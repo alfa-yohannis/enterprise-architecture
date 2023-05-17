@@ -20,7 +20,7 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### TOGAF Framework
 
-![image](../figures/togaf){width=".95\\textwidth"}
+![image](../figures/togaf.png)
 
 ### Komponen-komponen TOGAF
 
@@ -67,7 +67,7 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### Architecture Capability Framework
 
-![image](../figures/architecture_capability_framework){width=".95\\textwidth"}
+![image](../figures/architecture_capability_framework.png)
 
 ### Kemampuan Bisnis di TOGAF
 
@@ -121,7 +121,7 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### Architecture Development Method
 
-![image](../figures/architecture_development_method){width=".58\\textwidth"}
+![image](../figures/architecture_development_method.png)
 
 ### Metode Pengembangan Arsitektur (ADM)
 
@@ -197,7 +197,7 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### Architecture Deliverables
 
-![image](../figures/architecture_deliverables){width=".95\\textwidth"}
+![image](../figures/architecture_deliverables.png)
 
 ### Deliverables, Artefak, dan Building Blocks di TOGAF
 
@@ -217,7 +217,7 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### Architecture Continuum
 
-![image](../figures/enterprise_continuum){width=".95\\textwidth"}
+![image](../figures/enterprise_continuum.png)
 
 ### Kontinum dan Alat Perusahaan
 
@@ -238,7 +238,7 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### Architecture Repository
 
-![image](../figures/architecture_repository){width=".88\\textwidth"}
+![image](../figures/architecture_repository.png)
 
 ### Repositori Arsitektur di TOGAF
 
@@ -260,11 +260,11 @@ title: 'TOGAF Framework dan Komponen-Komponennya'
 
 ### Technical Reference Model
 
-![image](../figures/detailed_technical_reference_model){width=".70\\textwidth"}
+![image](../figures/detailed_technical_reference_model.png)
 
 ### Integrated Information Infrastructure Reference Model
 
-![image](../figures/integrated_information_infrastructure_reference_model){width="\\textwidth"}
+![image](../figures/integrated_information_infrastructure_reference_model.png)
 
 ### Model Referensi TOGAF
 
