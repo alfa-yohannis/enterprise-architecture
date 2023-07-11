@@ -1,62 +1,153 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169, table]{beamer}
 
 \usepackage[utf8]{inputenc}
-\usetheme{Madrid}
-\usecolortheme{seahorse}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fontspec} 
+\usepackage{xcolor}
+\usepackage{tcolorbox}
 
-\title{Fase D: Arsitektur Teknologi dalam Metode Pengembangan Arsitektur TOGAF}
-\author{Alfa Yohannis}
-\date{\today}
+\setsansfont[
+ItalicFont=fonts/TitilliumWeb-Italic.ttf,
+BoldFont=fonts/TitilliumWeb-Bold.ttf,
+BoldItalicFont=fonts/TitilliumWeb-BoldItalic.ttf,
+]{TitilliumWeb-Regular.ttf}
+
+\usetheme{Pradita}
+
+\subtitle{MTI102-Information System \&\\Technology Architecture}
+\title{\vskip-0.7cm Phase D: Arsitektur Teknologi\\dalam Metode Pengembangan\\Arsitektur TOGAF}
+\date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
+\author[Pradita]{\small {\textbf{Alfa Yohannis}}}
+
 
 \begin{document}
 
 \frame{\titlepage}
 
 \begin{frame}
-\frametitle{Tujuan}
-\begin{itemize}
-\item Mendefinisikan arsitektur teknologi yang diperlukan untuk mendukung arsitektur bisnis dan arsitektur data dan aplikasi
-\item Menjamin bahwa arsitektur ini responsif terhadap perubahan teknologi
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Input}
-\begin{itemize}
-\item Pernyataan arsitektur
-\item Pernyataan kebutuhan
-\item Arsitektur bisnis, arsitektur data, dan arsitektur aplikasi
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Langkah-langkah}
+\frametitle{Aims}
 \begin{enumerate}
-\item Mengumpulkan informasi teknologi
-\item Mendefinisikan arsitektur teknologi
-\item Memvalidasi dan menyetujui arsitektur teknologi
+	\item Develop the Target Technology Architecture that enables the logical and physical application and data components and the Architecture Vision, addressing the Request for Architecture Work and stakeholder concerns.
+	\item Identify candidate Architecture Roadmap components based upon gaps between the Baseline and Target Technology Architectures.
 \end{enumerate}
 \end{frame}
 
 \begin{frame}
-\frametitle{Output}
+	\frametitle{Inputs (1)}
+	\vspace{20pt}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.45\textwidth}
+			\begin{enumerate}
+				\item Request for Architecture Work
+				\item Capability Assessment
+				\item Communications Plan
+				\item Organizational Model for Enterprise Architecture
+				\item Tailored Architecture Framework
+				\item Technology principles, if existing
+				\item Statement of Architecture Work
+				\item Architecture Vision
+			\end{enumerate}
+		\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{enumerate}
+				\setcounter{enumi}{8}
+				\item Draft Architecture Definition Document:
+				\begin{itemize}
+					\item Baseline Business Architecture (detailed)
+					\item Target Business Architecture (detailed)
+					\item Baseline Data Architecture (detailed)
+					\item Target Data Architecture (detailed)
+					\item Baseline Application Architecture (detailed)
+					\item Target Application Architecture (detailed)
+					\item Baseline Technology Architecture (high-level)
+					\item Target Technology Architecture (high-level)
+				\end{itemize}
+			\end{enumerate}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inputs (2)}
+	\begin{columns}[onlytextwidth]
+		\begin{column}{0.5\textwidth}
+			\begin{enumerate}
+				\item Architecture Repository
+				\item Draft Architecture Requirements Specification:
+				\begin{itemize}
+					\item Gap Analysis results
+					\item Relevant technical requirements
+				\end{itemize}
+				\item Business, Data, and Application Architecture components of an Architecture Roadmap
+			\end{enumerate}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Technology Principles}
+	\begin{enumerate}
+		\item \textbf{Requirements-based Change}.
+		Changes to applications and technology are made only in response to business needs.
+		\item \textbf{Responsive Change Management}.
+		Changes to the enterprise information environment are implemented in a timely manner.
+		\item  \textbf{Control Technical Diversity}.
+		Technological diversity is controlled to minimize the non-trivial cost of maintaining expertise in and connectivity between multiple processing environments.
+		\item \textbf{Interoperability}. Software and hardware should conform to defined standards
+		that promote interoperability for data, applications, and technology.
+	\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Steps}
+\vspace{20pt}
+\begin{enumerate}
+	\item Select reference models, viewpoints, and tools
+	\item Develop Baseline Technology Architecture Description
+	\item Develop Target Technology Architecture Description
+	\item Perform Gap Analysis
+	\item Define candidate roadmap components
+	\item Resolve impacts across the Architecture Landscape
+	\item Conduct formal stakeholder review
+	\item Finalize the Technology Architecture
+	\item Create Architecture Definition Document
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Catalogs, Matrices, and Diagrams}
 \begin{itemize}
-\item Arsitektur teknologi yang didefinisikan
-\item Pernyataan yang divalidasi dan disetujui
+\item \textbf{Catalogs}. Technology Standards catalog, Technology Portfolio
+\item \textbf{Matrices}. Application/Technology matrix
+\item \textbf{Diagrams}. Environments and Locations diagram, Platform Decomposition diagram, Processing diagram, Networked Computing/Hardware diagram, Communications Engineering diagram
 \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Contoh}
-\begin{itemize}
-\item Contoh arsitektur teknologi: Implementasi cloud
-\item Contoh validasi: Review dan persetujuan oleh pemangku kepentingan
-\end{itemize}
+	\frametitle{Outputs}
+	\begin{enumerate}
+		\item Statement of Architecture Work, updated if necessary
+		\item Validated technology principles or new technology principles (if generated here)
+		\item Draft Architecture Definition Document , containing content updates 
+		\item Draft Architecture Requirements Specification, including content updates
+		\item Technology Architecture components of an Architecture Roadmap
+	\end{enumerate}
 \end{frame}
 
 \begin{frame}
-\frametitle{Ringkasan}
-Fase Arsitektur Teknologi memungkinkan kita untuk mendefinisikan dan memvalidasi arsitektur teknologi yang diperlukan untuk mendukung arsitektur bisnis dan arsitektur data dan aplikasi. Fase ini penting untuk menjamin bahwa arsitektur ini dapat menanggapi perubahan teknologi.
+\frametitle{Summary}
+The Technology Architecture phase enables us to define and validate the technology architecture needed to support:
+\begin{enumerate}
+	\item business architecture
+	\item data architecture
+	\item application architecture
+\end{enumerate}
 \end{frame}
 
 \end{document}

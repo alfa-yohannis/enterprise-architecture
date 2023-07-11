@@ -1,4 +1,5 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
+
 
 \usepackage[utf8]{inputenc}
 \usetheme{Madrid}
@@ -15,49 +16,179 @@
 \begin{frame}
 \frametitle{Tujuan}
 \begin{itemize}
-\item Mendefinisikan kerangka kerja untuk aplikasi yang diperlukan untuk mendukung bisnis
-\item Membuat interkoneksi antara aplikasi
+\item • Mengembangkan Arsitektur Aplikasi Sasaran yang memungkinkan Bisnis
+Arsitektur dan Visi Arsitektur, sambil menangani Permintaan
+untuk Pekerjaan Arsitektur dan perhatian pemangku kepentingan
+\item Mengidentifikasi calon komponen Roadmap Arsitektur berdasarkan kesenjangan
+antara Baseline dan Arsitektur Aplikasi Target
 \end{itemize}
 \end{frame}
 
+	\begin{frame}
+	\frametitle{Input (1)}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\begin{enumerate}
+					\item Permintaan Pekerjaan Arsitektur
+					\item Penilaian Kapabilitas
+					\item Rencana Komunikasi
+					\item Model Organisasi untuk Arsitektur Perusahaan
+					\item Kerangka Kerja Arsitektur yang sudah Disesuaikan
+					\item \textbf{Prinsip Aplikasi}, jika ada
+					\item Pernyataan Pekerjaan Arsitektur
+					\item Draf Spesifikasi Persyaratan Arsitektur Rancangan:
+					\begin{enumerate}
+						\item Hasil Analisis Gap
+						\item Persyaratan teknis relevan lain
+					\end{enumerate}
+				\end{enumerate}
+			\end{center}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\begin{enumerate}
+					\setcounter{enumi}{8}
+					\item Visi Arsitektur
+					\item Repositori Arsitektur
+					\item Draf Dokumen Definisi Arsitektur:
+					\begin{enumerate}
+						\item Arsitektur Bisnis Baseline (detil)
+						\item Target Arsitektur Bisnis (detil)
+						\item Arsitektur Data Baseline (detil)
+						\item Arsitektur Data Target (detil)
+						\item Arsitektur Aplikasi Baseline (garis besar)
+						\item Arsitektur Aplikasi Target (garis besar)
+						\item Arsitektur Teknologi Baseline (garis besar)
+						\item Arsitektur Teknologi Target (garis besar)
+					\end{enumerate}
+					\item Komponen Arsitektur Bisnis dari Peta Jalan Arsitektur
+				\end{enumerate}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \begin{frame}
-\frametitle{Input}
+	\frametitle{Prinsip-prinsip Aplikasi}
+	\begin{enumerate}
+		\item \textbf{Teknologi}.
+		Aplikasi-aplikasi tidak tergantung pada pilihan teknologi tertentu dan oleh karena itu dapat beroperasi di berbagai platform teknologi.
+		\item \textbf{Kemudahan Penggunaan}.
+		Aplikasi-aplikasi mudah digunakan. Teknologi yang mendasarinya transparan bagi pengguna, sehingga mereka dapat fokus pada tugas-tugas yang ada.
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Langkah-langkah}
+	\begin{enumerate}
+		\item Memilih model referensi, sudut pandang, dan alat-alat
+		\item Mengembangkan Deskripsi Arsitektur Aplikasi Baseline
+		\item Mengembangkan Deskripsi Arsitektur Aplikasi Target
+		\item Melakukan Analisis Gap
+		\item Mendefinisikan komponen rencana jalan calon
+		\item Menyelesaikan dampak-dampak di seluruh Lanskap Arsitektur
+		\item Melakukan Analisis Stakeholder Formal
+		\item Menyelesaikan Arsitektur Aplikasi
+		\item Membuat Dokumen Definisi Arsitektur
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Output}
+	\begin{enumerate}
+		\item Pernyataan Kerja Arsitektur, diperbarui jika diperlukan
+		\item Prinsip-prinsip aplikasi yang divalidasi, atau prinsip-prinsip aplikasi baru
+		\item Draf Dokumen Definisi Arsitektur, yang telah dibarui jika perlu
+		\item Draf Spesifikasi Persyaratan Arsitektur, yang telah dibarui jika perlu
+		\item Komponen Arsitektur Aplikasi dalam Rencana Jalan Arsitektur
+	\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{ Data Architecture Catalogs, Matrices, and Diagrams}
+	\begin{enumerate}
+		\item Katalog
+		\begin{itemize}
+			\item Katalog Portofolio Aplikasi, Katalog Antarmuka
+		\end{itemize}
+		\item Matriks
+		\begin{itemize}
+			\item Matriks Aplikasi/Organisasi, Matriks Peran/Aplikasi, Matriks Aplikasi/Fungsi, Matriks Interaksi Aplikasi
+		\end{itemize}
+		\item Diagram
+		\begin{itemize}
+			\item Diagram Komunikasi Aplikasi, Diagram Lokasi Aplikasi dan Pengguna, Diagram Use-Case Aplikasi, Diagram Manajabilitas Perusahaan, Diagram Realisasi Proses/Aplikasi, Diagram Rekayasa Perangkat Lunak, Diagram Migrasi Aplikasi, Diagram Distribusi Perangkat Lunak
+		\end{itemize}
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Beberapa Hal yang Perlu Diperhatikan Khususnya untuk Kerja Jarak Jauh}
+	\begin{enumerate}
+		\item Migrasi ke penggunaan applikasi untuk kolaborasi kerja online.
+		\item Perubahan proses bisnis, kemungkinan juga akan ada perubahan aplikasi.
+		\item Kemananan aplikasi: enkripsi, manajemen password, hak akses, dll
+		\item Tata kelola aplikasi: siapa bertanggung jawab atas aplikasi apa atau tugas terkait aplikasi apa
+		\item Manajemen aplikasi: manajemen trouble shooting, support ke pengguna, support dan service dari vendor, lisensi, upgrade, penggantian dan pemberhentian aplikasi, dsb.
+		\item Biaya aplikasi: finansial, lisensi, performa, fitur
+	\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{Aplikasi terkait Enterprise}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\begin{enumerate}
+					\item Enterprise Resource Planning (ERP)
+					\item Customer Relationship Management (CRM)
+					\item Supply Chain Management (SCM)
+					\item Business Intelligence
+					\item Point of Sales (PoS)
+					\item Manufacturing Execution System (MES)
+					\item Product Lifecycle Management (PLM)
+					\item Human Resource Management System (HRMS)
+					\item Maintenance Management System (MMS)
+					\item Warehouse Management System (WMS)
+				\end{enumerate}
+			\end{center}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\begin{enumerate}
+					\setcounter{enumi}{10}
+					\item Manufacturing Intelligence (MI)
+					\item Quality Management System (QMS)
+					\item Knowledge management system (KMS)
+					\item Transportation Management System (TMS)
+					\item Fleet Management System (FMS)
+					\item Hospital Information System (HIS)
+					\item Electronic Health Record (EHRre)
+					\item Laboratory Information System (LIS)
+					\item Learning Management System (LMS)
+					\item Geographical Information Systems (GIS) 
+					\item E-Commerce.
+				\end{enumerate}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Penutup}
 \begin{itemize}
-\item Arsitektur Bisnis
-\item Pernyataan Kebutuhan Arsitektur
+	\item Fase Arsitektur Aplikasi memungkinkan kita untuk mendefinisikan dan memvalidasi arsitektur aplikasi yang diperlukan untuk mendukung arsitektur bisnis.
+	\item Fase ini penting untuk memastikan bahwa aplikasi dan interkoneksinya sesuai dengan kebutuhan bisnis.
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Langkah-langkah}
-\begin{enumerate}
-\item Mengembangkan Baseline Arsitektur Aplikasi
-\item Mengembangkan Arsitektur Sasaran Aplikasi
-\item Melakukan Gap Analysis
-\item Mendefinisikan peta jalan aplikasi
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Output}
-\begin{itemize}
-\item Baseline Arsitektur Aplikasi
-\item Arsitektur Sasaran Aplikasi
-\item Peta jalan aplikasi
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Contoh}
-\begin{itemize}
-\item Contoh Baseline Arsitektur Aplikasi: Diagram arsitektur aplikasi saat ini
-\item Contoh Arsitektur Sasaran Aplikasi: Diagram arsitektur aplikasi masa depan
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Ringkasan}
-Fase Arsitektur Aplikasi memungkinkan kita untuk mendefinisikan dan memvalidasi arsitektur aplikasi yang diperlukan untuk mendukung arsitektur bisnis. Fase ini penting untuk memastikan bahwa aplikasi dan interkoneksinya sesuai dengan kebutuhan bisnis.
 \end{frame}
 
 \end{document}
