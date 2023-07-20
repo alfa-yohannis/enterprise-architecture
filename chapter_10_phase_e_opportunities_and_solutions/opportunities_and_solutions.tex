@@ -1,63 +1,158 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169, table]{beamer}
 
-\usepackage[utf8]{inputenc}
-\usepackage{babel}
-\usetheme{Madrid}
-\usecolortheme{seahorse}
+%\usepackage[beamertheme=./praditatheme]{Pradita}
 
-\title{Fase E: Peluang dan Solusi dalam Metode Pengembangan Arsitektur TOGAF}
-\author{Alfa Yohannis}
-\date{\today}
+\usetheme{Pradita}
+
+\subtitle{MTI102-Information System \&\\Technology Architecture}
+\title{\vskip-0.7cm \Large Phase E: Opportunities and Solutions\\in TOGAF
+	Architecture\\Development Method (ADM)}
+\date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
+\author[Pradita]{\small {\textbf{Alfa Yohannis}}}
 
 \begin{document}
-
-\frame{\titlepage}
-
-\begin{frame}
-\frametitle{Tujuan}
-\begin{itemize}
-\item Mengidentifikasi peluang dan solusi yang dapat mencapai arsitektur yang diinginkan
-\item Membuat rencana implementasi yang rinci
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Input}
-\begin{itemize}
-\item Arsitektur visi
-\item Pernyataan arsitektur
-\item Pernyataan kebutuhan
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Langkah-langkah}
-\begin{enumerate}
-\item Menentukan peluang
-\item Menyusun solusi
-\item Membuat rencana implementasi
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Output}
-\begin{itemize}
-\item Daftar peluang dan solusi
-\item Rencana implementasi arsitektur
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Contoh}
-\begin{itemize}
-\item Contoh peluang: Migrasi ke cloud
-\item Contoh solusi: Implementasi layanan berbasis cloud
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Ringkasan}
-Fase Peluang dan Solusi memungkinkan kita untuk mengidentifikasi dan menyusun solusi arsitektur yang efektif dan efisien. Ini membantu dalam merencanakan implementasi arsitektur secara rinci.
-\end{frame}
-
-\end{document}
+	
+	\frame{\titlepage}
+	
+	\begin{frame}
+		\frametitle{Aims}
+		\begin{enumerate}
+			\item Generate the initial complete version of the Architecture Roadmap, based upon the gap analysis and candidate Architecture Roadmap components from Phases B, C, and D.
+			\item Determine whether an incremental approach is required, and if so identify Transition Architectures that will deliver continuous business value.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Inputs (1)}
+		\vspace{20pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.45\textwidth}
+				\begin{enumerate}
+					\item Product information
+					\item Request for Architecture Work
+					\item Capability Assessment
+					\item Communications Plan
+					\item Planning Methodologies
+					\item Organizational Model for Enterprise Architecture
+					\item Governance Models and Frameworks
+					\item Tailored Architecture Framework
+				\end{enumerate}
+				
+			\end{column}
+			\begin{column}{0.55\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{8}
+					\item Statement of Architecture Work
+					\item Architecture Vision
+					\item Architecture Repository
+					\item Draft Architecture Definition Document
+					\item Draft Architecture Requirements Specification
+					\item Change Requests for existing programs and projects
+					\item Candidate Architecture Roadmap components from Phases B, C, and D
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Steps}
+		\vspace{20pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.50\textwidth}
+				\begin{enumerate}
+					\item Determine/confirm key corporate change attributes
+					\item Determine business constraints for implementation
+					\item Review and consolidate Gap Analysis results from Phases B to D
+					\item Review consolidated requirements across related business functions
+					\item Consolidate and reconcile interoperability requirements
+					
+				\end{enumerate}
+				
+			\end{column}
+			\begin{column}{0.50\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{5}
+					\item Refine and validate dependencies
+					\item Confirm readiness and risk for business transformation
+					\item Formulate Implementation and Migration Strategy
+					\item Identify and group major work packages
+					\item Identify Transition Architectures
+					\item Create the Architecture Roadmap \& Implementation and Migration Plan
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Outputs}
+		\vspace{25pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.50\textwidth}
+				\begin{enumerate}
+					\item Statement of Architecture Work, updated if necessary
+					\item Architecture Vision, updated if necessary
+					\item Draft Architecture Definition Document, updated if necessary, including:
+					\begin{itemize}
+						\item Transition Architectures, if any
+					\end{itemize}
+					\item Draft Architecture Requirements Specification, including:
+					\begin{itemize}
+						\item Consolidated Gaps, Solutions, and Dependencies Assessment
+					\end{itemize}
+					
+				\end{enumerate}
+				
+			\end{column}
+			\begin{column}{0.50\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{4}
+					\item Capability Assessment, including:
+					\begin{itemize}
+						\item Business Capability Assessment
+						\item IT Capability Assessment
+					\end{itemize}
+					\item Architecture Roadmap, including:
+					\begin{itemize}
+						\item Work package portfolio
+						\item Identification of Transition Architectures, if any
+						\item Implementation recommendations
+					\end{itemize}
+					\item Implementation and Migration Plan (outline)
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+%	\begin{frame}
+%		\frametitle{Technology Principles}
+%		\begin{enumerate}
+%			\item \textbf{Requirements-based Change}.
+%			Changes to applications and technology are made only in
+%			response to business needs.
+%			\item \textbf{Responsive Change Management}.
+%			Changes to the enterprise information environment are
+%			implemented on time.
+%			\item  \textbf{Control Technical Diversity}.
+%			Technological diversity is controlled to minimize the
+%			non-trivial cost of maintaining expertise in and
+%			connectivity between multiple
+%			processing environments.
+%			\item \textbf{Interoperability}. Software and hardware
+%			should conform to defined standards
+%			that promote interoperability for data, applications,
+%			and technology.
+%		\end{enumerate}
+%	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Summary}
+		\begin{enumerate}
+			\item The Opportunity and Solutions Phase allows us to identify and develop effective and efficient architectural solutions. 
+			\item It helps in planning the detailed implementation of the architecture.
+		\end{enumerate}
+	\end{frame}
+	
+\end{document}`
