@@ -1,84 +1,352 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169, table]{beamer}
+
+%\usepackage[beamertheme=./praditatheme]{Pradita}
 \usepackage[utf8]{inputenc}
 
-\usetheme{Madrid}
-\usecolortheme{seahorse}
+\usetheme{Pradita}
 
-\title{Fase G: Pengawasan Implementasi dalam TOGAF's Architecture Development Method}
-\author{Alfa Yohannis}
-\date{13 May 2023}
+\subtitle{MTI102-Information System \&\\Technology Architecture}
+\title{\vskip-0.7cm \Large Phase G: Implementation Governance\\in TOGAF
+	Architecture\\Development Method (ADM)}
+\date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
+\author[Pradita]{\small {\textbf{Alfa Yohannis}}}
 
 \begin{document}
 	
 	\frame{\titlepage}
 	
 	\begin{frame}
-		\frametitle{Pengantar}
-		\begin{itemize}
-			\item TOGAF (The Open Group Architecture Framework) adalah kerangka kerja yang membantu dalam pengembangan dan pengelolaan arsitektur perusahaan.
-			\item Salah satu fase penting dalam TOGAF, fase G, adalah Pengawasan Implementasi.
-			\item Pengawasan Implementasi bertujuan untuk memastikan bahwa arsitektur yang dihasilkan juga diimplementasikan dengan baik dan sesuai dengan rencana.
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}
-		\frametitle{Tujuan}
-		\begin{itemize}
-			\item Memastikan bahwa implementasi arsitektur berlangsung sesuai dengan rencana dan spesifikasi yang telah ditetapkan.
-			\item Memantau dan mengendalikan perubahan pada arsitektur yang mungkin terjadi selama implementasi.
-			\item Mengevaluasi kualitas dan keberhasilan implementasi arsitektur.
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}
-		\frametitle{Input}
-		\begin{itemize}
-			\item Rencana Implementasi Arsitektur (Architecture Implementation Plan)
-			\item Rencana Pengelolaan Perubahan (Change Management Plan)
-			\item Hasil dari fase-fase sebelumnya dalam TOGAF's Architecture Development Method
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}
-		\frametitle{Langkah-langkah}
+		\frametitle{Aims}
 		\begin{enumerate}
-			\item Memastikan ketersediaan dan implementasi rencana pengelolaan perubahan.
-			\item Memantau dan mengendalikan implementasi arsitektur.
-			\item Mengevaluasi kualitas dan keberhasilan implementasi arsitektur.
-			\item Melaporkan hasil evaluasi kepada pemangku kepentingan.
-			\item Mengidentifikasi dan menangani masalah yang muncul selama implementasi.
+			\item Ensure conformance with the Target Architecture by implementation projects
+			\item Perform appropriate Architecture Governance functions for the solution and any implementation-driven architecture Change Requests
+		\end{enumerate}	
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Inputs}
+		\vspace{22pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item Request for Architecture Work
+					\item Capability Assessment
+					\item Organizational Model for Enterprise Architecture
+					\item Tailored Architecture Framework
+					\item Statement of Architecture Work
+					\item Architecture Vision
+					\item Architecture Repository
+					\item Architecture Definition Document
+					
+				\end{enumerate}
+				
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{8}
+					\item Architecture Requirements Specification
+					\item Architecture Roadmap
+					\item Implementation Governance Model
+					\item Architecture Contract
+					\item Request for Architecture Work identified in Phases E and F
+					\item Implementation and Migration Plan
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Steps}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Confirm scope and priorities for deployment with development management
+			\item Identify deployment resources and skills
+			\item Guide development of solutions deployment
+			\item Perform enterprise Architecture Compliance Reviews
+			\item Implement business and IT operations
+			\item Perform post-implementation review and close the implementation
+		\end{enumerate}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Step 1: Confirm scope and priorities for deployment}
+		\framesubtitle{with development management}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Produce recommendations for deployment based on migration planning outputs.
+			\item Identify priorities for development teams and deployment issues along with recommendations.
+			\item Identify building blocks for replacement and update through Gap Analysis between enterprise architecture and solutions framework.
+			\item Consider reuse of specific Solution Building Blocks (SBBs) across multiple projects by solutions architects.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Step 2: Identify deployment resources and skills}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Educate deployment resources on enterprise architecture deliverables and project expectations.
+			\item Identify system development methods for solutions development with feedback to the architecture team.
+			\item Address considerations for specific development and implementation projects.
+			\item Ensure feedback on designs is included in the system development methods.
+		\end{enumerate}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Step 3: Guide development of solutions deployment}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Create project recommendations for each implementation and deployment project, including scope, strategic requirements, change requests, conformance rules, and timeline requirements.
+			\item Document the Architecture Contract and obtain signatures from developing organizations and the sponsoring organization.
+			\item Populate the Enterprise Continuum and Architecture Repository with the solutions.
+			\item Use the Architecture Contract to guide the development of business and IT operating models for identified services, based on requirements from the enterprise architecture and a Gap Analysis with current operations.
+			\item Develop an Implementation Plan based on the identified missing elements.
 		\end{enumerate}
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Output}
-		\begin{itemize}
-			\item Laporan Implementasi Arsitektur (Architecture Implementation Report)
-			\item Catatan perubahan pada arsitektur yang diimplementasikan
-			\item Evaluasi kualitas dan keberhasilan implementasi
-			\item Rencana aksi untuk mengatasi masalah yang teridentifikasi
-		\end{itemize}
+		\frametitle{Step 4: Perform enterprise Architecture Compliance Reviews}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Govern the architecture through implementation to achieve the Architecture Vision.
+			\item Feed implementation lessons back into the architecture process.
+			\item Conduct periodic compliance reviews of implementation projects in Phase G.
+			\item Ensure project progress aligns with strategic and architectural objectives.
+		\end{enumerate}
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Step 4.1: Timing of Compliance Reviews}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Conduct compliance reviews at appropriate project milestones or checkpoints in the project's lifecycle.
+			\item Include specific checkpoints for ADM compliance during the development of the architecture and architecture compliance during the implementation.
+			\item Schedule Architecture Compliance Reviews at project initiation, initial design, major design changes, and as needed.
+			\item Target Architecture Compliance Review when business requirements and enterprise architecture are reasonably firm, and project architecture is taking shape before completion.
+			\item Aim to hold the review early enough to correct major errors or shortcomings.
+		\end{enumerate}
+		
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Step 4.2: Review Scenarios}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Ensure Architecture Compliance Review process is backed by senior management and mandated as part of corporate Architecture Governance policies.
+			\item For smaller-scale projects, use a series of questions or checklists for project architects or leaders to create a project report for management.
+			\item For projects without prior architectural involvement, conduct reviews to bring in architectural expertise, involving business domain experts.
+			\item In larger-scale projects, coordinate reviews by the lead enterprise architect, assemble a team of domain experts, and compile answers into a report.
+			\item Alternatively, the review might be led by a representative of an Architecture Board or a similar body with enterprise-wide responsibilities.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Step 4.3: Risk Monitoring}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Risk is present in all phases of the ADM and initially identified in Phase A during the Business Transformation Readiness Assessment.
+			\item Governance artifacts, such as risk identification and mitigation assessment worksheets, should be part of the compliance review process.
+			\item Monitor and ensure that any residual risks accepted are being mitigated to an acceptable level.
+			\item For critical risks not being adequately mitigated, generate a change request that may require another full or partial ADM cycle.
+		\end{enumerate}
+		
+	\end{frame}
+
+	
+	\begin{frame}
+		\frametitle{Step 5: Implement business and IT operations}
+		\framesubtitle{\hspace{1cm}}
+		\vspace{20pt}
+		\begin{enumerate}
+			\item Carry out deployment projects, including:
+			\begin{enumerate}
+				\item IT services and business services delivery implementation,
+				\item skills development and training implementation, and 
+				\item communications documentation publication.
+			\end{enumerate}
+			\item Publish new Baseline Architectures to the Architecture Repository and update other impacted repositories, such as operational configuration management stores.
+		\end{enumerate}
 	\end{frame}
 	
 	\begin{frame}
-		\frametitle{Contoh}
-		\begin{itemize}
-			\item Memastikan bahwa semua aplikasi dan infrastruktur yang diperlukan untuk implementasi arsitektur tersedia dan siap digunakan.
-			\item Melakukan pemantauan progres implementasi dan memastikan bahwa pekerjaan dilakukan sesuai dengan jadwal yang telah ditetapkan.
-			\item Mengevaluasi kualitas dan keberhasilan implementasi berdasarkan kriteria yang telah ditetapkan, seperti kepatuhan terhadap standar arsitektur, performa sistem, dan kepuasan pengguna.
-			\item Melaporkan hasil evaluasi kepada pemangku kepentingan, termasuk manajemen senior dan tim proyek.
-			\item Mengidentifikasi dan menangani masalah yang muncul selama implementasi, misalnya, konflik antara arsitektur yang diusulkan dan sistem yang ada.
-		\end{itemize}
+		\frametitle{Step 6: Perform post-implementation review and}
+		\framesubtitle{close the implementation}
+		\vspace{25pt}
+		\begin{enumerate}
+			\item Conduct post-implementation reviews.
+			\item Publish reviews.
+			\item Close implementation projects upon full deployment of solutions.
+		\end{enumerate}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Outputs}
+		\vspace{22pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item Architecture Contract (signed)
+					\item Compliance Assessments
+					\item Change Requests
+					\item Impact Analysis – Implementation Recommendations
+					\item Architecture-compliant solutions deployed, including:
+					\begin{enumerate}
+						\item The architecture-compliant implemented system
+						\item Populated Architecture Repository
+						\item Architecture compliance recommendations and dispensations
+					\end{enumerate}
+				\end{enumerate}
+				
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{4}
+					\item[]
+					\begin{enumerate}
+						\setcounter{enumii}{3}
+						\item Recommendations on service delivery requirements
+						\item Recommendations on performance metrics
+						\item Service Level Agreements (SLAs)
+						\item Architecture Vision, updated post-implementation
+						\item Architecture Definition Document, updated post-implementation
+						\item Transition Architecture, updated post-implementation
+						\item Business and IT operating models for the implemented solution
+					\end{enumerate}
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Architecture Contracts}
+		\vspace{25pt}
+		\begin{enumerate}
+			\item Architecture Contracts in Phase G are joint agreements on deliverables, quality, and fitness-for-purpose between development partners and sponsors.
+			\item Successful implementation of these agreements requires an effective governance approach.
+			\item Governance ensures continuous monitoring, integrity checks, and audits of all architecture-related activities.
+			\item Adherence to principles, standards, and requirements of existing or developing architectures is enforced.
+			\item Risks in development, implementation, and operational aspects of architectures are identified and addressed.
+			\item Processes and practices ensure accountability, responsibility, and discipline in the development and usage of all architectural artifacts.
+		\end{enumerate}
+		
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Typical contents of an Architecture Design}
+		\framesubtitle{and Development Contract}
+		\vspace{22pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.45\textwidth}
+				\begin{enumerate}
+					\item Introduction and background
+					\item The nature of the agreement
+					\item Scope of the architecture
+					\item Architecture and strategic principles and requirements
+					\item Conformance requirements
+				\end{enumerate}
+			\end{column}
+			\begin{column}{0.55\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{5}
+					\item Architecture development and management process and roles
+						\item Target Architecture measures
+					\item Defined phases of deliverables
+					\item Prioritized joint work plan
+					\item Time window(s)
+					\item Architecture delivery and business metrics
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Typical contents of a Business Users’ Architecture Contract }
+		\framesubtitle{\hspace{1cm}}
+		\vspace{22pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+			\begin{enumerate}
+				\item Introduction and background
+				\item The nature of the agreement
+				\item Scope
+				\item Strategic requirements
+				\item Conformance requirements
+			\end{enumerate}
+			
+				
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{5}
+					\item Architecture adopters
+					\item Time window
+					\item Architecture business metrics
+					\item Service architecture (includes SLA)
+					\begin{enumerate}
+						\item This contract is also used to manage changes to the enterprise architecture in Phase H.
+					\end{enumerate}
+				\end{enumerate}
+			\end{column}
+		\end{columns}
+	\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Compliance Assessments}
+		\vspace{22pt}
+		\begin{columns}[onlytextwidth]
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\item Overview of project progress and status
+					\item Overview of project architecture/design
+					\item Completed architecture checklists:
+					\begin{enumerate}
+						\item Hardware and operating system checklist
+						\item Software services and middleware checklist
+						\item Applications checklists
+						\item Information management checklists
+						
+					\end{enumerate}
+				\end{enumerate}
+				
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+					\setcounter{enumi}{3}
+					\item []
+					\begin{enumerate}
+						\setcounter{enumii}{4}
+						\item Security checklists
+						\item System management checklists
+						\item System engineering checklists
+						\item Methods and tools checklists
+					\end{enumerate}
+				\end{enumerate}
+			\end{column}
+		\end{columns}
 	\end{frame}
 
-\begin{frame}
-\frametitle{Ringkasan}
-\begin{itemize}
-\item Pengawasan Implementasi merupakan fase penting dalam TOGAF's Architecture Development Method untuk memastikan bahwa arsitektur yang dihasilkan juga diimplementasikan dengan baik dan sesuai dengan rencana.
-\item Tujuan dari Pengawasan Implementasi adalah memastikan implementasi yang sesuai, memantau perubahan, dan mengevaluasi kualitas serta keberhasilan implementasi.
-\item Langkah-langkah dalam Pengawasan Implementasi meliputi memastikan ketersediaan dan implementasi rencana pengelolaan perubahan, memantau dan mengendalikan implementasi, mengevaluasi kualitas dan keberhasilan implementasi, melaporkan hasil evaluasi kepada pemangku kepentingan, serta mengidentifikasi dan menangani masalah yang muncul.
-\item Output dari fase ini meliputi Laporan Implementasi Arsitektur, catatan perubahan, evaluasi kualitas dan keberhasilan implementasi, serta rencana aksi untuk mengatasi masalah yang teridentifikasi.
-\end{itemize}
-\end{frame}
-
+	\begin{frame}
+		\frametitle{Summary}
+		\begin{enumerate}
+			\item Implementation Governance defines architecture constraints and obtains signatures on an Architecture Contract.
+			\item Deliver the contract and all documentation to the implementation team.
+			\item Govern the architecture through implementation with compliance reviews and risk monitoring.
+			\item Conduct post-implementation reviews.
+		\end{enumerate}
+		
+	\end{frame}
+	
 \end{document}
