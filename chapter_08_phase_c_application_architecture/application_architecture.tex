@@ -1,13 +1,16 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169, table]{beamer}
 
-
+%\usepackage[beamertheme=./praditatheme]{Pradita}
 \usepackage[utf8]{inputenc}
-\usetheme{Madrid}
-\usecolortheme{seahorse}
 
-\title{Fase C: Arsitektur Aplikasi dalam Metode Pengembangan Arsitektur TOGAF}
-\author{Alfa Yohannis}
-\date{\today}
+\usetheme{Pradita}
+
+\subtitle{MTI102-Information System \&\\Technology Architecture}
+
+\title{\Large Phase C: Application Architecture\\in TOGAF
+	Architecture\\Development Method (ADM)}
+\date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
+\author[Pradita]{\small {\textbf{Alfa Yohannis}}}
 
 \begin{document}
 
@@ -16,7 +19,7 @@
 \begin{frame}
 \frametitle{Tujuan}
 \begin{itemize}
-\item • Mengembangkan Arsitektur Aplikasi Sasaran yang memungkinkan Bisnis
+\item Mengembangkan Arsitektur Aplikasi Sasaran yang memungkinkan Bisnis
 Arsitektur dan Visi Arsitektur, sambil menangani Permintaan
 untuk Pekerjaan Arsitektur dan perhatian pemangku kepentingan
 \item Mengidentifikasi calon komponen Roadmap Arsitektur berdasarkan kesenjangan
@@ -26,6 +29,7 @@ antara Baseline dan Arsitektur Aplikasi Target
 
 	\begin{frame}
 	\frametitle{Input (1)}
+        \vspace{20pt}
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
 			\begin{center}
@@ -35,8 +39,6 @@ antara Baseline dan Arsitektur Aplikasi Target
 					\item Rencana Komunikasi
 					\item Model Organisasi untuk Arsitektur Perusahaan
 					\item Kerangka Kerja Arsitektur yang sudah Disesuaikan
-					\item \textbf{Prinsip Aplikasi}, jika ada
-					\item Pernyataan Pekerjaan Arsitektur
 					\item Draf Spesifikasi Persyaratan Arsitektur Rancangan:
 					\begin{enumerate}
 						\item Hasil Analisis Gap
@@ -45,12 +47,12 @@ antara Baseline dan Arsitektur Aplikasi Target
 				\end{enumerate}
 			\end{center}
 		\end{column}
+
 		\begin{column}{0.5\textwidth}
 			\begin{center}
 				\begin{enumerate}
-					\setcounter{enumi}{8}
-					\item Visi Arsitektur
-					\item Repositori Arsitektur
+					\setcounter{enumi}{6}
+                    \item \textbf{Prinsip Aplikasi}, jika ada
 					\item Draf Dokumen Definisi Arsitektur:
 					\begin{enumerate}
 						\item Arsitektur Bisnis Baseline (detil)
@@ -62,9 +64,30 @@ antara Baseline dan Arsitektur Aplikasi Target
 						\item Arsitektur Teknologi Baseline (garis besar)
 						\item Arsitektur Teknologi Target (garis besar)
 					\end{enumerate}
-					\item Komponen Arsitektur Bisnis dari Peta Jalan Arsitektur
+
 				\end{enumerate}
 			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Input (2)}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+                    \setcounter{enumi}{8}
+                    \item Pernyataan Pekerjaan Arsitektur
+					\item Visi Arsitektur
+					\item Repositori Arsitektur
+                    \item Komponen Arsitektur Bisnis dari Peta Jalan Arsitektur
+				\end{enumerate}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+                \setcounter{enumi}{14}
+%				\begin{enumerate}
+%					\item
+%				\end{enumerate}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -109,7 +132,8 @@ antara Baseline dan Arsitektur Aplikasi Target
 
 
 \begin{frame}
-	\frametitle{ Data Architecture Catalogs, Matrices, and Diagrams}
+	\frametitle{Data Architecture Catalogs, Matrices, and Diagrams}
+	\framesubtitle{\hspace{1cm}}
 	\begin{enumerate}
 		\item Katalog
 		\begin{itemize}
@@ -128,7 +152,8 @@ antara Baseline dan Arsitektur Aplikasi Target
 
 
 \begin{frame}
-	\frametitle{Beberapa Hal yang Perlu Diperhatikan Khususnya untuk Kerja Jarak Jauh}
+	\frametitle{Beberapa Hal yang Perlu Diperhatikan Khususnya}
+    \framesubtitle{untuk Kerja Jarak Jauh}
 	\begin{enumerate}
 		\item Migrasi ke penggunaan applikasi untuk kolaborasi kerja online.
 		\item Perubahan proses bisnis, kemungkinan juga akan ada perubahan aplikasi.
@@ -143,10 +168,10 @@ antara Baseline dan Arsitektur Aplikasi Target
 
 
 \begin{frame}
-	\frametitle{Aplikasi terkait Enterprise}
+	\frametitle{Aplikasi terkait Enterprise (1)}
+    \vspace{20pt}
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
-			\begin{center}
 				\begin{enumerate}
 					\item Enterprise Resource Planning (ERP)
 					\item Customer Relationship Management (CRM)
@@ -156,32 +181,46 @@ antara Baseline dan Arsitektur Aplikasi Target
 					\item Manufacturing Execution System (MES)
 					\item Product Lifecycle Management (PLM)
 					\item Human Resource Management System (HRMS)
-					\item Maintenance Management System (MMS)
-					\item Warehouse Management System (WMS)
 				\end{enumerate}
-			\end{center}
 		\end{column}
 		\begin{column}{0.5\textwidth}
-			\begin{center}
 				\begin{enumerate}
-					\setcounter{enumi}{10}
+					\setcounter{enumi}{8}
+                    \item Maintenance Management System (MMS)
+					\item Warehouse Management System (WMS)
 					\item Manufacturing Intelligence (MI)
 					\item Quality Management System (QMS)
 					\item Knowledge management system (KMS)
 					\item Transportation Management System (TMS)
 					\item Fleet Management System (FMS)
-					\item Hospital Information System (HIS)
+				\end{enumerate}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Aplikasi terkait Enterprise (2)}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+				\begin{enumerate}
+                    \setcounter{enumi}{15}
+                    \item Hospital Information System (HIS)
 					\item Electronic Health Record (EHRre)
 					\item Laboratory Information System (LIS)
 					\item Learning Management System (LMS)
-					\item Geographical Information Systems (GIS) 
+					\item Geographical Information Systems (GIS)
 					\item E-Commerce.
+				\end{enumerate}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{center}
+				\begin{enumerate}
+%					\item
 				\end{enumerate}
 			\end{center}
 		\end{column}
 	\end{columns}
 \end{frame}
-
 
 \begin{frame}
 \frametitle{Penutup}
