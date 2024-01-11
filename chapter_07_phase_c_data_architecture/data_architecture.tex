@@ -1,30 +1,33 @@
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169, table]{beamer}
 
+%\usepackage[beamertheme=./praditatheme]{Pradita}
 \usepackage[utf8]{inputenc}
-\usetheme{Madrid}
-\usecolortheme{seahorse}
 
-\title{Fase C: Arsitektur Data dalam Metode Pengembangan Arsitektur TOGAF}
-\author{Alfa Yohannis}
-\date{\today}
+\usetheme{Pradita}
+
+\subtitle{MTI102-Information System \&\\Technology Architecture}
+
+\title{Fase C: Arsitektur Data dalam Metode \&\\ Pengembangan Arsitektur TOGAF}
+\date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
+\author[Pradita]{\small {\textbf{Alfa Yohannis}}}
 
 \begin{document}
-	
+
 	\frame{\titlepage}
-	
+
 	\begin{frame}
 		\frametitle{Tujuan}
+%		\framesubtitle{\hspace{1cm}}
 		\begin{itemize}
 			\item Mengembangkan Arsitektur Data Target yang memampukan Arsitektur Bisnis dan Visi Arsitektur tercapai, sambil menangani Permintaan Pekerjaan Arsitektur dan \textit{concerns} dari \textit{stakeholders}.
 			\item Identifikasi kandidat komponen Peta Jalan Arsitektur berdasarkan gap antara Baseline dan Target Data Architectures
 		\end{itemize}
 	\end{frame}
-	
+
 	\begin{frame}
 		\frametitle{Input (1)}
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
+%		\framesubtitle{\hspace{1cm}}
+			\vspace{20pt}
 					\begin{enumerate}
 						\item Permintaan Pekerjaan Arsitektur
 						\item Penilaian Kapabilitas
@@ -39,10 +42,13 @@
 							\item Persyaratan teknis relevan lain
 						\end{enumerate}
 					\end{enumerate}
-				\end{center}
-			\end{column}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{Input (2)}
+%		\framesubtitle{\hspace{1cm}}
+			\vspace{20pt}
 					\begin{enumerate}
 						\setcounter{enumi}{8}
 						\item Visi Arsitektur
@@ -60,13 +66,12 @@
 						\end{enumerate}
 						\item Komponen Arsitektur Bisnis dari Peta Jalan Arsitektur
 					\end{enumerate}
-				\end{center}
-			\end{column}
-		\end{columns}
 	\end{frame}
-	
+
+
 	\begin{frame}
 		\frametitle{Langkah-langkah}
+        \vspace{20pt}
 		\begin{enumerate}
 			\item Pilih model referensi, sudut pandang, dan alat
 			\item Kembangkan Deskripsi Arsitektur Data Baseline
@@ -79,9 +84,10 @@
 			\item Buat Dokumen Definisi Arsitektur
 		\end{enumerate}
 	\end{frame}
-	
+
 	\begin{frame}
 		\frametitle{Output}
+%		\framesubtitle{\hspace{1cm}}
 		\begin{enumerate}
 			\item Pernyataan Pekerjaan Arsitektur, diperbarui jika diperlukan
 			\item Prinsip data tervalidasi, atau prinsip data baru
@@ -90,9 +96,10 @@
 			\item Komponen Arsitektur Data dari Peta Jalan Arsitektur
 		\end{enumerate}
 	\end{frame}
-	
+
 	\begin{frame}
 		\frametitle{Prinsip-prinsip Data}
+%		\framesubtitle{\hspace{1cm}}
 		\begin{enumerate}
 			\item \textbf{Data adalah Aset}.
 			Data adalah aset yang memiliki nilai bagi perusahaan dan dikelola sesuai dengan itu.
@@ -100,6 +107,14 @@
 			Pengguna memiliki akses ke data yang diperlukan untuk menjalankan tugasnya; oleh karena itu, data dibagikan di seluruh fungsi perusahaan
 			dan organisasi.
 			\item \textbf{Data Dapat Diakses}. Data dapat diakses oleh pengguna untuk menjalankan fungsinya.
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Prinsip-prinsip Data (2)}
+%		\framesubtitle{\hspace{1cm}}
+		\begin{enumerate}
+			\setcounter{enumi}{3}
 			\item \textbf{Definisi Kosakata dan Data Bersama}. Data didefinisikan secara konsisten di seluruh perusahaan, dan definisi tersebut dapat dimengerti dan tersedia untuk semua pengguna.
 			\item \textbf{Keamanan Data}.
 			Data dilindungi dari penggunaan dan pengungkapan yang tidak sah. Selain aspek tradisional keamanan nasional
@@ -107,14 +122,17 @@
 			informasi hak milik.
 		\end{enumerate}
 	\end{frame}
-	
+
+
 	\begin{frame}
 		\frametitle{ Data Architecture Catalogs, Matrices, and Diagrams}
+		\framesubtitle{\hspace{1cm}}
+        \begin{small}
 		\begin{table}[]
 			\begin{tabular}{|c|c|c|}
 				\hline
 				\textbf{Catalogs} & \textbf{Matrices}   & \textbf{Diagrams} \\ \hline
-				Data Entity/Data                   & Data Entity/Business Function matrix & Conceptual Data diagram            \\ 
+				Data Entity/Data                   & Data Entity/Business Function matrix & Conceptual Data diagram            \\
 				Component catalog                  & Application/Data matrix              & Logical Data diagram               \\
 				&                                      & Data Dissemination diagram         \\
 				&                                      & Data Lifecycle diagram             \\
@@ -122,11 +140,13 @@
 				&                                      & Data Migration diagram             \\ \hline
 			\end{tabular}
 		\end{table}
+        \end{small}
 	\end{frame}
-	
-	
+
+
 	\begin{frame}
-		\frametitle{Beberapa Hal yang Perlu Diperhatikan Khususnya untuk Kerja Jarak Jauh}
+		\frametitle{Beberapa Hal yang Perlu Diperhatikan Khususnya }
+		\framesubtitle{untuk Kerja Jarak Jauh}
 		\begin{enumerate}
 			\item Migrasi data offline (fisik, digital) ke online (diakses melalui internet)
 			\item Transformasi data fisik dan tidak terstruktur ke digital dan terstruktur
@@ -137,55 +157,80 @@
 			\item Biaya data: finansial, kecepatan dan beban proses, transfer, dan penyimpanan
 		\end{enumerate}
 	\end{frame}
-	
-	
-	
 
-\begin{frame}
-	\frametitle{Inovasi Terkait Data}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\begin{center}
-				\begin{enumerate}
-					\item Text and Binary Files
-					\item Relational Database Systems (RDBMS)
-					\item Online transaction processing (OLTP) Data
-					\item Online analytical processing (OLAP) Data
-					\item Extract, Transformation, Load (ETL)
-					\item Data Warehouse 
-					\item OLAP Cube
-					\item Business Intelligence: data analysis, data mining, machine learning, artificial intelligence
-					\item Big Data
-				\end{enumerate}
-			\end{center}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\begin{center}
-				\begin{enumerate}
-					\setcounter{enumi}{9}
-					
-					\item NoSQL database systems (non-RDBMS): graph-based, column-based, document-based, in-memory, etc.
-					\item integritas data: hashing
-					\item enkripsi dan dekripsi data
-					\item Kompresi data: teks, video, audio, image.
-					\item Batch processing vs data streaming
-					\item Sequential vs parallel processing
-					\item Centralised vs distributed data
-					\item Centralised vs federated data
-					\item Centralised vs Decentralised data (Web3 movement) please search Filecoin, SOLID POD
-				\end{enumerate}
-			\end{center}
-		\end{column}
-	\end{columns}
-\end{frame}
 
-\begin{frame}
-	\frametitle{Penutup}
-	\begin{itemize}
-		\item Fase Arsitektur Data memungkinkan kita untuk mendefinisikan dan memvalidasi struktur data yang diperlukan untuk mendukung arsitektur bisnis. 
-		\item Fase ini penting untuk memastikan bahwa data dan integrasinya sesuai dengan kebutuhan bisnis.
-	\end{itemize}
-\end{frame}
+
+
+
+	\begin{frame}
+		\frametitle{Inovasi Terkait Data}
+%		\framesubtitle{\hspace{1cm}}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{center}
+					\begin{enumerate}
+						\item Text and Binary Files
+						\item Relational Database Systems (RDBMS)
+						\item Online transaction processing (OLTP) Data
+						\item Online analytical processing (OLAP) Data
+
+					\end{enumerate}
+				\end{center}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{center}
+					\begin{enumerate}
+						\setcounter{enumi}{4}
+
+						\item Sequential vs parallel processing
+						\item Centralised vs distributed data
+						\item Centralised vs federated data
+						\item Centralised vs Decentralised data (Web3 movement) please search Filecoin, SOLID POD
+					\end{enumerate}
+				\end{center}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+		\begin{frame}
+		\frametitle{Inovasi Terkait Data (2)}
+%		\framesubtitle{\hspace{1cm}}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{center}
+					\begin{enumerate}
+						\setcounter{enumi}{8}
+						\item Text and Binary Files
+						\item Relational Database Systems (RDBMS)
+						\item Online transaction processing (OLTP) Data
+						\item Online analytical processing (OLAP) Data
+					\end{enumerate}
+				\end{center}
+			\end{column}
+			\begin{column}{0.5\textwidth}
+				\begin{center}
+					\begin{enumerate}
+						\setcounter{enumi}{12}
+						\item Sequential vs parallel processing
+						\item Centralised vs distributed data
+						\item Centralised vs federated data
+						\item Centralised vs Decentralised data (Web3 movement) please search Filecoin, SOLID POD
+					\end{enumerate}
+				\end{center}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+
+
+	\begin{frame}
+		\frametitle{Penutup}
+%		\framesubtitle{\hspace{1cm}}
+		\begin{itemize}
+			\item Fase Arsitektur Data memungkinkan kita untuk mendefinisikan dan memvalidasi struktur data yang diperlukan untuk mendukung arsitektur bisnis.
+			\item Fase ini penting untuk memastikan bahwa data dan integrasinya sesuai dengan kebutuhan bisnis.
+		\end{itemize}
+	\end{frame}
 
 
 
