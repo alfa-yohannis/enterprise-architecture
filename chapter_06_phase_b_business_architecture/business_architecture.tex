@@ -7,282 +7,284 @@
 
 \subtitle{MTI102-Information System \&\\Technology Architecture}
 
-\title{Fase B: Arsitektur Bisnis dalam Metode Pengembangan Arsitektur TOGAF}
+\title{Phase B:\\Business Architecture in TOGAF\\
+     Architecture Development Method}
 \date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
 \author[Pradita]{\small {\textbf{Alfa Yohannis}}}
 
 \begin{document}
 
-	\frame{\titlepage}
+    \frame{\titlepage}
 
-	\begin{frame}
-		\frametitle{Tujuan}
-		\begin{enumerate}
-			\item Membangun Arsitektur Bisnis Target yang menjelaskan bagaimana perusahaan seharusnya beroperasi untuk mencapai tujuan bisnis, dan menaggapi penggerak bisnis strategis yang ditetapkan dalam Visi Arsitektur, dengan cara yang memenuhi atau menjawab \textit{Permintaan untuk Pekerjaan Arsitektur} dan \textit{hal-hal yang menjadi perhatian pemangku kepentingan}.
+    \begin{frame}
+        \frametitle{Destination}
+        \begin{enumerate}
+            \item Build a Target Business Architecture that describes how the company should operate to achieve business objectives, and respond to the strategic business drivers set out in the Architectural Vision, in a way that meets or answers \textit{Demand for Architectural Work} and \textit{things that be of concern to stakeholders}.
 
-			\item Mengidentifikasi komponen Peta Jalan Arsitektur berdasarkan gap antara Arsitektur Saat Ini dan Arsitektur Bisnis Target.
-		\end{enumerate}
-	\end{frame}
+            \item Identify components of the Architecture Roadmap based on the gaps between the Current Architecture and the Target Business Architecture.
+        \end{enumerate}
+    \end{frame}
 
-	\begin{frame}
-		\frametitle{Input (1)}
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
+    \begin{frame}
+        \frametitle{Input (1)}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{center}
+                    \begin{enumerate}
 
-						\item Prinsip-prinsip Bisnis, tujuan bisnis, dan penggerak bisnis
-						\item Penilaian Kapabilitas
-						\item Rencana Komunikasi
-						\item Model Organisasi untuk Arsitektur Perusahaan
-						\item Kerangka Kerja Arsitektur yang Disesuaikan
-						\item Pernyataan Kerja Arsitektur yang Disetujui
+                        \item Business principles, business goals, and business drivers
+                        \item Capability Assessment
+                        \item Communication Plan
+                        \item Organizational Models for Enterprise Architecture
+                        \item Customized Architectural Framework
+                        \item Approved Architectural Statement of Work
 
-					\end{enumerate}
-				\end{center}
-			\end{column}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\setcounter{enumi}{7}
-						\item Prinsip-prinsip Arsitektur, termasuk prinsip-prinsip bisnis yang sudah ada sebelumnya
-						\item Kontinum Perusahaan
-						\item Repositori Arsitektur
-						\item Visi Arsitektur, termasuk:
-						\begin{itemize}
-							\item Permasalahan
-							\item Tujuan Pernyataan Kerja Arsitektur
-							\item Tinjauan ringkasan
-							\item Skenario bisnis (opsional)
-							\item Persyaratan pemangku kepentingan tingkat tinggi yang terperinci
-						\end{itemize}
+                    \end{enumerate}
+                \end{center}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{center}
+                    \begin{enumerate}
+                        \setcounter{enumi}{7}
+                        \item Architectural Principles, including pre-existing business principles
+                        \item Company Continuum
+                        \item Architectural Repository
+                        \item Architectural Vision, including:
+                        \begin{itemize}
+                            \item Problem
+                            \item Purpose of Architectural Work Statement
+                            \item Overview summary
+                            \item Business scenario (optional)
+                            \item Detailed high-level stakeholder requirements
+                        \end{itemize}
 
-					\end{enumerate}
-				\end{center}
-			\end{column}
-		\end{columns}
-	\end{frame}
+                    \end{enumerate}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
 
-	\begin{frame}
-		\frametitle{Input (2)}
-		\begin{enumerate}
-			\setcounter{enumi}{11}
-			\item Rancangan Dokumen Definisi Arsitektur, termasuk (bila dalam cakupan):
-			\begin{itemize}
-				\item Arsitektur Bisnis Dasar (tingkat tinggi)
-				\item Arsitektur Data Dasar (tingkat tinggi)
-				\item Arsitektur Aplikasi Dasar (tingkat tinggi)
-				\item Arsitektur Teknologi Dasar (tingkat tinggi)
-				\item Arsitektur Bisnis Target (tingkat tinggi)
-				\item Arsitektur Data Target (tingkat tinggi)
-				\item Arsitektur Aplikasi Target (tingkat tinggi)
-				\item Arsitektur Teknologi Target (tingkat tinggi)
-			\end{itemize}
-				\item Permintaan untuk Pekerjaan Arsitektur
-		\end{enumerate}
-	\end{frame}
+    \begin{frame}
+        \frametitle{Input (2)}
+        \begin{enumerate}
+            \setcounter{enumi}{11}
+            \item Draft Architectural Definition Document, including (if in scope):
+            \begin{itemize}
+                \item Basic Business Architecture (high level)
+                \item Basic Data Architecture (high level)
+                \item Basic Application Architecture (high level)
+                \item Basic Technology Architecture (high level)
+                \item Target Business Architecture (high level)
+                \item Target Data Architecture (high level)
+                \item Target Application Architecture (high level)
+                \item Target Technology Architecture (high level)
+            \end{itemize}
+            \item Request for Architectural Work
+        \end{enumerate}
+    \end{frame}
 
-	\begin{frame}
-		\frametitle{Langkah-langkah}
-		\begin{enumerate}
-			\item Memilih model referensi, sudut pandang pelbagai aktor, dan alat-alat
-			\item Mengembangkan Deskripsi Arsitektur Bisnis Saat Ini
-			\item Mengembangkan Deskripsi Arsitektur Bisnis Target
-			\item Melakukan Analisis Gap
-			\item Mendefinisikan komponen-komponen peta jalan
-		\end{enumerate}
-
-
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Langkah-langkah(2)}
-		\begin{enumerate}
-			\setcounter{enumi}{5}
-			\item Membuat solusi atas dampak/efek samping di seluruh Lanskap Arsitektur
-			\item Melakukan kajian pemangku kepentingan secara formal terhadap arsitektur yang diajukan.
-			\item Menyelesaikan Arsitektur Bisnis
-			\item Membuat Dokumen Definisi Arsitektur
-		\end{enumerate}
+    \begin{frame}
+        \frametitle{Steps}
+        \begin{enumerate}
+            \item Select reference models, viewpoints of various actors, and tools
+            \item Developing a Description of the Current Business Architecture
+            \item Develop Target Business Architecture Description
+            \item Conduct a Gap Analysis
+            \item Defines the components of the roadmap
+        \end{enumerate}
 
 
-	\end{frame}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Steps(2)}
+        \begin{enumerate}
+            \setcounter{enumi}{5}
+            \item Create solutions to impacts/side effects across the Architectural Landscape
+            \item Conduct a formal stakeholder review of the proposed architecture.
+            \item Complete the Business Architecture
+            \item Create an Architecture Definition Document
+        \end{enumerate}
 
 
-	\begin{frame}
-		\frametitle{Output}
-		\begin{enumerate}
-			\item Pernyataan Kerja Arsitektur, diperbarui jika diperlukan
-			\item Prinsip-prinsip bisnis yang tervalidasi, tujuan bisnis, dan penggerak bisnis
-			\item Prinsip-prinsip Arsitektur Bisnis yang dimuktahirkan
-			\item Draf Dokumen Definisi Arsitektur, termasuk konten yang telah diperbaharui
-			\item Draf Spesifikasi Persyaratan Arsitektur, termasuk konten yang telah diperbaharui
-			\item Komponen Arsitektur Bisnis dari Peta Jalan Arsitektur
-		\end{enumerate}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Menggunakan Repositori Arsitektur}
-		\framesubtitle{\hspace{1cm}}
-		Tim arsitektur perlu mempertimbangkan sumber daya Arsitektur Bisnis yang relevan yang tersedia dari Repositori Arsitektur, terutama:
-		\begin{enumerate}
-			\item standar umum yang berlaku
-			\item Model bisnis generik yang relevan dengan sektor industri organisasi (industri ritel dan kesehatan)
-			\item Model bisnis yang relevan dengan domain bisnis (ritel alat kesehatan)
-			\item Blok bangunan khusus perusahaan (komponen proses, aturan bisnis, deskripsi pekerjaan, dll.)
-
-		\end{enumerate}
-	\end{frame}
+    \end{frame}
 
 
-	\begin{frame}
-		\frametitle{Mengidenfikasi Katalog, Matrix, dan Diagram}
-		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\item Katalog mengumpulkan inventaris aset inti bisnis.
-			\item Matriks menunjukkan hubungan inti antara entitas model.
-			\item Diagram menggambarkan informasi Arsitektur Bisnis dari berbagai perspektif (pandangan).
-		\end{enumerate}
-	\end{frame}
+    \begin{frame}
+        \frametitle{Output}
+        \begin{enumerate}
+            \item Architectural Statement of Work, updated as necessary
+            \item Validated business principles, business objectives, and business drivers
+            \item Updated Principles of Business Architecture
+            \item Draft Architectural Definition Document, including updated content
+            \item Draft Architectural Requirements Specification, including updated content
+            \item Business Architecture Components of the Architecture Roadmap
+        \end{enumerate}
+    \end{frame}
 
-	{
-		\setbeamertemplate{navigation symbols}{}
-		\setbeamertemplate{footline}{}
-		\begin{frame}
-			\centering
-			\frametitle{Katalog, Matrix, dan Diagram}
-			\includegraphics[width=.6\textwidth]{../figures/catalogs_matrices_diagrams.png}
-		\end{frame}
-	}
+    \begin{frame}
+        \frametitle{Using the Architecture Repository}
+        \framesubtitle{\hspace{1cm}}
+        Architecture teams need to consider relevant Business Architecture resources available from the Architecture Repository, especially:
+        \begin{enumerate}
+            \item general standards that apply
+            \item Generic business models relevant to the organization's industry sector (retail and healthcare industries)
+            \item Business models relevant to the business domain (medical device retail)
+            \item Company-specific building blocks (process components, business rules, job descriptions, etc.)
 
-	\begin{frame}
-		\frametitle{Isi Dokumen Definisi Arsitektur}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\item Lingkup
-						\item Tujuan, objektif, dan kendala
-						\item Prinsip-prinsip arsitektur
-						\item Arsitektur dasar
-						\item Model arsitektur (untuk setiap keadaan yang akan dimodelkan); seperti model untuk Arsitektur Bisnis, Arsitektur Data, Arsitektur Aplikasi, dan Arsitektur Teknologi
-
-					\end{enumerate}
-				\end{center}
-			\end{column}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\setcounter{enumi}{5}
-						\item Rationale dan justifikasi untuk pendekatan arsitektur
-						\item Pemetaan ke Repositori Arsitektur, termasuk pemetaan ke Lanskap Arsitektur, model referensi, standar, serta penilaian penggunaan kembali
-						\item Analisis kesenjangan
-						\item Penilaian dampak
-						\item Arsitektur Transisi
-					\end{enumerate}
-				\end{center}
-			\end{column}
-		\end{columns}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Isi Komponen Arsitektur Bisnis}
-		\begin{enumerate}
-			\item Baseline Arsitektur Bisnis, jika sesuai; ini adalah deskripsi dari Arsitektur Bisnis yang ada.
-			\item Target Arsitektur Bisnis, termasuk:
-			\item Tampilan yang sesuai dengan pandangan yang dipilih untuk mengatasi kekhawatiran pemangku kepentingan utama.
-		\end{enumerate}
-	\end{frame}
-
-		\begin{frame}
-		\frametitle{Isi Komponen Arsitektur Bisnis(2)}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\setcounter{enumi}{3}
-			\item Target Arsitektur Bisnis, termasuk:
-			\begin{itemize}
-				\item \textbf{Struktur organisasi} yang mengidentifikasi lokasi bisnis dan menghubungkannya dengan unit organisasi.
-				\item \textbf{Tujuan dan objektif bisnis} untuk perusahaan dan setiap unit organisasi.
-				\item \textbf{Fungsi bisnis} yang diidentifikasi menggunakan langkah rinci dan rekursif yang melibatkan dekomposisi berurutan dari area fungsi utama menjadi sub-fungsi.
-				\item \textbf{Layanan bisnis} yang diberikan oleh perusahaan dan setiap unit perusahaan kepada pelanggannya, baik internal maupun eksternal.
-			\end{itemize}
-		\end{enumerate}
-	\end{frame}
+        \end{enumerate}
+    \end{frame}
 
 
-	\begin{frame}
-		\frametitle{Isi Komponen Arsitektur Bisnis (3)}
-%		\framesubtitle{\hspace{1cm}}
-			\begin{itemize}
-                \item \textbf{Proses bisnis}, termasuk ukuran dan hasil yang dihasilkan.
-				\item \textbf{Peran bisnis}, termasuk pengembangan dan modifikasi persyaratan keahlian.
-				\item \textbf{Model data bisnis}.
-				\item \textbf{Korelasi organisasi dan fungsi} yang menghubungkan fungsi bisnis dengan unit organisasi dalam bentuk laporan matriks.
-			\end{itemize}
-	\end{frame}
+    \begin{frame}
+        \frametitle{Identifying Catalogs, Matrix, and Diagrams}
+        \framesubtitle{\hspace{1cm}}
+        \begin{enumerate}
+            \item Catalogs collect an inventory of a business's core assets.
+            \item The matrix shows the core relationships between model entities.
+            \item Diagrams depict Business Architecture information from various perspectives (views).
+        \end{enumerate}
+    \end{frame}
+
+{
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{footline}{}
+    \begin{frame}
+        \centering
+        \frametitle{Catalog, Matrix, and Diagram}
+        \includegraphics[width=.6\textwidth]{../figures/catalogs_matrices_diagrams.png}
+    \end{frame}
+}
+
+\begin{frame}
+    \frametitle{Contents of Architecture Definition Document}
+     \framesubtitle{\hspace{1cm}}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \begin{enumerate}
+                    \item Scope
+                    \item Goals, objectives, and constraints
+                    \item Architectural principles
+                    \item Basic architecture
+                    \item Architectural model (for each state to be modeled); such as models for Business Architecture, Data Architecture, Application Architecture, and Technology Architecture
+
+                \end{enumerate}
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \begin{enumerate}
+                    \setcounter{enumi}{5}
+                    \item Rationale and justification for architectural approaches
+                    \item Mappings to Architectural Repositories, including mappings to Architectural Landscapes, reference models, standards, as well as reuse assessments
+                    \item Gap analysis
+                    \item Impact assessment
+                    \item Transitional Architecture
+                \end{enumerate}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Contents of Business Architecture Components}
+     \framesubtitle{\hspace{1cm}}
+    \begin{enumerate}
+        \item Business Architecture Baseline, if applicable; this is a description of the existing Business Architecture.
+        \item Target Business Architecture, including:
+        \item Views that align with selected views to address key stakeholder concerns.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Contents of Business Architecture Components(2)}
+     \framesubtitle{\hspace{1cm}}
+    \begin{enumerate}
+        \setcounter{enumi}{3}
+        \item Target Business Architecture, including:
+        \begin{itemize}
+            \item \textbf{Organizational structure} that identifies business locations and links them to organizational units.
+            \item \textbf{Business goals and objectives} for the company and each organizational unit.
+            \item \textbf{Business functions} are identified using detailed, recursive steps involving sequential decomposition of major functional areas into sub-functions.
+            \item \textbf{Business services} provided by the company and each company unit to its customers, both internal and external.
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Contents of Business Architecture Components (3)}
+     \framesubtitle{\hspace{1cm}}
+    \begin{itemize}
+        \item \textbf{Business processes}, including measures and results produced.
+        \item \textbf{Business role}, including development and modification of skill requirements.
+        \item \textbf{Business data model}.
+        \item \textbf{Organizational and functional correlation} that connects business functions with organizational units in the form of a matrix report.
+    \end{itemize}
+\end{frame}
 
 
 
-	\begin{frame}
-		\frametitle{Isi Spesifikasi Kebutuhan Arsitektur}
-		\framesubtitle{\hspace{1cm}}
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\item Ukuran keberhasilan
-						\item Persyaratan arsitektur
-						\item Kontrak layanan bisnis
-						\item Kontrak layanan aplikasi
-						\item Panduan implementasi
-						\item Spesifikasi implementasi
+\begin{frame}
+    \frametitle{Fill in the Architectural Requirements Specification}
+    \framesubtitle{\hspace{1cm}}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \begin{enumerate}
+                    \item Measure of success
+                    \item Architectural requirements
+                    \item Business services contracts
+                    \item Application service contract
+                    \item Implementation guide
+                    \item Implementation specifications
 
-					\end{enumerate}
-				\end{center}
-			\end{column}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\setcounter{enumi}{6}
-						\item Standar implementasi
-						\item Persyaratan interoperabilitas
-						\item Persyaratan manajemen layanan TI
-						\item Kendala
-						\item Asumsi
-					\end{enumerate}
-				\end{center}
-			\end{column}
-		\end{columns}
-	\end{frame}
+                \end{enumerate}
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \begin{enumerate}
+                    \setcounter{enumi}{6}
+                    \item Standard implementation
+                    \item Interoperability requirements
+                    \item IT service management requirements
+                    \item Constraints
+                    \item Assumptions
+                \end{enumerate}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-	\begin{frame}
-		\frametitle{Kebutuhan Arsitektur Bisnis}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\item Hasil Analisis Gap
-			\item Kebutuhan bisnis yang diperbarui, diidentifikasi dengan menggunakan teknik Skenario Bisnis
-		\end{enumerate}
-	\end{frame}
+\begin{frame}
+    \frametitle{Business Architecture Requirements}
+     \framesubtitle{\hspace{1cm}}
+    \begin{enumerate}
+        \item Gap Analysis Results
+        \item Updated business requirements, identified using Business Scenario techniques
+    \end{enumerate}
+\end{frame}
 
-	\begin{frame}
-		\frametitle{Kebutuhan Arsitektur Bisnis (2)}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\setcounter{enumi}{2}
-			\item Kebutuhan teknis: Sebuah set awal kebutuhan teknis harus dihasilkan sebagai output dari Fase B: Arsitektur Bisnis. Ini menjadi pendorong untuk pekerjaan Arsitektur Teknologi yang akan datang, dan harus mengidentifikasi, mengategorikan, dan mengutamakan implikasi untuk pekerjaan di domain arsitektur yang tersisa; misalnya, dengan menggunakan matriks ketergantungan/prioritas (misalnya, memandu kompromi antara kecepatan pemrosesan transaksi dan keamanan) dan daftar model khusus yang diharapkan dihasilkan.
+\begin{frame}
+    \frametitle{Business Architecture Requirements (2)}
+     \framesubtitle{\hspace{1cm}}
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item Technical requirements: An initial set of technical requirements should be generated as the output of Phase B: Business Architecture. This serves as the impetus for future Technology Architecture work, and should identify, categorize, and prioritize implications for work in the remaining architectural domains; for example, by using a dependency/priority matrix (e.g., guiding the trade-off between transaction processing speed and security) and a list of expected custom models is generated.
 
-		\end{enumerate}
-	\end{frame}
+    \end{enumerate}
+\end{frame}
 
 
-	\begin{frame}
-		\frametitle{Ringkasan}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\item Fase Arsitektur Bisnis memungkinkan kita untuk mendefinisikan dan memvalidasi arsitektur bisnis yang diperlukan untuk mendukung strategi bisnis.
-			\item Fase ini penting untuk memastikan bahwa arsitektur bisnis sejalan dengan kebutuhan stakeholder.
-		\end{enumerate}
-	\end{frame}
+\begin{frame}
+    \frametitle{Summary}
+    % \framesubtitle{\hspace{1cm}}
+    \begin{enumerate}
+        \item The Business Architecture phase allows us to define and validate the business architecture required to support the business strategy.
+        \item This phase is important to ensure that the business architecture is aligned with stakeholder needs.
+    \end{enumerate}
+\end{frame}
 
 \end{document}
