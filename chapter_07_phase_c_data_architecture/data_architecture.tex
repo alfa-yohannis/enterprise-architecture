@@ -5,232 +5,206 @@
 
 \usetheme{Pradita}
 
-\subtitle{MTI102-Information System \&\\Technology Architecture}
+\subtitle{MTI102-Information Systems \&\\Technology Architecture}
 
-\title{Fase C: Arsitektur Data dalam Metode \&\\ Pengembangan Arsitektur TOGAF}
+\title{\Large Phase C: Data Architecture\\in TOGAF
+    Architecture\\Development Method (ADM)}
 \date[Serial]{\scriptsize {PRU/SPMI/FR-BM-18/0222}}
 \author[Pradita]{\small {\textbf{Alfa Yohannis}}}
 
 \begin{document}
 
-	\frame{\titlepage}
+    \frame{\titlepage}
 
-	\begin{frame}
-		\frametitle{Tujuan}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{itemize}
-			\item Mengembangkan Arsitektur Data Target yang memampukan Arsitektur Bisnis dan Visi Arsitektur tercapai, sambil menangani Permintaan Pekerjaan Arsitektur dan \textit{concerns} dari \textit{stakeholders}.
-			\item Identifikasi kandidat komponen Peta Jalan Arsitektur berdasarkan gap antara Baseline dan Target Data Architectures
-		\end{itemize}
-	\end{frame}
+    \begin{frame}
+        \frametitle{Goals}
+        % \framesubtitle{\hspace{1cm}}
+        \begin{itemize}
+            \item Develop Target Data Architectures that enable the Business Architecture and Architectural Vision to be achieved while addressing Architectural Work Requests and \textit{concerns} from \textit{stakeholders}.
+            \item Identify candidate Architecture Roadmap components based on gaps between Baseline and Target Data Architectures
+        \end{itemize}
+    \end{frame}
 
-	\begin{frame}
-		\frametitle{Input (1)}
-%		\framesubtitle{\hspace{1cm}}
-			\vspace{20pt}
-					\begin{enumerate}
-						\item Permintaan Pekerjaan Arsitektur
-						\item Penilaian Kapabilitas
-						\item Rencana Komunikasi
-						\item Model Organisasi untuk Arsitektur Perusahaan
-						\item Kerangka Kerja Arsitektur yang sudah Disesuaikan
-						\item Prinsip data, jika ada
-						\item Pernyataan Pekerjaan Arsitektur
-						\item Draf Spesifikasi Persyaratan Arsitektur Rancangan:
-						\begin{enumerate}
-							\item Hasil Analisis Gap
-							\item Persyaratan teknis relevan lain
-						\end{enumerate}
-					\end{enumerate}
-	\end{frame}
-
-
-	\begin{frame}
-		\frametitle{Input (2)}
-%		\framesubtitle{\hspace{1cm}}
-			\vspace{20pt}
-					\begin{enumerate}
-						\setcounter{enumi}{8}
-						\item Visi Arsitektur
-						\item Repositori Arsitektur
-						\item Draf Dokumen Definisi Arsitektur:
-						\begin{enumerate}
-							\item Arsitektur Bisnis Dasar (detil)
-							\item Target Arsitektur Bisnis (detil)
-							\item Arsitektur Data Dasar (tingkat tinggi)
-							\item Arsitektur Data Target (garis besar)
-							\item Arsitektur Aplikasi Dasar (garis besar)
-							\item Arsitektur Aplikasi Target (garis besar)
-							\item Arsitektur Teknologi Dasar (garis besar)
-							\item Arsitektur Teknologi Target (garis besar)
-						\end{enumerate}
-						\item Komponen Arsitektur Bisnis dari Peta Jalan Arsitektur
-					\end{enumerate}
-	\end{frame}
-
-
-	\begin{frame}
-		\frametitle{Langkah-langkah}
+    \begin{frame}
+        \frametitle{Input (1)}
+        % \framesubtitle{\hspace{1cm}}
         \vspace{20pt}
-		\begin{enumerate}
-			\item Pilih model referensi, sudut pandang, dan alat
-			\item Kembangkan Deskripsi Arsitektur Data Baseline
-			\item Kembangkan Deskripsi Arsitektur Data Target
-			\item Lakukan Analisis Gap
-			\item Menentukan kandidat komponen peta jalan
-			\item Selesaikan dampak di Lanskap Arsitektur
-			\item Lakukan tinjauan formal pemangku kepentingan
-			\item Menyelesaikan Arsitektur Data
-			\item Buat Dokumen Definisi Arsitektur
-		\end{enumerate}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Output}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\item Pernyataan Pekerjaan Arsitektur, diperbarui jika diperlukan
-			\item Prinsip data tervalidasi, atau prinsip data baru
-			\item Draf Dokumen Definisi Arsitektur, dengan isi yang telah diperbarui
-			\item Spesifikasi Persyaratan Arsitektur Rancangan, termasuk yang sudah diperbarui
-			\item Komponen Arsitektur Data dari Peta Jalan Arsitektur
-		\end{enumerate}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Prinsip-prinsip Data}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\item \textbf{Data adalah Aset}.
-			Data adalah aset yang memiliki nilai bagi perusahaan dan dikelola sesuai dengan itu.
-			\item \textbf{Data is shared}.
-			Pengguna memiliki akses ke data yang diperlukan untuk menjalankan tugasnya; oleh karena itu, data dibagikan di seluruh fungsi perusahaan
-			dan organisasi.
-			\item \textbf{Data Dapat Diakses}. Data dapat diakses oleh pengguna untuk menjalankan fungsinya.
-		\end{enumerate}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Prinsip-prinsip Data (2)}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{enumerate}
-			\setcounter{enumi}{3}
-			\item \textbf{Definisi Kosakata dan Data Bersama}. Data didefinisikan secara konsisten di seluruh perusahaan, dan definisi tersebut dapat dimengerti dan tersedia untuk semua pengguna.
-			\item \textbf{Keamanan Data}.
-			Data dilindungi dari penggunaan dan pengungkapan yang tidak sah. Selain aspek tradisional keamanan nasional
-			klasifikasi, ini termasuk, namun tidak terbatas pada, perlindungan pra-keputusan, sensitif, pemilihan sumber sensitif, dan
-			informasi hak milik.
-		\end{enumerate}
-	\end{frame}
+        \begin{enumerate}
+            \item Architectural Job Request
+            \item Capability Assessment
+            \item Communication Plan
+            \item Organizational Models for Enterprise Architecture
+            \item Customized Architectural Framework
+            \item Data principles, if any
+            \item Statement of Architectural Work
+            \item Draft Architectural Requirements Specification Design:
+            \begin{enumerate}
+                \item Gap Analysis Results
+                \item Other relevant technical requirements
+            \end{enumerate}
+        \end{enumerate}
+    \end{frame}
 
 
-	\begin{frame}
-		\frametitle{ Data Architecture Catalogs, Matrices, and Diagrams}
-		\framesubtitle{\hspace{1cm}}
+    \begin{frame}
+        \frametitle{Input (2)}
+        % \framesubtitle{\hspace{1cm}}
+        \vspace{20pt}
+        \begin{enumerate}
+            \setcounter{enumi}{8}
+            \item Architectural Vision
+            \item Architectural Repository
+            \item Draft Architectural Definition Document:
+            \begin{enumerate}
+                \item Baseline Business Architecture (detailed)
+                \item Target Business Architecture (detailed)
+                \item Baseline Data Architecture (outline)
+                \item Target Data Architecture (outline)
+                \item Baseline Application Architecture (outline)
+                \item Target Application Architecture (outline)
+                \item Baseline Technology Architecture (outline)
+                \item Target Technology Architecture (outline)
+            \end{enumerate}
+            \item Business Architecture Components of the Architecture Roadmap
+        \end{enumerate}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Steps}
+        \vspace{20pt}
+        \begin{enumerate}
+            \item Select a reference model, viewpoint, and tool
+            \item Develop Baseline Data Architecture Description
+            \item Develop Target Data Architecture Description
+            \item Perform a Gap Analysis
+            \item Specifies candidate roadmap components
+            \item Resolve impact in Architectural Landscape
+            \item Conduct a formal stakeholder review
+            \item Complete Data Architecture
+            \item Create an Architecture Definition Document
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Output}
+        % \framesubtitle{\hspace{1cm}}
+        \begin{enumerate}
+            \item Architectural Statement of Work, updated as necessary
+            \item Validated data principles, or new data principles
+            \item Draft Architectural Definition Document, with updated content
+            \item Design Architectural Requirements Specifications, including those that have been updated
+            \item Data Architecture Components of the Architecture Roadmap
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Data Principles}
+        % \framesubtitle{\hspace{1cm}}
+        \begin{enumerate}
+            \item \textbf{Data is an Asset}.
+            Data is an asset that has value to a company and is managed accordingly.
+            \item \textbf{Data is shared}.
+            Users can access the data necessary to carry out their tasks; therefore, data is shared across company functions
+            and organizations.
+            \item \textbf{Accessible Data}. Data can be accessed by users to carry out their functions.
+        \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+        \frametitle{Data Principles (2)}
+        % \framesubtitle{\hspace{1cm}}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item \textbf{Vocabulary Definitions and Shared Data}. Data is defined consistently across the enterprise, and the definitions are understandable and available to all users.
+            \item \textbf{Data Security}.
+            Data is protected from unauthorized use and disclosure. In addition to traditional aspects of national security
+            classifications, these include, but are not limited to, pre-decision protection, sensitive, sensitive source selection, and
+            proprietary information.
+        \end{enumerate}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{ Data Architecture Catalogs, Matrices, and Diagrams}
+        \framesubtitle{\hspace{1cm}}
         \begin{small}
-		\begin{table}[]
-			\begin{tabular}{|c|c|c|}
-				\hline
-				\textbf{Catalogs} & \textbf{Matrices}   & \textbf{Diagrams} \\ \hline
-				Data Entity/Data                   & Data Entity/Business Function matrix & Conceptual Data diagram            \\
-				Component catalog                  & Application/Data matrix              & Logical Data diagram               \\
-				&                                      & Data Dissemination diagram         \\
-				&                                      & Data Lifecycle diagram             \\
-				&                                      & Data Security diagram              \\
-				&                                      & Data Migration diagram             \\ \hline
-			\end{tabular}
-		\end{table}
+            \begin{table}[]
+                \begin{tabular}{|c|c|c|}
+                    \hline
+                    \textbf{Catalogs} & \textbf{Matrices} & \textbf{Diagrams} \\ \hline
+                    Data Entity/Data & Data Entity/Business Function matrix & Conceptual Data diagram \\
+                    Component catalog & Application/Data matrix & Logical Data diagram \\
+                    & & Data Dissemination diagram \\
+                    & & Data Lifecycle diagram \\
+                    & & Data Security diagram \\
+                    & & Data Migration diagram \\ \hline
+                \end{tabular}
+            \end{table}
         \end{small}
-	\end{frame}
+    \end{frame}
 
 
-	\begin{frame}
-		\frametitle{Beberapa Hal yang Perlu Diperhatikan Khususnya }
-		\framesubtitle{untuk Kerja Jarak Jauh}
-		\begin{enumerate}
-			\item Migrasi data offline (fisik, digital) ke online (diakses melalui internet)
-			\item Transformasi data fisik dan tidak terstruktur ke digital dan terstruktur
-			\item Kemananan data: enkripsi, manajemen password, hak akses, dll
-			\item Tata kelola data: otorisasi dan pengaturan CRUD (create, read, update, delete) data, berapa lama data disimpan sebelum dihapus
-			\item Bagaimana menyimpan, membagikan, mengakses, memperoses data
-			\item backup dan accident/disaster recovery
-			\item Biaya data: finansial, kecepatan dan beban proses, transfer, dan penyimpanan
-		\end{enumerate}
-	\end{frame}
-
-
-
-
-
-	\begin{frame}
-		\frametitle{Inovasi Terkait Data}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\item Text and Binary Files
-						\item Relational Database Systems (RDBMS)
-						\item Online transaction processing (OLTP) Data
-						\item Online analytical processing (OLAP) Data
-
-					\end{enumerate}
-				\end{center}
-			\end{column}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\setcounter{enumi}{4}
-
-						\item Sequential vs parallel processing
-						\item Centralised vs distributed data
-						\item Centralised vs federated data
-						\item Centralised vs Decentralised data (Web3 movement) please search Filecoin, SOLID POD
-					\end{enumerate}
-				\end{center}
-			\end{column}
-		\end{columns}
-	\end{frame}
-
-		\begin{frame}
-		\frametitle{Inovasi Terkait Data (2)}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{columns}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\setcounter{enumi}{8}
-						\item Text and Binary Files
-						\item Relational Database Systems (RDBMS)
-						\item Online transaction processing (OLTP) Data
-						\item Online analytical processing (OLAP) Data
-					\end{enumerate}
-				\end{center}
-			\end{column}
-			\begin{column}{0.5\textwidth}
-				\begin{center}
-					\begin{enumerate}
-						\setcounter{enumi}{12}
-						\item Sequential vs parallel processing
-						\item Centralised vs distributed data
-						\item Centralised vs federated data
-						\item Centralised vs Decentralised data (Web3 movement) please search Filecoin, SOLID POD
-					\end{enumerate}
-				\end{center}
-			\end{column}
-		\end{columns}
-	\end{frame}
+    \begin{frame}
+        \frametitle{Some Things to Pay Special Attention to }
+        \framesubtitle{for Remote Work}
+        \begin{enumerate}
+            \item Offline data migration (physical, digital) to online (accessed via the internet)
+            \item Transformation of physical and unstructured data to digital and structured
+            \item Data security: encryption, password management, access rights, etc
+            \item Data governance: authorization and CRUD (create, read, update, delete) data settings, how long data is stored before being deleted
+            \item How to store, share, access, process data
+            \item backup and accident/disaster recovery
+            \item Data costs: financial, speed and load of processing, transfer, and storage
+        \end{enumerate}
+    \end{frame}
 
 
 
-	\begin{frame}
-		\frametitle{Penutup}
-%		\framesubtitle{\hspace{1cm}}
-		\begin{itemize}
-			\item Fase Arsitektur Data memungkinkan kita untuk mendefinisikan dan memvalidasi struktur data yang diperlukan untuk mendukung arsitektur bisnis.
-			\item Fase ini penting untuk memastikan bahwa data dan integrasinya sesuai dengan kebutuhan bisnis.
-		\end{itemize}
-	\end{frame}
+
+
+    \begin{frame}
+        \frametitle{Data Related Innovation}
+        % \framesubtitle{\hspace{1cm}}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{center}
+                    \begin{enumerate}
+                        \item Text and Binary Files
+                        \item Relational Database Systems (RDBMS)
+                        \item Online transaction processing (OLTP) Data
+                        \item Online analytical processing (OLAP) Data
+                        \item NoSQL and Unstructured Data
+                        \item graph database
+                        \item file-based database
+                    \end{enumerate}
+                \end{center}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{center}
+                    \begin{enumerate}
+                        \setcounter{enumi}{7}
+                        \item column-based database
+                        \item in-memory database
+                        \item Sequential vs parallel processing
+                        \item Centralized vs distributed data
+                        \item Centralized vs federated data
+                        \item Centralized vs Decentralized data (Web3 movement) please search Filecoin, SOLID POD
+                    \end{enumerate}
+                \end{center}
+            \end{column}
+        \end{columns}
+    \end{frame}
+
+
+    \begin{frame}
+        \frametitle{Afterword}
+        % \framesubtitle{\hspace{1cm}}
+        \begin{itemize}
+            \item The Data Architecture phase allows us to define and validate the data structures required to support the business architecture.
+            \item This phase is important to ensure that the data and its integration meet business needs.
+        \end{itemize}
+    \end{frame}
 
 
 
