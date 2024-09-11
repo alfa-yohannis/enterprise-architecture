@@ -1,0 +1,69 @@
+\documentclass{book}
+
+\usepackage[a4paper,margin=3cm]{geometry}
+\usepackage{cite} % for IEEE-style citations
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+
+% Define Java language style for listings
+\lstdefinestyle{JavaStyle}{
+	language=Java,
+	basicstyle=\ttfamily\footnotesize,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{red},
+	breaklines=true,
+	showstringspaces=false,
+	tabsize=2,
+	captionpos=b,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{gray}\ttfamily,
+	string=[s]{'}{'},
+	morestring=[s]{"}{"},
+%	stringstyle=\color{teal}\ttfamily,
+%	showstringspaces=false
+}
+
+\begin{document}
+		
+	\begin{titlepage}
+		\centering
+		\vspace*{1cm}
+		
+		\Huge
+		\textbf{MTI102 - Information System \& Technology Architecture}
+		
+		\vspace{0.5cm}
+		
+		\LARGE
+		Universitas Pradita
+		
+		\vspace{1.5cm}
+		
+		\textit{Powered by ChatGPT}
+		
+		\vspace{2cm}
+		
+		\textbf{Alfa Yohannis}
+		
+		\vspace{0.8cm}
+		
+		\today
+		
+		\vfill
+	\end{titlepage}
+	
+	% Contents Page
+	\tableofcontents
+	
+	
+	\include{Pertemuan01.tex}
+	\include{Pertemuan02.tex}
+	\include{Pertemuan03.tex}
+
+\end{document}
