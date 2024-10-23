@@ -1,0 +1,30 @@
+@startuml
+package "Offline Examination System" {
+
+  artifact "Question Paper Preparation" as questionPaperPrep
+  component "Attendance Tracking System" as attendanceSystem
+  artifact "Physical Answer Sheet Storage" as answerSheetStorage
+  artifact "Grading Room" as gradingRoom
+  component "Result Processing System" as resultProcessing
+  component "Incident Reporting System" as incidentReporting
+
+  questionPaperPrep --> gradingRoom : "Provides Exam Papers"
+  attendanceSystem --> incidentReporting : "Logs Incidents"
+  answerSheetStorage --> gradingRoom : "Stores Answer Sheets"
+  gradingRoom --> resultProcessing : "Stores Grading Results"
+  resultProcessing --> incidentReporting : "Logs Result Issues"
+
+}
+
+actor "Lecturer" as lecturer
+actor "Student" as student
+actor "Invigilator" as invigilator
+
+lecturer --> questionPaperPrep : "Prepares Question Papers"
+invigilator --> attendanceSystem : "Tracks Attendance"
+student --> answerSheetStorage : "Submits Answer Sheets"
+lecturer --> gradingRoom : "Grades Answer Sheets"
+invigilator --> incidentReporting : "Submits Incident Reports"
+student --> resultProcessing : "Receives Final Results"
+
+@enduml

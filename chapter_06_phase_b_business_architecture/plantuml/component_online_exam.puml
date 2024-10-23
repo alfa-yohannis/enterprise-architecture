@@ -1,74 +1,32 @@
 @startuml
-left to right direction
+package "Online Examination System" {
 
-package "Online Exam System" {
+  component "Exam Management Platform" as examPlatform
+  component "Identity Verification System" as identitySystem
+  component "Exam Management System" as examSystem
+  component "Grading System" as gradingSystem
+  component "Notification System" as notificationSystem
+  component "Storage System" as submissionStorage
+  component "Database" as examDatabase
 
-  component "Examination Platform" as Examination_Platform {
-    component "Question Bank" as Question_Bank
-    component "Time Management System" as Time_Management_System
-    component "Submission System" as Submission_System
-    component "Auto-Submit Feature" as Auto_Submit_Feature
-    component "Grading System" as Grading_System
-    component "Result Management System" as Result_Management_System
-  }
-
-  component "Authentication System" as Authentication_System {
-    component "User Login" as User_Login
-    component "Two-Factor Authentication" as Two_Factor_Authentication
-  }
-
-  component "Proctoring Tools" as Proctoring_Tools {
-    component "Webcam Monitoring" as Webcam_Monitoring
-    component "Screen Monitoring" as Screen_Monitoring
-    component "Browser Lockdown" as Browser_Lockdown
-  }
-
-  component "Security Components" as Security_Components {
-    component "Data Encryption" as Data_Encryption
-    component "Plagiarism Detection" as Plagiarism_Detection
-    component "Backup System" as Backup_System
-  }
-
-  component "Communication System" as Communication_System {
-    component "Notifications" as Notifications
-    component "Exam Instructions" as Exam_Instructions
-    component "Feedback Mechanism" as Feedback_Mechanism
-  }
-
-  component "Technical Support" as Technical_Support {
-    component "Help Desk" as Help_Desk
-    component "Support Ticket System" as Support_Ticket_System
-  }
-
-  component "Hardware and Network" as Hardware_and_Network {
-    component "Student Devices" as Student_Devices
-    component "Internet Connection" as Internet_Connection
-    component "Server Infrastructure" as Server_Infrastructure
-  }
-
+  examPlatform --> examSystem : "Handles Exams"
+  examPlatform --> identitySystem : "Uses for Authentication"
+  examPlatform --> notificationSystem : "Sends Notifications"
+  examPlatform --> submissionStorage : "Stores Submissions"
+  examSystem --> examDatabase : "Stores Metadata and Results"
+  gradingSystem --> examDatabase : "Fetch Exam and Submissions"
+  gradingSystem --> notificationSystem : "Notify Grades"
+  submissionStorage --> examDatabase : "Store Submission Metadata"
 }
- 
-actor Lecturer
-actor Student
 
-Lecturer --> Examination_Platform : Prepares Exam
-Lecturer --> Examination_Platform : Uploads Questions
-Examination_Platform --> Lecturer : Provides Results
-Lecturer --> Technical_Support : Seeks Help
+actor "Lecturer" as lecturer
+actor "Student" as student
 
-Student --> Authentication_System : Logs in
-Authentication_System --> Student : Authenticates Identity
-Student --> Examination_Platform : Takes Exam
-Student --> Submission_System : Submits Answers
-Student --> Result_Management_System : Views Results
-Student --> Technical_Support : Seeks Help
-
-Examination_Platform --> Notifications : Sends Notifications
-Examination_Platform --> Exam_Instructions : Provides Exam Instructions
-Examination_Platform --> Feedback_Mechanism : Collects Feedback
-Proctoring_Tools --> Examination_Platform : Monitors Exam
-Security_Components --> Examination_Platform : Ensures Data Security
-
-Hardware_and_Network --> Student : Provides Device and Connectivity
+lecturer --> examPlatform : "Creates Exam"
+lecturer --> gradingSystem : "Evaluates Answers"
+student --> examPlatform : "Takes Exam"
+student --> identitySystem : "Verifies Identity"
+student --> examPlatform : "Submits Answers"
+student --> notificationSystem : "Receives Notifications"
 
 @enduml

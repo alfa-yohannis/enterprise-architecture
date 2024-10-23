@@ -1,0 +1,29 @@
+@startuml
+actor "Lecturer" as lecturer
+actor "Student" as student
+participant "Exam Management System" as examSystem
+participant "Identity Verification System" as identitySystem
+participant "Platform" as platform
+
+lecturer -> examSystem : Create and Upload Exam Materials
+lecturer -> examSystem : Define Exam Rules (Duration, Format, etc.)
+
+student -> platform : Log in to Examination Platform
+student -> identitySystem : Authenticate Identity
+identitySystem -> platform : Verify Identity Status
+
+lecturer -> platform : Monitor Student Activities
+lecturer -> platform : Start Online Examination
+
+student -> platform : Take Online Examination
+student -> platform : Submit Answers
+platform -> examSystem : Store Submissions
+platform -> platform : Auto-Submit at Time Limit
+
+lecturer -> examSystem : Evaluate Answers
+lecturer -> examSystem : Assign Grades
+examSystem -> platform : Publish Results
+
+student -> platform : View Results
+
+@enduml

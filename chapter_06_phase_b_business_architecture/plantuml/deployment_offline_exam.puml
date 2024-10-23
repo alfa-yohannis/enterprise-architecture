@@ -1,0 +1,52 @@
+@startuml
+
+' Define Nodes (Physical or Virtual Machines/Services)
+node "Offline Examination System" as offlineExamSystem {
+
+  node "Print Server" as printServer {
+    artifact "Question Paper Printer" as questionPaperPrinter
+  }
+
+  node "Storage Room" as storageRoom {
+    artifact "Physical Answer Sheets Storage" as answerSheetStorage
+  }
+
+  node "Grading Room" as gradingRoom {
+    artifact "Manual Grading" as manualGrading
+    artifact "Grading Records Storage" as gradingRecordsStorage
+  }
+
+  node "Admin Office" as adminOffice {
+    artifact "Attendance Sheets" as attendanceSheets
+    artifact "Invigilator Logs" as invigilatorLogs
+    artifact "Incident Reports" as incidentReports
+  }
+
+  node "Results Office" as resultsOffice {
+    artifact "Final Results Storage" as resultsStorage
+    artifact "Printed Results Notifications" as resultsNotifications
+  }
+
+}
+
+' Define Actors
+actor "Lecturer" as lecturer
+actor "Student" as student
+actor "Invigilator" as invigilator
+
+' Relationships and Interactions
+lecturer --> questionPaperPrinter : "Print Question Papers"
+invigilator --> student : "Verify Student Identity"
+invigilator --> attendanceSheets : "Record Attendance"
+student --> answerSheetStorage : "Submit Answer Sheets"
+invigilator --> invigilatorLogs : "Record Exam Monitoring Logs"
+invigilator --> incidentReports : "Submit Incident Reports"
+
+lecturer --> manualGrading : "Grade Answer Sheets"
+manualGrading --> gradingRecordsStorage : "Store Grading Records"
+gradingRecordsStorage --> resultsStorage : "Store Final Grades"
+resultsStorage --> resultsNotifications : "Prepare Printed Results"
+
+student --> resultsNotifications : "Receive Final Results"
+
+@enduml

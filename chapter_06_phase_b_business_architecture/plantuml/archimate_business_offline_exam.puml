@@ -1,4 +1,4 @@
-@startuml archimate_offline
+@startuml 
 top to bottom direction
 
 !include <archimate/Archimate> 

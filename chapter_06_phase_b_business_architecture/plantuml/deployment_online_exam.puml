@@ -1,0 +1,65 @@
+@startuml
+
+' Define Nodes (Physical or Virtual Machines/Services)
+node "Online Examination System" as onlineExamSystem {
+  
+  node "Web Server" as webServer {
+    component "Exam Management Platform" as examPlatform
+  }
+
+  node "Identity Verification Service" as idVerificationService {
+    component "Identity Verification System" as identitySystem
+  }
+
+  node "Application Server" as appServer {
+    component "Exam Management System" as examSystem
+    component "Grading System" as gradingSystem
+  }
+
+  database "Database Server" as dbServer {
+    frame "Exam Database" as examDatabase {
+      entity "User Data"
+      entity "Student Profile Data"
+      entity "Exam Metadata"
+      entity "Submission Data"
+      entity "Grading Data"
+      entity "Result Data"
+    }
+  }
+
+  node "Storage Server" as storageServer {
+    component "Answer Submissions Storage" as submissionStorage
+  }
+
+  node "Notification Service" as notificationService {
+    component "Notification System" as notificationSystem
+  }
+  
+}
+
+' Define Actors
+actor "Lecturer" as lecturer
+actor "Student" as student
+
+' Relationships and Interactions
+lecturer --> examPlatform : "Create and Upload Exams"
+lecturer --> examSystem : "Define Exam Rules"
+lecturer --> gradingSystem : "Evaluate Answers and Assign Grades"
+gradingSystem --> examDatabase : "Store Grading Data"
+gradingSystem --> notificationSystem : "Send Grading Notifications"
+notificationSystem --> student : "Notify Students"
+
+student --> examPlatform : "Log in and Access Exams"
+student --> idVerificationService : "Authenticate Identity"
+idVerificationService --> examPlatform : "Verify Identity Status"
+student --> examPlatform : "Take Exam"
+student --> submissionStorage : "Submit Answers"
+examPlatform --> submissionStorage : "Store Submissions"
+submissionStorage --> examDatabase : "Store Submission Metadata"
+
+examPlatform --> notificationSystem : "Notify Lecturer/Students"
+examPlatform --> examDatabase : "Store Exam Metadata and User Data"
+examDatabase --> gradingSystem : "Access Exam and Submission Data"
+examPlatform --> student : "View Results"
+
+@enduml
