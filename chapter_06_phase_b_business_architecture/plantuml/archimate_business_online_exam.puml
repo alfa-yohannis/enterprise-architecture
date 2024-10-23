@@ -1,0 +1,55 @@
+@startuml archimate_offline
+top to bottom direction
+
+!include <archimate/Archimate> 
+
+' Define Business Actors
+archimate #Business "Lecturer" as lecturer <<business-actor>>
+archimate #Business "Student" as student <<business-actor>>
+archimate #Application "Platform" as platform <<application-component>>
+
+' Define Business Processes
+archimate #Business "Create and Upload Examination Materials" as createUploadExam <<business-process>>
+archimate #Business "Define Exam Rules (Duration, Format, etc.)" as defineExamRules <<business-process>>
+archimate #Business "Log in to Examination Platform" as loginToPlatform <<business-process>>
+archimate #Business "Authenticate Identity" as authenticateIdentity <<business-process>>
+archimate #Business "Monitor Student Activities" as monitorActivities <<business-process>>
+archimate #Business "Start Online Examination" as startOnlineExam <<business-process>>
+archimate #Business "Take Online Examination" as takeOnlineExam <<business-process>>
+archimate #Business "Submit Answers" as submitAnswers <<business-process>>
+archimate #Business "Auto-Submit Answers at Time Limit" as autoSubmitAnswers <<business-process>>
+archimate #Business "Save and Store Submissions" as saveSubmissions <<business-process>>
+archimate #Business "Evaluate Answers" as evaluateAnswers <<business-process>>
+archimate #Business "Assign Grades" as assignGrades <<business-process>>
+archimate #Business "View Results" as viewResults <<business-process>>
+
+' Relationships
+lecturer @-->> createUploadExam : "Executes"
+lecturer @-->> defineExamRules : "Executes"
+student @-->> loginToPlatform : "Executes"
+student @-->> authenticateIdentity : "Executes"
+lecturer @-->> monitorActivities : "Executes"
+lecturer @-->> startOnlineExam : "Executes"
+student @-->> takeOnlineExam : "Executes"
+student @-->> submitAnswers : "Executes"
+lecturer @-->> evaluateAnswers : "Executes"
+lecturer @-->> assignGrades : "Executes"
+platform --> autoSubmitAnswers : "Serves"
+platform --> saveSubmissions : "Serves"
+student @-->> viewResults : "Executes"
+
+' Define Triggers between processes
+createUploadExam -->> defineExamRules : "Triggers"
+defineExamRules -->> loginToPlatform : "Triggers"
+loginToPlatform -->> authenticateIdentity : "Triggers"
+authenticateIdentity -->> monitorActivities : "Triggers"
+monitorActivities -->> startOnlineExam : "Triggers"
+startOnlineExam -->> takeOnlineExam : "Triggers"
+takeOnlineExam -->> submitAnswers : "Triggers"
+submitAnswers -->> autoSubmitAnswers : "Triggers"
+autoSubmitAnswers -->> saveSubmissions : "Triggers"
+saveSubmissions -->> evaluateAnswers : "Triggers"
+evaluateAnswers -->> assignGrades : "Triggers"
+assignGrades -->> viewResults : "Triggers"
+
+@enduml

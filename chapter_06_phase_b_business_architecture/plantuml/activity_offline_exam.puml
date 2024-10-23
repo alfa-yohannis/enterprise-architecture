@@ -1,0 +1,28 @@
+@startuml
+|Lecturer|
+:Prepare Examination Materials;
+:Print and Distribute Examination Materials;
+
+|Student|
+:Present Identification;
+:Verify Student Identity;
+
+|Invigilator|
+:Monitor Exam Room;
+
+|Student|
+:Take the Examination;
+
+|Invigilator|
+:Supervise Examination;
+
+|Student|
+:Submit Answer Sheets;
+
+|Lecturer|
+:Collect and Store Answer Sheets;
+:Evaluate Answer Sheets;
+
+|Student|
+:Review Results;
+@enduml

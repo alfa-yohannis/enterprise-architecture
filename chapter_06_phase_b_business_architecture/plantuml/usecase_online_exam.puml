@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+actor Lecturer as L
+actor Student as S
+actor Platform as P
+
+L --> (Create Examination Materials)
+L --> (Define Exam Rules)
+L --> (Monitor Examination) : <<include>>
+L --> (Evaluate Submissions)
+L --> (Assign Grades) : <<include>>
+
+S --> (Log in to Platform)
+S --> (Authenticate Identity)
+S --> (Take Examination)
+S --> (Submit Answers)
+
+S --> (View Results)
+
+P --> (Auto-Submit Answers) : <<extend>> 
+P --> (Save Submissions)
+
+(Log in to Platform) .> (Authenticate Identity) : <<include>>
+(Take Examination) .> (Submit Answers) : <<include>>
+(Monitor Examination) .> (Auto-Submit Answers) : <<extend>>
+
+@enduml

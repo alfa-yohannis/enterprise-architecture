@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+
+actor Lecturer as L
+actor Student as S
+actor Invigilator as I 
+
+L --> (Prepare Examination Materials)
+L --> (Distribute Examination Materials) : <<include>>
+L --> (Evaluate Answer Sheets)
+L --> (Provide Results) : <<include>>
+
+S --> (Take Examination)
+S --> (Submit Answer Sheets)
+S --> (Present Identification) : <<include>>
+S --> (Review Results)
+
+I --> (Monitor Examination)
+I --> (Verify Student Identity) : <<include>>
+
+(Prepare Examination Materials) .> (Distribute Examination Materials) : <<include>>
+(Take Examination) .> (Submit Answer Sheets) : <<include>>
+(Verify Student Identity) .> (Monitor Examination) : <<extend>>
+
+@enduml

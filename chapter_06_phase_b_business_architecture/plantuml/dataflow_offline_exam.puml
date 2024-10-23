@@ -1,0 +1,43 @@
+@startuml
+
+left to right direction
+  file "Printed\nQuestion\nPapers" as A1
+  file "Answer\nSheets" as A2
+  file "Attendance\nSheets" as A3
+  file "Invigilator\nLogs" as A4
+  file "Incident\nReports" as A5
+
+  entity "Grading Data" as GD
+  entity "Result Data" as RD
+  entity "Incident Data" as ID
+
+  usecase "Prepare Exam Materials" as P1
+  usecase "Distribute Question Papers" as P2
+  usecase "Verify Student Identity" as P3
+  usecase "Mark Attendance" as P4
+  usecase "Monitor Exam" as P5
+  usecase "Collect Answer Sheets" as P6
+  usecase "Marking and Grading" as P7
+  usecase "Publish Results" as P8
+  usecase "Incident Reporting" as P9
+
+  P1 --> A1 : "Prepare Printed Papers"
+  P2 --> A1 : "Distribute Papers"
+  P3 --> A3 : "Verify and Record Attendance"
+  P4 --> A3 : "Mark Attendance"
+  P5 --> A4 : "Log Incidents"
+  P6 --> A2 : "Collect Answer Sheets"
+  P7 --> A2 : "Mark Answer Sheets"
+  P7 --> GD : "Store Grading Data"
+  P8 --> RD : "Publish Final Results"
+  P9 --> A5 : "Submit Incident Reports"
+  P9 --> ID : "Store Incident Data"
+
+  A1 --> P1 : "Question Papers"
+  A2 --> P6 : "Answer Sheets"
+  A3 --> P4 : "Attendance"
+  A4 --> P5 : "Monitor Records"
+  A5 --> P9 : "Incident Records"
+  
+
+@enduml

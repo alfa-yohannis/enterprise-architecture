@@ -1,0 +1,49 @@
+@startuml archimate_offline
+top to bottom direction
+
+!include <archimate/Archimate> 
+
+' Define Business Actors
+archimate #Business "Lecturer" as lecturer <<business-actor>>
+archimate #Business "Student" as student <<business-actor>>
+archimate #Business "Invigilator" as invigilator <<business-actor>>
+
+' Define Business Processes
+archimate #Business "Prepare Examination Materials" as prepareExamMaterials <<business-process>>
+archimate #Business "Print and Distribute Examination Materials" as printAndDistribute <<business-process>>
+archimate #Business "Present Identification" as presentIdentification <<business-process>>
+archimate #Business "Verify Student Identity" as verifyIdentity <<business-process>>
+archimate #Business "Monitor Exam Room" as monitorExamRoom <<business-process>>
+archimate #Business "Take the Examination" as takeExamination <<business-process>>
+archimate #Business "Supervise Examination" as superviseExam <<business-process>>
+archimate #Business "Submit Answer Sheets" as submitAnswerSheets <<business-process>>
+archimate #Business "Collect and Store Answer Sheets" as collectAnswerSheets <<business-process>>
+archimate #Business "Evaluate Answer Sheets" as evaluateAnswerSheets <<business-process>>
+archimate #Business "Review Results" as reviewResults <<business-process>>
+
+' Relationships
+lecturer @-->> prepareExamMaterials : "Executes"
+lecturer @-->> printAndDistribute : "Executes"
+student @-->> presentIdentification : "Executes"
+invigilator @-->> verifyIdentity : "Executes"
+invigilator @-->> monitorExamRoom : "Executes"
+student @-->> takeExamination : "Executes"
+invigilator @-->> superviseExam : "Executes"
+student @-->> submitAnswerSheets : "Executes"
+lecturer @-->> collectAnswerSheets : "Executes"
+lecturer @-->> evaluateAnswerSheets : "Executes"
+student @-->> reviewResults : "Executes"
+
+' Define Triggers between processes
+prepareExamMaterials -->> printAndDistribute : "Triggers"
+printAndDistribute -->> presentIdentification : "Triggers"
+presentIdentification -->> verifyIdentity : "Triggers"
+verifyIdentity -->> monitorExamRoom : "Triggers"
+monitorExamRoom -->> takeExamination : "Triggers"
+takeExamination -->> superviseExam : "Triggers"
+superviseExam -->> submitAnswerSheets : "Triggers"
+submitAnswerSheets -->> collectAnswerSheets : "Triggers"
+collectAnswerSheets -->> evaluateAnswerSheets : "Triggers"
+evaluateAnswerSheets -->> reviewResults : "Triggers"
+
+@enduml

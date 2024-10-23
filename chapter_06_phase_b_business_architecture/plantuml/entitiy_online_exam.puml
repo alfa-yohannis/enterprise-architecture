@@ -1,0 +1,166 @@
+@startuml
+left to right direction
+
+!define PRIMARY_KEY(x) <b>x</b>
+!define FOREIGN_KEY(x) <i>x</i>
+
+entity "User" as user {
+  PRIMARY_KEY(user_id)
+  name
+  email
+  role
+  password_hash
+  last_login
+}
+
+entity "Student Profile" as student_profile {
+  PRIMARY_KEY(student_id)
+  FOREIGN_KEY(user_id)
+  enrollment_year
+  class
+  major
+}
+
+entity "Lecturer Profile" as lecturer_profile {
+  PRIMARY_KEY(lecturer_id)
+  FOREIGN_KEY(user_id)
+  department
+  courses_taught
+}
+
+entity "Exam" as exam {
+  PRIMARY_KEY(exam_id)
+  FOREIGN_KEY(course_id)
+  exam_title
+  exam_duration
+  start_time
+  end_time
+  total_marks
+  exam_rules
+}
+
+entity "Question" as question {
+  PRIMARY_KEY(question_id)
+  FOREIGN_KEY(exam_id)
+  question_type
+  question_text
+  max_marks
+}
+
+entity "Option" as option {
+  PRIMARY_KEY(option_id)
+  FOREIGN_KEY(question_id)
+  option_text
+  is_correct
+}
+
+entity "Student Answer" as student_answer {
+  PRIMARY_KEY(answer_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(question_id)
+  answer_text
+  selected_option_id
+  submitted_at
+}
+
+entity "Grading" as grading {
+  PRIMARY_KEY(grading_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(question_id)
+  marks_awarded
+  feedback
+  graded_by
+  graded_at
+}
+
+entity "Proctoring Log" as proctoring_log {
+  PRIMARY_KEY(proctor_log_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(student_id)
+  start_time
+  end_time
+  proctoring_status
+  notes
+}
+
+entity "Screen Monitoring Log" as screen_monitoring_log {
+  PRIMARY_KEY(monitor_log_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(student_id)
+  capture_data
+}
+
+entity "Plagiarism Check" as plagiarism_check {
+  PRIMARY_KEY(plagiarism_check_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(question_id)
+  plagiarism_score
+  plagiarism_status
+}
+
+entity "Notification" as notification {
+  PRIMARY_KEY(notification_id)
+  FOREIGN_KEY(user_id)
+  message
+  sent_at
+  status
+}
+
+entity "Feedback" as feedback {
+  PRIMARY_KEY(feedback_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  feedback_text
+  submitted_at
+}
+
+entity "Device Information" as device_info {
+  PRIMARY_KEY(device_id)
+  FOREIGN_KEY(student_id)
+  device_type
+  device_os
+  ip_address
+}
+
+entity "Network Activity Log" as network_log {
+  PRIMARY_KEY(network_log_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  timestamp
+  activity_type
+  ip_address
+}
+
+entity "Backup Record" as backup_record {
+  PRIMARY_KEY(backup_id)
+  entity_type
+  created_at
+  created_by
+  backup_location
+}
+
+user ||--o{ student_profile : has
+user ||--o{ lecturer_profile : has
+user ||--o{ notification : receives
+user ||--o{ feedback : provides
+
+exam ||--o{ question : contains
+exam ||--o{ student_answer : collects
+exam ||--o{ grading : has
+exam ||--o{ proctoring_log : monitored by
+exam ||--o{ screen_monitoring_log : monitored by
+exam ||--o{ plagiarism_check : flagged for
+
+question ||--o{ option : has
+question ||--o{ student_answer : answered by
+
+student_profile ||--o{ student_answer : submits
+student_profile ||--o{ grading : evaluated
+student_profile ||--o{ proctoring_log : observed in
+student_profile ||--o{ screen_monitoring_log : monitored in
+student_profile ||--o{ device_info : uses
+student_profile ||--o{ network_log : logs
+
+@enduml

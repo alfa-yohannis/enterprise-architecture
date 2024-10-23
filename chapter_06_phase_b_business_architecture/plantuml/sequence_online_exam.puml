@@ -1,0 +1,26 @@
+@startuml
+actor Lecturer
+actor Student
+participant Platform
+
+Lecturer -> Platform: Create and Upload Examination Materials
+Lecturer -> Platform: Define Exam Rules (Duration, Format, etc.)
+
+Student -> Platform: Log in to Examination Platform
+Platform -> Student: Authenticate Identity
+
+Lecturer -> Platform: Monitor Student Activities
+Lecturer -> Platform: Start Online Examination
+
+Student -> Platform: Take Online Examination
+Student -> Platform: Submit Answers
+
+Platform -> Platform: Auto-Submit Answers at Time Limit
+Platform -> Platform: Save and Store Submissions
+
+Lecturer -> Platform: Evaluate Answers
+Lecturer -> Platform: Assign Grades
+
+Lecturer -> Student: Provide Results
+Student -> Student: View Results
+@enduml

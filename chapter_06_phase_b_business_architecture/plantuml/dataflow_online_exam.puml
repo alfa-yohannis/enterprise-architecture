@@ -1,0 +1,51 @@
+@startuml
+
+left to right direction
+
+
+
+  artifact "Exam Instructions (PDF, Word)" as A1
+  artifact "Digital Answer Submissions" as A2
+  artifact "Proctoring Data (Webcam, Screen)" as A3
+  artifact "Proctoring Logs" as A4
+  artifact "Incident Reports" as A5
+  artifact "Browser/System Logs" as A6
+
+  entity "User Data" as UD
+  entity "Lecturer Profile Data" as LPD
+  entity "Student Profile Data" as SPD
+  entity "Grading Data" as GD
+  entity "Result Data" as RD
+  entity "Incident Data" as ID
+  entity "Plagiarism Check Data" as PCD
+  entity "Notifications" as NTF
+
+  usecase "Prepare Exam" as P1
+  usecase "Authenticate Students" as P2
+  usecase "Monitor Exam" as P3
+  usecase "Submit Answers" as P4
+  usecase "Plagiarism Check" as P5
+  usecase "Grading" as P6
+  usecase "Publish Results" as P7
+  usecase "Notify Students" as P8
+  usecase "Report Incidents" as P9
+
+  P1 --> LPD: "Use Lecturer Data"
+  P1 --> A1 : "Upload Exam Instructions"
+  P2 --> UD : "Authenticate"
+  P2 --> SPD : "Verify"
+  P3 --> A3 : "Capture Proctoring Data"
+  P3 --> A4 : "Log Proctoring Events"
+  P3 --> A6 : "Log Browser/System Events"
+  P4 --> A2 : "Submit Digital Answers"
+  P5 --> PCD : "Check for Plagiarism"
+  P6 --> A2 : "Grade Submissions"
+  P6 --> GD : "Store Grades"
+  P7 --> RD : "Publish Final Results"
+  P8 --> NTF : "Send Notifications"
+  P9 --> A5 : "Submit Incident Reports"
+  P9 --> ID : "Log Incidents"
+  
+
+
+@enduml

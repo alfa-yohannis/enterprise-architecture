@@ -1,0 +1,23 @@
+@startuml
+actor Lecturer
+actor Student
+actor Invigilator
+
+Lecturer -> Lecturer: Prepare Examination Materials
+Lecturer -> Invigilator: Print and Distribute Examination Materials
+
+Student -> Invigilator: Present Identification
+Invigilator -> Invigilator: Verify Student Identity
+
+Invigilator -> Invigilator: Monitor Exam Room
+
+Student -> Student: Take the Examination
+Invigilator -> Invigilator: Supervise Examination
+
+Student -> Lecturer: Submit Answer Sheets
+Lecturer -> Lecturer: Collect and Store Answer Sheets
+Lecturer -> Lecturer: Evaluate Answer Sheets
+
+Lecturer -> Student: Provide Results
+Student -> Student: Review Results
+@enduml

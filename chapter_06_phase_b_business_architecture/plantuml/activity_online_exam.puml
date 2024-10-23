@@ -1,0 +1,30 @@
+@startuml
+|Lecturer|
+start
+:Create and Upload Examination Materials;
+:Define Exam Rules (Duration, Format, etc.);
+
+|Student|
+:Log in to Examination Platform;
+:Authenticate Identity;
+
+|Lecturer|
+:Monitor Student Activities;
+:Start Online Examination; 
+
+|Student|
+:Take Online Examination;
+:Submit Answers;
+
+|Platform|
+:Auto-Submit Answers at Time Limit;
+:Save and Store Submissions;
+
+|Lecturer|
+:Evaluate Answers;
+:Assign Grades;
+
+|Student|
+:View Results;
+stop
+@enduml

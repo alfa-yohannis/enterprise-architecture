@@ -1,0 +1,146 @@
+@startuml
+left to right direction
+
+!define PRIMARY_KEY(x) <b>x</b>
+!define FOREIGN_KEY(x) <i>x</i>
+
+entity "User" as user {
+  PRIMARY_KEY(user_id)
+  name
+  email
+  role
+  last_login
+}
+
+entity "Student Profile" as student_profile {
+  PRIMARY_KEY(student_id)
+  FOREIGN_KEY(user_id)
+  enrollment_number
+  class
+  major
+}
+
+entity "Lecturer Profile" as lecturer_profile {
+  PRIMARY_KEY(lecturer_id)
+  FOREIGN_KEY(user_id)
+  department
+  courses_taught
+}
+
+entity "Exam" as exam {
+  PRIMARY_KEY(exam_id)
+  course_id
+  exam_title
+  exam_date
+  exam_time
+  duration
+  venue
+  total_marks
+  rules
+}
+
+entity "Question Paper" as question_paper {
+  PRIMARY_KEY(question_paper_id)
+  FOREIGN_KEY(exam_id)
+  paper_type
+  total_questions
+}
+
+entity "Answer Sheet" as answer_sheet {
+  PRIMARY_KEY(answer_sheet_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  submission_date
+  status
+}
+
+entity "Grading" as grading {
+  PRIMARY_KEY(grading_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  marks_awarded
+  feedback
+  graded_by
+  graded_at
+}
+
+entity "Attendance" as attendance {
+  PRIMARY_KEY(attendance_id)
+  FOREIGN_KEY(student_id)
+  FOREIGN_KEY(exam_id)
+  attendance_status
+  timestamp
+  verified_by
+}
+
+entity "Student Identification" as identification {
+  PRIMARY_KEY(verification_id)
+  FOREIGN_KEY(student_id)
+  verification_status
+  id_document_checked
+}
+
+entity "Invigilator Log" as invigilator_log {
+  PRIMARY_KEY(invigilator_log_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(lecturer_id)
+  observations
+  session_start_time
+  session_end_time
+}
+
+entity "Incident Report" as incident_report {
+  PRIMARY_KEY(incident_report_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(student_id)
+  incident_description
+  reported_by
+  timestamp
+}
+
+entity "Notification" as notification {
+  PRIMARY_KEY(notification_id)
+  FOREIGN_KEY(user_id)
+  message
+  sent_at
+  status
+}
+
+entity "Result Sheet" as result_sheet {
+  PRIMARY_KEY(result_id)
+  FOREIGN_KEY(exam_id)
+  FOREIGN_KEY(student_id)
+  total_marks
+  status
+}
+
+entity "Audit Log" as audit_log {
+  PRIMARY_KEY(audit_log_id)
+  FOREIGN_KEY(user_id)
+  activity_description
+  timestamp
+}
+
+user ||--o{ student_profile : has
+user ||--o{ lecturer_profile : has
+user ||--o{ notification : receives
+
+exam ||--o{ question_paper : has
+exam ||--o{ answer_sheet : collects
+exam ||--o{ grading : evaluates
+exam ||--o{ attendance : requires
+exam ||--o{ invigilator_log : monitored by
+exam ||--o{ incident_report : logs
+
+student_profile ||--o{ answer_sheet : submits
+student_profile ||--o{ grading : gets
+student_profile ||--o{ attendance : recorded
+student_profile ||--o{ incident_report : associated with
+student_profile ||--o{ identification : verifies identity
+
+lecturer_profile ||--o{ invigilator_log : logs
+
+result_sheet ||--o{ grading : includes
+audit_log ||--o{ user : records
+
+@enduml
