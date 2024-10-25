@@ -1,0 +1,324 @@
+\chapter{Arsitektur Aplikasi}
+
+\section{Tujuan}
+Mengembangkan arsitektur aplikasi target yang mendukung bisnis sangat penting untuk menyelaraskan strategi bisnis dengan kapabilitas teknologi. Ini mencakup pembuatan visi arsitektur sekaligus menangani permintaan pekerjaan arsitektur dan kepentingan pemangku kepentingan. Selain itu, identifikasi komponen kandidat untuk peta jalan arsitektur membantu mengatasi kesenjangan antara arsitektur aplikasi saat ini dan yang diinginkan.
+
+\section{Input untuk Pengembangan Arsitektur Aplikasi}
+
+\subsection{Permintaan Pekerjaan Arsitektur}
+Input yang digunakan dalam fase ini meliputi:
+
+\begin{enumerate}
+	\item Penilaian Kapabilitas
+	\item Rencana Komunikasi
+	\item Model Organisasi untuk Arsitektur Perusahaan
+	\item Kerangka Kerja Arsitektur yang Disesuaikan
+	\item Spesifikasi Kebutuhan Arsitektur Awal, termasuk:
+	\begin{enumerate}
+		\item Hasil Analisis Kesenjangan
+		\item Persyaratan teknis lainnya yang relevan
+	\end{enumerate}
+	\item Dokumen definisi arsitektur (draf)
+	\begin{enumerate}
+		
+	\item Arsitektur Bisnis Saat Ini (rinci)
+	\item Arsitektur Bisnis Target (rinci)
+	\item Arsitektur Data Saat Ini (rinci)
+	\item Arsitektur Data Target (rinci)
+	\item Arsitektur Aplikasi Saat Ini (garis besar)
+	\item Arsitektur Aplikasi Target (garis besar)
+	\item Arsitektur Teknologi Saat Ini (garis besar)
+	\item Arsitektur Teknologi Target (garis besar)
+\end{enumerate}
+
+	\item Prinsip Aplikasi, jika ada
+	\item Pernyataan Pekerjaan Arsitektur
+	\item Visi Arsitektur
+	\item Repositori Arsitektur
+	\item Komponen Arsitektur Bisnis dalam Peta Jalan Arsitektur
+\end{enumerate}
+
+\section{Prinsip Aplikasi}
+\begin{itemize}
+	\item \textbf{Independensi Teknologi}.
+	Aplikasi tidak tergantung pada pilihan teknologi tertentu, sehingga memberikan fleksibilitas untuk beroperasi di berbagai platform teknologi.
+	
+	\item \textbf{Kemudahan Penggunaan}.
+	Aplikasi harus mudah digunakan. Teknologi yang mendasari harus transparan bagi pengguna, sehingga mereka dapat fokus pada penyelesaian tugas dengan efektif.
+\end{itemize}
+
+\section{Langkah-langkah dalam Pengembangan Arsitektur Aplikasi}
+Langkah-langkah berikut sangat penting dalam pengembangan arsitektur aplikasi yang kokoh:
+
+\begin{enumerate}
+	\item Pilih model referensi, sudut pandang, dan alat yang sesuai
+	\item Mengembangkan Deskripsi Arsitektur Aplikasi Saat Ini
+	\item Mengembangkan Deskripsi Arsitektur Aplikasi Target
+	\item Melakukan Analisis Kesenjangan
+	\item Menentukan komponen peta jalan kandidat
+	\item Menyelesaikan dampak di seluruh Lanskap Arsitektur
+	\item Melakukan Analisis Pemangku Kepentingan Formal
+	\item Menyelesaikan Arsitektur Aplikasi
+	\item Membuat Dokumen Definisi Arsitektur
+\end{enumerate}
+
+\subsection*{Contoh:}
+\begin{enumerate}
+	\item \textbf{Pilih model referensi, sudut pandang, dan alat yang sesuai}: Langkah pertama dalam proses pengembangan arsitektur aplikasi adalah memilih model referensi yang relevan (misalnya TOGAF, Zachman), sudut pandang yang akan digunakan (misalnya sudut pandang pemangku kepentingan, sudut pandang implementasi teknis), serta alat bantu yang mendukung (misalnya ArchiMate, Enterprise Architect). Pemilihan ini akan memengaruhi cara arsitektur didefinisikan dan dikomunikasikan.
+	\\
+	\textit{Contoh:} Universitas menggunakan model referensi TOGAF untuk mendefinisikan dan mengelola arsitektur teknologi, memilih sudut pandang pemangku kepentingan (mahasiswa, dosen, admin) untuk memastikan bahwa setiap kebutuhan dipenuhi.
+	
+	\item \textbf{Mengembangkan Deskripsi Arsitektur Aplikasi Saat Ini}: Deskripsi ini mendokumentasikan keadaan saat ini dari arsitektur aplikasi, termasuk aplikasi yang digunakan, fungsionalitas, dan interaksi antar aplikasi. Deskripsi ini penting untuk memahami baseline sebelum merencanakan perubahan.
+	\\
+	\textit{Contoh:} Universitas memiliki deskripsi arsitektur aplikasi saat ini yang mencakup LMS, sistem keuangan, dan sistem pendaftaran online, serta bagaimana aplikasi tersebut saling terhubung.
+	
+	\item \textbf{Mengembangkan Deskripsi Arsitektur Aplikasi Target}: Deskripsi ini berfokus pada arsitektur aplikasi yang diinginkan di masa mendatang, mencakup aplikasi baru yang akan diimplementasikan, fitur tambahan, atau integrasi yang lebih baik antara sistem. Hal ini membantu mengarahkan langkah-langkah perbaikan ke arah yang tepat.
+	\\
+	\textit{Contoh:} Arsitektur aplikasi target universitas mencakup integrasi penuh antara sistem LMS dan sistem manajemen kursus, serta penambahan platform kolaborasi daring untuk mendukung pembelajaran hybrid.
+	
+	\item \textbf{Melakukan Analisis Kesenjangan}: Analisis ini membandingkan arsitektur aplikasi saat ini dengan arsitektur target untuk mengidentifikasi kesenjangan dan menentukan langkah-langkah yang perlu dilakukan untuk menjembataninya.
+	\\
+	\textit{Contoh:} Analisis kesenjangan menunjukkan bahwa universitas saat ini tidak memiliki fitur penjadwalan otomatis pada LMS yang diinginkan pada arsitektur aplikasi target untuk mendukung pembelajaran hybrid.
+	
+	\item \textbf{Menentukan komponen peta jalan kandidat}: Setelah analisis kesenjangan dilakukan, langkah berikutnya adalah menentukan komponen-komponen yang harus dimasukkan ke dalam peta jalan (roadmap) untuk mencapai arsitektur target. Ini termasuk penentuan prioritas, waktu pelaksanaan, dan sumber daya yang diperlukan.
+	\\
+	\textit{Contoh:} Universitas memprioritaskan integrasi LMS dengan sistem manajemen kursus sebagai komponen utama peta jalan mereka, yang dijadwalkan selesai dalam dua semester.
+	
+	\item \textbf{Menyelesaikan dampak di seluruh Lanskap Arsitektur}: Setiap perubahan pada arsitektur aplikasi dapat berdampak pada arsitektur lain, seperti arsitektur data, arsitektur teknologi, atau bahkan arsitektur bisnis. Langkah ini memastikan bahwa dampak tersebut diidentifikasi dan dikelola dengan tepat.
+	\\
+	\textit{Contoh:} Integrasi LMS dengan sistem manajemen kursus dipastikan tidak mengganggu arsitektur data mahasiswa, dengan mengelola akses yang aman antara dua sistem tersebut.
+	
+	\item \textbf{Melakukan Analisis Pemangku Kepentingan Formal}: Pada tahap ini, kebutuhan dan kepentingan pemangku kepentingan, seperti mahasiswa, dosen, dan admin, dianalisis secara formal untuk memastikan bahwa arsitektur aplikasi memenuhi kebutuhan mereka.
+	\\
+	\textit{Contoh:} Universitas melakukan survei kepada mahasiswa dan dosen untuk memastikan bahwa perubahan pada LMS memenuhi kebutuhan mereka akan kemudahan akses dan efisiensi.
+	
+	\item \textbf{Menyelesaikan Arsitektur Aplikasi}: Setelah seluruh komponen di atas selesai dianalisis, arsitektur aplikasi diselesaikan. Ini melibatkan finalisasi rancangan, pengaturan sumber daya, dan perencanaan implementasi.
+	\\
+	\textit{Contoh:} Universitas telah menyelesaikan arsitektur aplikasi dengan mengintegrasikan semua sistem yang mendukung pembelajaran hybrid secara efisien.
+	
+	\item \textbf{Membuat Dokumen Definisi Arsitektur}: Langkah terakhir adalah mendokumentasikan seluruh arsitektur dalam dokumen formal. Dokumen ini mencakup semua aspek yang telah direncanakan, termasuk deskripsi aplikasi saat ini dan target, analisis kesenjangan, peta jalan, dan strategi implementasi.
+	\\
+	\textit{Contoh:} Universitas menyusun Dokumen Definisi Arsitektur yang mencakup semua aplikasi yang akan diintegrasikan, roadmap untuk perubahan, dan rencana pemantauan dampak bagi pengguna.
+\end{enumerate}
+
+\section{Hasil (\textit{Output}) dari Pengembangan Arsitektur Aplikasi}
+Hasil dari fase ini memastikan pengembangan dan validasi arsitektur aplikasi yang mendukung arsitektur bisnis. Hasil tersebut meliputi:
+
+\begin{enumerate}
+	\item Pernyataan Pekerjaan Arsitektur, diperbarui sesuai kebutuhan
+	\item Prinsip aplikasi yang divalidasi atau prinsip aplikasi baru
+	\item Dokumen Definisi Arsitektur, diperbarui sesuai kebutuhan
+	\item Spesifikasi Kebutuhan Arsitektur , diperbarui sesuai kebutuhan
+	\item Komponen Arsitektur Aplikasi dalam Peta Jalan Arsitektur
+\end{enumerate}
+
+\section{Katalog, Matriks, dan Diagram Arsitektur Aplikasi}
+Alat dan representasi berikut digunakan untuk mendokumentasikan dan menganalisis arsitektur aplikasi:
+
+\begin{itemize}
+\item Katalog
+\begin{itemize}
+	\item Katalog Portofolio Aplikasi
+	\item Katalog Antarmuka
+\end{itemize}
+
+\item Matriks
+\begin{itemize}
+	\item Matriks Aplikasi/Organisasi
+	\item Matriks Peran/Aplikasi
+	\item Matriks Aplikasi/Fungsi
+	\item Matriks Interaksi Aplikasi
+\end{itemize}
+
+\item Diagram
+\begin{itemize}
+	\item Diagram Komunikasi Aplikasi
+	\item Diagram Lokasi Aplikasi dan Pengguna
+	\item Diagram Use-Case Aplikasi
+	\item Diagram Kemudahan Manajemen Perusahaan
+	\item Diagram Realisasi Proses/Aplikasi
+	\item Diagram Rekayasa Perangkat Lunak
+	\item Diagram Migrasi Aplikasi
+	\item Diagram Distribusi Perangkat Lunak
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection*{Contoh:}
+
+\begin{itemize}
+	\item \textbf{Katalog}: Katalog berisi daftar terstruktur dari berbagai elemen terkait aplikasi dan antarmuka yang digunakan dalam arsitektur aplikasi.
+	
+	\begin{itemize}
+		\item \textbf{Katalog Portofolio Aplikasi}: Berisi daftar semua aplikasi yang digunakan dalam suatu organisasi. Katalog ini mencakup informasi tentang fungsi aplikasi, statusnya (aktif, dalam pengembangan, atau dihentikan), dan bagaimana aplikasi tersebut mendukung proses bisnis organisasi. \\
+		\textit{Contoh:} Katalog aplikasi di universitas yang mencakup Learning Management System (LMS), sistem informasi akademik, dan aplikasi administrasi keuangan.
+		
+		\item \textbf{Katalog Antarmuka}: Berisi daftar antarmuka yang menghubungkan berbagai aplikasi dalam sistem. Katalog ini menjelaskan bagaimana data ditransfer antar aplikasi, termasuk protokol komunikasi dan format data yang digunakan. \\
+		\textit{Contoh:} Katalog antarmuka antara sistem LMS dan sistem manajemen sumber daya manusia (HRMS) di universitas untuk menyinkronkan data kehadiran dosen dan mahasiswa.
+	\end{itemize}
+	
+	\item \textbf{Matriks}: Matriks menggambarkan hubungan antara berbagai elemen seperti aplikasi, peran, fungsi, dan interaksi dalam arsitektur aplikasi.
+	
+	\begin{itemize}
+		\item \textbf{Matriks Aplikasi/Organisasi}: Menunjukkan hubungan antara aplikasi yang digunakan dan unit organisasi yang bertanggung jawab atas aplikasi tersebut. Matriks ini membantu mengidentifikasi tanggung jawab dan pengelolaan aplikasi di berbagai departemen. \\
+		\textit{Contoh:} Matriks yang menunjukkan bahwa departemen IT bertanggung jawab atas manajemen LMS, sedangkan departemen keuangan bertanggung jawab atas aplikasi penggajian.
+		
+		\item \textbf{Matriks Peran/Aplikasi}: Menggambarkan hubungan antara peran pengguna (misalnya, dosen, mahasiswa, staf administrasi) dan aplikasi yang digunakan oleh masing-masing peran. Matriks ini memastikan setiap peran memiliki akses ke aplikasi yang tepat. \\
+		\textit{Contoh:} Matriks yang menunjukkan bahwa dosen memiliki akses ke sistem evaluasi akademik, sementara mahasiswa memiliki akses ke sistem pengelolaan tugas di LMS.
+		
+		\item \textbf{Matriks Aplikasi/Fungsi}: Menggambarkan hubungan antara aplikasi dan fungsi bisnis yang mereka dukung. Matriks ini menunjukkan bagaimana aplikasi mendukung berbagai aktivitas bisnis. \\
+		\textit{Contoh:} Matriks yang menunjukkan bahwa aplikasi ERP mendukung fungsi keuangan, pengadaan, dan manajemen inventaris.
+		
+		\item \textbf{Matriks Interaksi Aplikasi}: Menggambarkan interaksi antara aplikasi yang berbeda dalam suatu sistem, membantu memahami bagaimana data dan proses bergerak di antara aplikasi. \\
+		\textit{Contoh:} Matriks yang menunjukkan interaksi antara sistem manajemen data mahasiswa dan sistem LMS dalam pembaruan status akademik secara otomatis.
+	\end{itemize}
+	
+	\item \textbf{Diagram}: Diagram memberikan representasi visual dari berbagai aspek arsitektur aplikasi, seperti komunikasi, interaksi, dan distribusi.
+	
+	\begin{itemize}
+		\item \textbf{Diagram Komunikasi Aplikasi}: Menggambarkan bagaimana aplikasi berkomunikasi satu sama lain, baik melalui antarmuka, API, atau protokol jaringan lainnya. \\
+		\textit{Contoh:} Diagram yang menunjukkan komunikasi antara sistem pendaftaran online dengan sistem pembayaran universitas.
+		
+		\item \textbf{Diagram Lokasi Aplikasi dan Pengguna}: Menunjukkan lokasi fisik dan geografis dari aplikasi serta pengguna yang mengakses aplikasi tersebut. Diagram ini penting dalam konteks distribusi geografis, terutama untuk organisasi yang memiliki banyak lokasi. \\
+		\textit{Contoh:} Diagram yang menunjukkan akses aplikasi LMS oleh mahasiswa dari berbagai lokasi, baik di kampus maupun dari rumah.
+		
+		\item \textbf{Diagram Use-Case Aplikasi}: Menggambarkan berbagai skenario penggunaan aplikasi oleh pengguna dalam konteks tertentu. Ini membantu memahami bagaimana aplikasi memenuhi kebutuhan pengguna. \\
+		\textit{Contoh:} Diagram use-case yang menunjukkan bagaimana mahasiswa menggunakan LMS untuk mengunduh tugas, mengikuti ujian daring, dan mengakses materi kuliah.
+		
+		\item \textbf{Diagram Kemudahan Manajemen Perusahaan}: Menunjukkan bagaimana aplikasi mendukung manajemen operasional dan strategis perusahaan, termasuk integrasi antara aplikasi yang berbeda dalam mendukung proses pengambilan keputusan. \\
+		\textit{Contoh:} Diagram yang menunjukkan bagaimana data keuangan dari sistem ERP digunakan oleh manajemen untuk perencanaan anggaran.
+		
+		\item \textbf{Diagram Realisasi Proses/Aplikasi}: Menggambarkan bagaimana aplikasi mendukung realisasi proses bisnis, seperti alur kerja, otomatisasi tugas, dan integrasi proses lintas aplikasi. \\
+		\textit{Contoh:} Diagram yang menunjukkan bagaimana aplikasi manajemen proyek terintegrasi dengan sistem waktu kerja dan pelaporan kinerja di universitas.
+		
+		\item \textbf{Diagram Rekayasa Perangkat Lunak}: Menunjukkan struktur perangkat lunak, modul-modul utama, dan hubungan antar modul dalam pengembangan aplikasi. \\
+		\textit{Contoh:} Diagram yang menunjukkan modul utama dalam sistem manajemen kursus daring, termasuk modul manajemen konten, modul diskusi, dan modul penilaian.
+		
+		\item \textbf{Diagram Migrasi Aplikasi}: Menggambarkan proses migrasi dari satu sistem aplikasi ke sistem yang lain, termasuk tahapan, data yang dipindahkan, dan integrasi dengan sistem lain selama proses migrasi. \\
+		\textit{Contoh:} Diagram yang menunjukkan migrasi data dari sistem LMS lama ke platform e-learning baru di universitas.
+		
+		\item \textbf{Diagram Distribusi Perangkat Lunak}: Menunjukkan bagaimana perangkat lunak didistribusikan ke berbagai pengguna atau sistem dalam organisasi. Ini mencakup jalur distribusi dan mekanisme pembaruan perangkat lunak. \\
+		\textit{Contoh:} Diagram distribusi yang menunjukkan bagaimana pembaruan perangkat lunak LMS dikirimkan ke berbagai server yang mengelola akses mahasiswa dan dosen.
+	\end{itemize}
+\end{itemize}
+
+\section{Dokumen Definisi Arsitektur dengan Penambahan Arsitektur Aplikasi}
+\label{sec:dokumen_definisi_arsitektur_aplikasi}
+
+Topik-topik yang perlu dibahas dalam Architecture Definition Document yang terkait dengan Application Architecture dalam konteks pembelajaran dan pengajaran hybrid di universitas adalah sebagai berikut:
+
+\begin{itemize}
+	\item Baseline Application Architecture, jika sesuai
+	\item Target Application Architecture
+	\item Tampilan Arsitektur Aplikasi yang sesuai dengan sudut pandang yang dipilih, yang mengatasi kekhawatiran utama pemangku kepentingan
+\end{itemize}
+
+\subsection*{Contoh:}
+
+Berikut adalah beberapa contoh arsitektur aplikasi dalam konteks pembelajaran hybrid di universitas:
+
+\begin{itemize}
+	\item \textbf{Baseline Application Architecture:} Universitas menggunakan sistem Learning Management System (LMS) seperti Moodle atau Google Classroom untuk mendukung pembelajaran daring, dan platform konferensi video seperti Zoom atau Microsoft Teams untuk kuliah daring. 
+	
+	\item \textbf{Target Application Architecture:} Sistem yang dirancang untuk meningkatkan integrasi antara pembelajaran daring dan tatap muka, serta mendukung interaksi yang lebih baik bagi mahasiswa dan dosen dalam konteks hybrid. 
+	
+	\begin{itemize}
+		\item \textbf{Model Sistem Proses:} Sebuah sistem hybrid yang mendukung proses pengajaran di mana kuliah dapat direkam dan disiarkan langsung secara bersamaan. Mahasiswa dapat berinteraksi dengan dosen secara real-time, dan rekaman kuliah otomatis disimpan di LMS untuk akses asinkron.
+		\item \textbf{Model Sistem Tempat:} Sistem ini memungkinkan dosen untuk mengajar dari ruang kelas yang dilengkapi teknologi hybrid, sementara mahasiswa dapat bergabung dari rumah atau lokasi lain melalui perangkat mereka.
+		\item \textbf{Model Sistem Waktu:} LMS yang mendukung penjadwalan otomatis untuk kuliah sinkron dan pengelolaan tugas yang dapat diakses asinkron oleh mahasiswa, sehingga fleksibel dengan waktu belajar yang berbeda.
+		\item \textbf{Model Sistem Orang:} Portal yang mendukung interaksi antara dosen dan mahasiswa, di mana dosen dapat memberikan umpan balik langsung secara daring, dan mahasiswa dapat berkolaborasi dalam proyek kelompok.
+	\end{itemize}
+	
+	\item \textbf{Tampilan Arsitektur Aplikasi:} Tampilan yang menunjukkan integrasi aplikasi pembelajaran hybrid. Ini bisa mencakup integrasi antara platform video conferencing seperti Zoom dengan LMS, sehingga rekaman kuliah dapat diakses oleh mahasiswa setelah sesi berakhir.
+	
+	\begin{itemize}
+		\item Tampilan arsitektur ini juga mencakup bagaimana platform tersebut mendukung dosen dalam penjadwalan kelas secara otomatis, serta bagaimana sistem mendukung evaluasi dan umpan balik secara digital.
+	\end{itemize}
+\end{itemize}
+
+\section{Spesifikasi Kebutuhan Arsitektur dengan Penambahan Arsitektur Aplikasi}
+\label{sec:spesifikasi_kebutuhan_arsitektur_aplikasi}
+
+Kebutuhan Arsitektur Aplikasi yang mengisi Spesifikasi Kebutuhan Arsitektur pada Fase C meliputi:
+
+\begin{itemize}
+	\item Hasil Analisis Kesenjangan
+	\item Kebutuhan interoperabilitas aplikasi
+	\item Kebutuhan teknis yang relevan yang akan berlaku untuk evolusi ini dari Siklus Pengembangan Arsitektur
+	\item Kendala pada Arsitektur Teknologi yang akan dirancang
+	\item Kebutuhan bisnis yang diperbarui, jika sesuai
+	\item Kebutuhan data yang diperbarui, jika sesuai
+\end{itemize}
+
+\subsection*{Contoh:}
+
+Berikut adalah beberapa contoh kebutuhan arsitektur aplikasi dalam konteks pembelajaran hybrid di universitas:
+
+\begin{itemize}
+	\item \textbf{Hasil Analisis Kesenjangan:} Dalam penerapan sistem hybrid di universitas, hasil analisis kesenjangan menunjukkan bahwa beberapa platform e-learning yang ada tidak dapat diintegrasikan dengan baik dengan sistem manajemen penjadwalan universitas. Hal ini menciptakan kesenjangan dalam penyelarasan proses antara kelas daring dan kelas tatap muka.
+	
+	\item \textbf{Kebutuhan Interoperabilitas Aplikasi:} Dalam pengembangan lebih lanjut, aplikasi hybrid harus memiliki kemampuan untuk berinteroperasi antara berbagai sistem, seperti LMS, sistem konferensi video, dan sistem manajemen universitas, sehingga data dari berbagai platform dapat diakses dan dikelola secara terintegrasi.
+	
+	\item \textbf{Kebutuhan Teknis:} Untuk memastikan kelancaran pembelajaran hybrid, diperlukan kebutuhan teknis yang relevan, seperti ketersediaan bandwidth untuk mendukung streaming video langsung, serta integrasi yang mulus antara perangkat keras di ruang kelas (misalnya, kamera dan mikrofon) dengan perangkat lunak.
+	
+	\item \textbf{Kendala pada Arsitektur Teknologi:} Teknologi saat ini yang digunakan untuk kelas tatap muka mungkin tidak mendukung semua aspek pembelajaran hybrid, seperti kemampuan untuk merekam sesi dan streaming secara simultan, yang menjadi kendala dalam perancangan arsitektur teknologi baru.
+	
+	\item \textbf{Kebutuhan Bisnis yang Diperbarui:} Kebutuhan bisnis untuk sistem hybrid meliputi peningkatan aksesibilitas dan inklusivitas bagi mahasiswa yang tidak dapat hadir secara fisik, sehingga solusi arsitektur aplikasi harus mencakup akses ke materi kuliah secara daring.
+	
+	\item \textbf{Kebutuhan Data yang Diperbarui:} Dalam konteks hybrid, diperlukan kebutuhan data yang diperbarui, termasuk cara mengelola data mahasiswa dan pelacakan kehadiran yang dilakukan secara daring maupun luring, serta memastikan bahwa data privasi mahasiswa dilindungi dengan baik.
+\end{itemize}
+
+
+\section{Beberapa Pertimbangan untuk Kasus Kerja Jarak Jauh}
+Dengan meningkatnya kerja jarak jauh, perhatian khusus perlu diberikan pada beberapa aspek terkait aplikasi:
+
+\begin{enumerate}
+	\item Migrasi ke aplikasi untuk kolaborasi kerja daring
+	\item Perubahan proses bisnis, yang mungkin menyebabkan perubahan aplikasi
+	\item Keamanan aplikasi: enkripsi, manajemen kata sandi, hak akses, dll.
+	\item Tata kelola aplikasi: siapa yang bertanggung jawab atas aplikasi atau tugas terkait aplikasi
+	\item Manajemen aplikasi: manajemen pemecahan masalah, dukungan pengguna, dukungan dari vendor, perizinan, dan pembaruan
+	\item Biaya aplikasi: keuangan, perizinan, kinerja, dan fitur
+\end{enumerate}
+
+\section{Aplikasi Terkait Perusahaan}
+Aplikasi terkait perusahaan membentuk tulang punggung bisnis modern. Beberapa jenis aplikasi perusahaan meliputi:
+
+\begin{enumerate}
+	\item \textbf{Enterprise Resource Planning (ERP)}: Sistem yang mengintegrasikan berbagai fungsi bisnis utama, seperti akuntansi, sumber daya manusia, penjualan, dan produksi, ke dalam satu sistem yang terpusat. Contoh: SAP ERP, Oracle ERP, Microsoft Dynamics 365, Odoo.
+	
+	\item \textbf{Customer Relationship Management (CRM)}: Sistem yang digunakan untuk mengelola interaksi perusahaan dengan pelanggan dan calon pelanggan, membantu meningkatkan hubungan dan kepuasan pelanggan. Contoh: Salesforce, HubSpot CRM, Zoho CRM, Microsoft Dynamics CRM.
+	
+	\item \textbf{Supply Chain Management (SCM)}: Sistem yang membantu mengelola aliran barang, informasi, dan uang di sepanjang rantai pasokan, mulai dari pemasok hingga pelanggan akhir. Contoh: SAP SCM, Oracle SCM Cloud, Kinaxis, Infor Supply Chain Management.
+	
+	\item \textbf{Business Intelligence}: Teknologi dan strategi yang digunakan oleh perusahaan untuk menganalisis data bisnis, menghasilkan wawasan yang dapat digunakan untuk pengambilan keputusan. Contoh: Power BI, Tableau, Qlik Sense, SAP BusinessObjects.
+	
+	\item \textbf{Point of Sales (PoS)}: Sistem yang digunakan untuk melakukan transaksi penjualan di lokasi fisik atau online, sering kali mencakup pemrosesan pembayaran, pelacakan inventaris, dan laporan penjualan. Contoh: Square, Shopify POS, Toast POS, Lightspeed POS.
+	
+	\item \textbf{Manufacturing Execution System (MES)}: Sistem yang digunakan untuk melacak dan mengelola produksi di pabrik, membantu dalam perencanaan produksi, pengawasan, dan pengoptimalan proses manufaktur. Contoh: Siemens Opcenter, Rockwell Automation FactoryTalk, Dassault Systèmes DELMIA, Honeywell MES.
+	
+	\item \textbf{Human Resource Management System (HRMS)}: Sistem yang membantu mengelola proses sumber daya manusia seperti penggajian, rekrutmen, pelatihan, dan pengelolaan kinerja karyawan. Contoh: Workday, SAP SuccessFactors, BambooHR, ADP Workforce Now.
+	
+	\item \textbf{Maintenance Management System (MMS)}: Sistem yang digunakan untuk merencanakan, melacak, dan mengelola pemeliharaan aset perusahaan, baik untuk perawatan preventif maupun reaktif. Contoh: IBM Maximo, Fiix, UpKeep, Limble CMMS.
+	
+	\item \textbf{Warehouse Management System (WMS)}: Sistem yang digunakan untuk mengelola operasi gudang, seperti pelacakan inventaris, manajemen lokasi penyimpanan, dan pemrosesan pengiriman. Contoh: Manhattan Associates WMS, SAP Extended Warehouse Management, Oracle WMS, Infor CloudSuite WMS.
+	
+	\item \textbf{Manufacturing Intelligence (MI)}: Sistem yang mengumpulkan dan menganalisis data dari proses manufaktur untuk meningkatkan kinerja operasional dan kualitas produk. Contoh: GE Digital Proficy, Siemens MindSphere, Honeywell Process Solutions, Rockwell Automation FactoryTalk Analytics.
+	
+	\item \textbf{Quality Management System (QMS)}: Sistem yang membantu organisasi dalam memastikan bahwa produk atau layanan yang mereka hasilkan memenuhi standar kualitas yang ditetapkan. Contoh: MasterControl, Arena QMS, ETQ Reliance, Sparta Systems TrackWise.
+	
+	\item \textbf{Knowledge Management System (KMS)}: Sistem yang digunakan untuk menangkap, menyimpan, dan berbagi pengetahuan dalam organisasi, sering kali melibatkan kolaborasi dan akses informasi yang mudah. Contoh: Confluence, Microsoft SharePoint, Notion, Zendesk Knowledge Management.
+	
+	\item \textbf{Transportation Management System (TMS)}: Sistem yang digunakan untuk merencanakan, melaksanakan, dan mengoptimalkan pengiriman barang, termasuk pengelolaan logistik dan pengangkutan. Contoh: SAP Transportation Management, Oracle Transportation Management, JDA TMS, Manhattan TMS.
+	
+	\item \textbf{Fleet Management System (FMS)}: Sistem yang digunakan untuk melacak dan mengelola armada kendaraan perusahaan, termasuk pemeliharaan, rute, dan pemantauan pengemudi. Contoh: Samsara, Geotab, Verizon Connect, Fleet Complete.
+\end{enumerate}
+
+
+
+\section{Ringkasan}
+Fase Arsitektur Aplikasi sangat penting untuk mendefinisikan dan memvalidasi arsitektur aplikasi yang diperlukan untuk mendukung arsitektur bisnis. Ini memastikan bahwa aplikasi dan interaksinya memenuhi kebutuhan bisnis secara efektif.
+
+\section{Aktivitas Kelas dan Tugas}
+Buat dokumen dan model aplikasi \textbf{As-Is} yang terpengaruh oleh kapabilitas yang dipilih. Selain itu, buat dokumen dan model aplikasi \textbf{To-Be} yang diperlukan untuk mewujudkan kapbilitas terpilih. Tuangkan dalam bentuk atau perbaharui Dokumen Definisi Arsitektur (Subbab \ref{sec:isi_dokumen_definisi_arsitektur} dan \ref{sec:dokumen_definisi_arsitektur_aplikasi}) dan Spesifikasi Persyaratan Arsitektur (Subbab \ref{sec:spesifikasi_kebutuhan_arsitektur} dan  \ref{sec:spesifikasi_kebutuhan_arsitektur_aplikasi}).

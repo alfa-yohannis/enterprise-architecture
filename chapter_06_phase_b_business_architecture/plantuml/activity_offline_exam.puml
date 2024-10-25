@@ -1,5 +1,6 @@
 @startuml
 |Lecturer|
+start
 :Prepare Examination Materials;
 :Print and Distribute Examination Materials;
 
@@ -25,4 +26,5 @@
 
 |Student|
 :Review Results;
+stop
 @enduml

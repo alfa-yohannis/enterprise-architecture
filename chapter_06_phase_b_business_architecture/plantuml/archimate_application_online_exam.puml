@@ -1,0 +1,121 @@
+@startuml 
+top to bottom direction
+
+!include <archimate/Archimate> 
+
+' Define Business Events (Start and End)
+archimate #Business "Start Exam Preparation Event" as startEvent <<business-event>>
+archimate #Business "End Exam Results Event" as endEvent <<business-event>>
+
+' Define Business Processes
+archimate #Business "Create and Upload Examination Materials" as createUploadExam <<business-process>>
+archimate #Business "Define Exam Rules (Duration, Format, etc.)" as defineExamRules <<business-process>>
+archimate #Business "Log in to Examination Platform" as loginToPlatform <<business-process>>
+archimate #Business "Authenticate Identity" as authenticateIdentity <<business-process>>
+archimate #Business "Monitor Student Activities" as monitorActivities <<business-process>>
+archimate #Business "Start Online Examination" as startOnlineExam <<business-process>>
+archimate #Business "Take Online Examination" as takeOnlineExam <<business-process>>
+archimate #Business "Submit Answers" as submitAnswers <<business-process>>
+archimate #Business "Auto-Submit Answers at Time Limit" as autoSubmitAnswers <<business-process>>
+archimate #Business "Save and Store Submissions" as saveSubmissions <<business-process>>
+archimate #Business "Evaluate Answers" as evaluateAnswers <<business-process>>
+archimate #Business "Assign Grades" as assignGrades <<business-process>>
+archimate #Business "View Results" as viewResults <<business-process>>
+
+' Define Application Components
+archimate #Application "Authentication Component" as authService <<application-component>>
+archimate #Application "Proctoring Component" as proctoringSystem <<application-component>>
+archimate #Application "Grading Component" as gradingSystem <<application-component>>
+archimate #Application "Notification Component" as notificationSystem <<application-component>>
+archimate #Application "Data Storage Component" as dataStorageService <<application-component>>
+
+' Define Application Services
+archimate #Application "Authentication Service" as authProcess <<application-service>>
+archimate #Application "Proctoring Service" as proctoringProcess <<application-service>>
+archimate #Application "Grading Service" as gradingProcess <<application-service>>
+archimate #Application "Notification Service" as notificationProcess <<application-service>>
+archimate #Application "Data Storage Service" as dataStorageProcess <<application-service>>
+
+' Define Data Elements as Application Data Objects
+archimate #Application "User Data" as userData <<application-data-object>>
+archimate #Application "Proctoring Data" as proctoringData <<application-data-object>>
+archimate #Application "Grading Data" as gradingData <<application-data-object>>
+archimate #Application "Exam Data" as examData <<application-data-object>>
+archimate #Application "Submission Data" as submissionData <<application-data-object>>
+archimate #Application "Notification Data" as notificationData <<application-data-object>>
+
+' Define Business Objects
+archimate #Business "User Info" as userInfo <<business-object>>
+archimate #Business "Proctoring Info" as proctoringInfo <<business-object>>
+archimate #Business "Grading Info" as gradingInfo <<business-object>>
+archimate #Business "Exam Info" as examInfo <<business-object>>
+archimate #Business "Submission Info" as submissionInfo <<business-object>>
+archimate #Business "Notification Info" as notificationInfo <<business-object>>
+
+' Define Realization Relationships between Application Data Objects and Business Objects
+userData ..|> userInfo : "Realizes"
+proctoringData ..|> proctoringInfo : "Realizes"
+gradingData ..|> gradingInfo : "Realizes"
+examData ..|> examInfo : "Realizes"
+submissionData ..|> submissionInfo : "Realizes"
+notificationData ..|> notificationInfo : "Realizes"
+
+' Define Application to Data Relationships
+authService ..> userData : "Produces"
+proctoringSystem ..> proctoringData : "Produces"
+gradingSystem ..> gradingData : "Produces"
+dataStorageService ..> examData : "Stores"
+dataStorageService ..> submissionData : "Stores"
+notificationSystem ..> notificationData : "Produces"
+
+' Define Data Relationships between processes and business objects
+loginToPlatform <.. userInfo : "Reads"
+authenticateIdentity <.. userInfo : "Verifies"
+createUploadExam ..> examInfo : "Stores"
+defineExamRules ..> examInfo : "Updates"
+submitAnswers ..> submissionInfo : "Stores"
+saveSubmissions ..> submissionInfo : "Stores"
+evaluateAnswers <.. gradingInfo : "Accesses"
+assignGrades ..> gradingInfo : "Stores"
+monitorActivities ..> proctoringInfo  : "Collects"
+autoSubmitAnswers ..> proctoringInfo : "Stores"
+viewResults ..> notificationInfo : "Notifies"
+
+' Relationships between processes, application services, and application components
+authService ..|> authProcess : "Provides"
+authProcess --> loginToPlatform : "Serves"
+authProcess --> authenticateIdentity : "Serves"
+
+proctoringSystem ..|> proctoringProcess : "Provides"
+proctoringProcess --> monitorActivities : "Serves"
+proctoringProcess --> startOnlineExam : "Serves"
+proctoringProcess --> submitAnswers : "Serves"
+proctoringProcess --> autoSubmitAnswers : "Serves"
+
+gradingSystem ..|> gradingProcess : "Provides"
+gradingProcess --> evaluateAnswers : "Serves"
+gradingProcess --> assignGrades : "Serves"
+
+notificationSystem ..|> notificationProcess : "Provides"
+notificationProcess --> viewResults : "Serves"
+
+dataStorageService ..|> dataStorageProcess : "Provides"
+dataStorageProcess --> saveSubmissions : "Serves"
+
+' Define Triggers between processes
+startEvent -->> createUploadExam : "Initiates"
+createUploadExam -->> defineExamRules : "Triggers"
+defineExamRules -->> loginToPlatform : "Triggers"
+loginToPlatform -->> authenticateIdentity : "Triggers"
+authenticateIdentity -->> monitorActivities : "Triggers"
+monitorActivities -->> startOnlineExam : "Triggers"
+startOnlineExam -->> takeOnlineExam : "Triggers"
+takeOnlineExam -->> submitAnswers : "Triggers"
+submitAnswers -->> autoSubmitAnswers : "Triggers"
+autoSubmitAnswers -->> saveSubmissions : "Triggers"
+saveSubmissions -->> evaluateAnswers : "Triggers"
+evaluateAnswers -->> assignGrades : "Triggers"
+assignGrades -->> viewResults : "Triggers"
+viewResults -->> endEvent : "Completes"
+
+@enduml

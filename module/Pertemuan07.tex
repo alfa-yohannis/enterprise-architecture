@@ -151,7 +151,7 @@ Dalam fase ini, berbagai katalog, matriks, dan diagram yang digunakan meliputi:
 \end{table}
 
 \section{Komponen Dokumen Definisi Arsitektur}
-\label{sec:data_komponen_dokumen_definisi_arsitektur}
+\label{sec:dokumen_definisi_arsitektur_data}
 Topik yang harus dibahas dalam Dokumen Definisi Arsitektur yang terkait dengan Arsitektur Data adalah sebagai berikut:
 \begin{itemize}
 	\item Arsitektur Data Baseline, jika memungkinkan
@@ -172,7 +172,7 @@ Topik yang harus dibahas dalam Dokumen Definisi Arsitektur yang terkait dengan A
 \end{itemize}
 
 \section{Komponen Spesifikasi Kebutuhan Arsitektur}
-\label{sec:data_komponen_spesifikasi_kebutuhan}
+\label{sec:spesifikasi_kebutuhan_arsitektur_data}
 Kebutuhan Arsitektur Data yang mengisi Spesifikasi Kebutuhan Arsitektur pada Fase C meliputi:
 \begin{itemize}
 	\item Hasil Analisis Kesenjangan
@@ -221,28 +221,31 @@ Dalam konteks \textit{\textbf{hybrid teaching and learning}} di universitas, hal
 \section{Inovasi Terkait Data}
 Beberapa inovasi terkait data meliputi:
 
-\begin{enumerate}
-	\item Berkas Teks dan Biner
-	\item Data tidak terstruktur
-	\item Data terstruktur
-	\item Sistem Basis Data Relasional (RDBMS)
-	\item Data Pemrosesan Transaksi Online (OLTP)
-	\item Data Pemrosesan Analitik Online (OLAP)
-	\item Data Lake
-	\item Data Warehouse
-	\item Business Intelligence
-	\item BigData
-	\item Data Mining
-	\item NoSQL dan Data Tidak Terstruktur
-	\item Basis Data Graf
-	\item Basis Data Berkas
-	\item Basis Data Kolom
-	\item Basis Data Dalam Memori
-	\item Pemrosesan Sequential vs Paralel
-	\item Data Terpusat vs Terdistribusi
-	\item Data Terpusat vs Federasi
-	\item Data Terpusat vs Desentralisasi (gerakan Web3) seperti Filecoin Arweave, SOLID POD
-\end{enumerate}
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item Berkas Teks dan Biner
+			\item Data tidak terstruktur
+			\item Data terstruktur
+			\item Sistem Basis Data Relasional (RDBMS)
+			\item Data Pemrosesan Transaksi Online (OLTP)
+			\item Data Pemrosesan Analitik Online (OLAP)
+			\item Data Lake
+			\item Data Warehouse
+			\item Business Intelligence
+			\item BigData
+			\item Data Mining
+			\item NoSQL dan Data Tidak Terstruktur
+			\item Basis Data Graf
+			\item Basis Data Berkas
+			\item Basis Data Kolom
+			\item Basis Data Dalam Memori
+			\item Pemrosesan Sequential vs Paralel
+			\item Data Terpusat vs Terdistribusi
+			\item Data Terpusat vs Federasi
+			\item Data Terpusat vs Desentralisasi (gerakan Web3) seperti Filecoin, Arweave, SOLID POD
+		\end{enumerate}
+	\end{multicols}
+
 
 \subsection*{Contoh:}
 
@@ -356,5 +359,199 @@ Beberapa inovasi terkait data meliputi:
 	\end{itemize}
 \end{enumerate}
 
+
+\section{Arsitektur Data: Studi Kasus Ujian Offline vs. Online}
+
+\subsection{Dataflow Diagram}
+
+Bagian ini menjelaskan dua diagram aliran data (dataflow) yang menggambarkan bagaimana data dan entitas berinteraksi dalam proses ujian offline (baseline) dan ujian online (target). Diagram ini menunjukkan entitas data utama, artefak, dan proses yang berhubungan dengan persiapan, pelaksanaan, dan evaluasi ujian. Selain itu, data dalam sistem dikategorikan berdasarkan jenisnya, yaitu data fisik, data terstruktur yang disimpan dalam database, dan data digital tidak terstruktur.
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=\linewidth]{../figures/dataflow_offline_exam}
+	\caption{Dataflow diagram untuk ujian offline.}
+	\label{fig:dataflow_offline_exam}
+\end{figure}
+
+
+
+
+\subsubsection{Diagram Aliran Data Ujian Offline (Baseline)}
+
+Diagram aliran data untuk sistem ujian offline menunjukkan bagaimana proses ujian dikelola secara manual dengan menggunakan artefak fisik seperti lembar soal, lembar jawaban, dan log pengawas. Berikut adalah penjelasan prosesnya beserta pengkategorian datanya:
+
+\begin{itemize}
+	\item \textbf{Dosen} memulai dengan menyiapkan materi ujian, yang kemudian dicetak dan didistribusikan kepada mahasiswa melalui proses "Distribute Question Papers". Hasilnya adalah artefak fisik berupa "Printed Question Papers" (Lembar Soal Cetak).
+	\item \textbf{Mahasiswa} memverifikasi identitas mereka, dan kehadiran mereka dicatat dalam "Attendance Sheets" (Lembar Kehadiran) melalui proses "Verify Student Identity" dan "Mark Attendance".
+	\item \textbf{Pengawas Ujian} memantau jalannya ujian dan mencatat insiden dalam "Invigilator Logs" (Log Pengawas) melalui proses "Monitor Exam". Jika ada insiden, laporan tersebut dimasukkan dalam "Incident Reports" (Laporan Insiden).
+	\item Setelah ujian selesai, lembar jawaban mahasiswa dikumpulkan dalam "Answer Sheets" (Lembar Jawaban) melalui proses "Collect Answer Sheets", yang kemudian digunakan oleh dosen dalam proses penilaian (grading).
+	\item \textbf{Dosen} menilai lembar jawaban dan menyimpan hasilnya dalam "Grading Data" (Data Penilaian) melalui proses "Marking and Grading". Setelah penilaian selesai, hasil akhir dipublikasikan melalui proses "Publish Results", yang disimpan dalam "Result Data" (Data Hasil).
+	\item Setiap insiden yang dilaporkan selama ujian akan dicatat dalam "Incident Reports" dan datanya disimpan sebagai "Incident Data".
+\end{itemize}
+
+\paragraph{Pengkategorian Data Ujian Offline:}
+\begin{itemize}
+	\item \textbf{Data Fisik:}
+	\begin{itemize}
+		\item "Printed Question Papers" (Lembar Soal Cetak)
+		\item "Answer Sheets" (Lembar Jawaban)
+		\item "Attendance Sheets" (Lembar Kehadiran)
+		\item "Invigilator Logs" (Log Pengawas)
+		\item "Incident Reports" (Laporan Insiden)
+	\end{itemize}
+	\item \textbf{Data Terstruktur (disimpan dalam database):}
+	\begin{itemize}
+		\item "Grading Data" (Data Penilaian)
+		\item "Result Data" (Data Hasil)
+		\item "Incident Data" (Data Insiden)
+	\end{itemize}
+	\item \textbf{Data Digital Tidak Terstruktur:}
+	\begin{itemize}
+		\item Tidak relevan untuk sistem ini karena sistem offline mengandalkan artefak fisik.
+	\end{itemize}
+\end{itemize}
+
+Sistem ini sangat bergantung pada data fisik untuk persiapan dan pengelolaan ujian, sementara hasil penilaian dan data insiden disimpan dalam bentuk data terstruktur yang dapat diakses untuk analisis dan laporan lebih lanjut.
+
+\subsubsection{Diagram Aliran Data Ujian Online (Target)}
+
+\begin{figure}[th!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../figures/dataflow_online_exam}
+	\caption{Dataflow diagram untuk ujian online.}
+	\label{fig:dataflow_online_exam}
+\end{figure}
+
+Diagram aliran data untuk sistem ujian online memperkenalkan otomatisasi dan digitalisasi yang signifikan dalam proses ujian. Berikut adalah penjelasan detailnya, beserta pengkategorian data yang digunakan dalam sistem:
+
+\begin{itemize}
+	\item \textbf{Dosen} menyiapkan ujian dengan mengunggah materi ujian, seperti instruksi ujian dalam format PDF atau Word, melalui proses "Prepare Exam". Informasi dosen yang digunakan untuk menyiapkan ujian diambil dari "Lecturer Profile Data".
+	\item \textbf{Mahasiswa} harus melakukan autentikasi dan verifikasi identitas melalui proses "Authenticate Students", yang menggunakan data dari "User Data" dan "Student Profile Data".
+	\item Selama ujian, \textbf{Platform} memantau aktivitas mahasiswa melalui "Monitor Exam", dengan mengumpulkan data proctoring (misalnya, rekaman webcam atau tangkapan layar) yang disimpan dalam "Proctoring Data", serta mencatat kejadian-kejadian penting dalam "Proctoring Logs". Data dari aktivitas sistem atau browser juga dicatat dalam "Browser/System Logs".
+	\item Mahasiswa mengirimkan jawaban ujian secara digital melalui proses "Submit Answers", dan jawaban tersebut disimpan dalam "Digital Answer Submissions".
+	\item Setelah pengiriman jawaban, proses "Plagiarism Check" memastikan tidak ada plagiarisme dengan memeriksa data dalam "Plagiarism Check Data". 
+	\item \textbf{Dosen} kemudian menilai jawaban mahasiswa melalui proses "Grading", dengan hasil penilaian disimpan dalam "Grading Data". Setelah itu, hasil akhir ujian dipublikasikan melalui "Publish Results" dan disimpan dalam "Result Data".
+	\item Mahasiswa menerima pemberitahuan hasil ujian melalui proses "Notify Students", dengan notifikasi yang dikirimkan melalui sistem pemberitahuan dan dicatat dalam "Notifications".
+	\item Jika ada insiden selama ujian, laporan insiden tersebut dibuat dalam proses "Report Incidents", dan insiden tersebut dicatat dalam "Incident Reports" serta disimpan sebagai "Incident Data".
+\end{itemize}
+
+\paragraph{Pengkategorian Data Ujian Online:}
+\begin{itemize}
+	\item \textbf{Data Fisik:}
+	\begin{itemize}
+		\item Tidak ada data fisik, semua proses menggunakan data digital.
+	\end{itemize}
+	\item \textbf{Data Terstruktur (disimpan dalam database):}
+	\begin{itemize}
+		\item "User Data" (Data Pengguna)
+		\item "Lecturer Profile Data" (Data Profil Dosen)
+		\item "Student Profile Data" (Data Profil Mahasiswa)
+		\item "Grading Data" (Data Penilaian)
+		\item "Result Data" (Data Hasil)
+		\item "Incident Data" (Data Insiden)
+		\item "Plagiarism Check Data" (Data Pemeriksaan Plagiarisme)
+		\item "Notifications" (Pemberitahuan)
+	\end{itemize}
+	\item \textbf{Data Digital Tidak Terstruktur:}
+	\begin{itemize}
+		\item "Exam Instructions (PDF, Word)" (Instruksi Ujian)
+		\item "Digital Answer Submissions" (Jawaban Digital)
+		\item "Proctoring Data (Webcam, Screen)" (Data Proctoring)
+		\item "Proctoring Logs" (Log Proctoring)
+		\item "Browser/System Logs" (Log Browser/Sistem)
+		\item "Incident Reports" (Laporan Insiden)
+	\end{itemize}
+\end{itemize}
+
+Sistem ujian online bergantung sepenuhnya pada data digital, dengan kombinasi data terstruktur yang disimpan dalam database dan data tidak terstruktur seperti rekaman video, instruksi ujian, dan log sistem yang perlu dikelola secara efisien. Otomatisasi pengelolaan data ini meningkatkan efisiensi, aksesibilitas, dan keamanan dalam mengelola ujian.
+
+Sistem ujian offline bergantung pada penggunaan data fisik, terutama dalam bentuk cetakan dan lembar jawaban, yang memerlukan interaksi manual dan pengelolaan artefak fisik. Sebaliknya, sistem ujian online menggunakan data digital, baik terstruktur maupun tidak terstruktur, yang dikelola secara otomatis oleh platform digital. Sistem online menawarkan efisiensi yang lebih tinggi dan fleksibilitas yang lebih besar dalam manajemen ujian, terutama dalam skenario pembelajaran jarak jauh atau hybrid. Data digital tidak terstruktur seperti rekaman proctoring dan log sistem menjadi elemen penting dalam menjaga integritas dan keamanan ujian online.
+
+\subsection{Analisis Advantages-Disadvantages, Upaya Migrasi, dan Cost-Benefit}
+
+Berdasarkan dataflow diagram untuk ujian offline (baseline) dan online (target), analisis berikut akan membahas kelebihan dan kekurangan dari kedua sistem, langkah-langkah migrasi dari sistem offline ke online, serta analisis biaya-manfaat (cost-benefit) dari transisi ini.
+
+\subsubsection{Analisis Advantages-Disadvantages}
+
+\paragraph{Sistem Ujian Offline (Baseline)}
+\textbf{Kelebihan:}
+\begin{itemize}
+	\item Tidak memerlukan infrastruktur teknologi yang kompleks, sehingga tidak ada ketergantungan pada perangkat digital atau jaringan internet.
+	\item Proses sudah dikenal oleh para dosen, pengawas, dan mahasiswa, sehingga tidak memerlukan pelatihan tambahan.
+	\item Pengawasan fisik secara langsung (oleh pengawas) dapat lebih mudah mengatasi kecurangan yang jelas terlihat.
+\end{itemize}
+
+\textbf{Kekurangan:}
+\begin{itemize}
+	\item Proses manual memerlukan banyak waktu dan sumber daya (misalnya mencetak soal, mengumpulkan lembar jawaban).
+	\item Rentan terhadap kesalahan manusia, baik dalam pencatatan kehadiran, pengumpulan, maupun penilaian.
+	\item Pengelolaan insiden (seperti laporan insiden di ruang ujian) memerlukan dokumentasi fisik yang bisa hilang atau rusak.
+	\item Skalabilitas terbatas, terutama untuk ujian dengan jumlah mahasiswa yang besar atau pada situasi pembelajaran jarak jauh.
+\end{itemize}
+
+\paragraph{Sistem Ujian Online (Target)}
+\textbf{Kelebihan:}
+\begin{itemize}
+	\item Otomatisasi proses seperti pengumpulan jawaban, pengecekan plagiarisme, dan publikasi hasil ujian mengurangi waktu dan sumber daya yang dibutuhkan.
+	\item Lebih aman dan efisien dalam pengelolaan data, baik untuk penyimpanan hasil ujian, laporan insiden, maupun pemantauan aktivitas mahasiswa.
+	\item Mendukung fleksibilitas bagi mahasiswa yang mengikuti ujian dari jarak jauh atau dalam situasi hybrid.
+	\item Data digital seperti log pengawasan dan data proctoring dapat digunakan untuk mengurangi risiko kecurangan dan meningkatkan transparansi.
+\end{itemize}
+
+\textbf{Kekurangan:}
+\begin{itemize}
+	\item Memerlukan infrastruktur teknologi yang handal, termasuk jaringan internet, perangkat keras, dan perangkat lunak yang mendukung.
+	\item Risiko keamanan siber, seperti potensi kebocoran data pribadi atau gangguan teknis yang dapat mengganggu proses ujian.
+	\item Kurva pembelajaran untuk dosen, mahasiswa, dan pengawas dalam mengoperasikan sistem ujian digital dan pemantauan online.
+\end{itemize}
+
+\subsubsection{Upaya Migrasi dari Ujian Offline (Baseline) ke Ujian Online (Target)}
+
+Migrasi dari sistem ujian offline ke sistem ujian online memerlukan beberapa upaya yang meliputi:
+
+\begin{enumerate}
+	\item \textbf{Penyiapan Infrastruktur Teknologi:}
+	\begin{itemize}
+		\item Pengadaan platform ujian online, perangkat keras, dan jaringan yang mendukung kelancaran ujian online.
+		\item Menyiapkan ruang server dan penyimpanan untuk menangani data digital besar seperti rekaman proctoring, log sistem, dan hasil ujian.
+	\end{itemize}
+	\item \textbf{Pelatihan dan Familiarisasi:}
+	\begin{itemize}
+		\item Melatih dosen, mahasiswa, dan pengawas dalam penggunaan platform ujian, termasuk cara menggunakan proctoring dan pengecekan plagiarisme.
+		\item Menyediakan panduan dan simulasi ujian online untuk memastikan semua pihak terbiasa dengan sistem baru.
+	\end{itemize}
+	\item \textbf{Keamanan dan Kebijakan Penggunaan:}
+	\begin{itemize}
+		\item Mengembangkan kebijakan keamanan data dan protokol dalam menangani masalah teknis serta potensi kecurangan digital.
+		\item Menerapkan prosedur yang jelas untuk menangani insiden yang terkait dengan pemantauan dan proctoring secara online.
+	\end{itemize}
+	\item \textbf{Uji Coba dan Pengawasan:}
+	\begin{itemize}
+		\item Melakukan uji coba sistem ujian online dengan kelompok kecil untuk memastikan bahwa sistem berjalan dengan baik tanpa masalah teknis.
+		\item Menerapkan sistem pemantauan dan audit terhadap proses ujian online untuk memastikan integritas dan keamanan ujian.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Analisis Cost-Benefit}
+
+\paragraph{Biaya:}
+\begin{itemize}
+	\item \textbf{Pengadaan Teknologi:} Pengeluaran awal yang signifikan untuk pengadaan platform ujian online, perangkat keras tambahan, server, serta perangkat proctoring.
+	\item \textbf{Pelatihan:} Biaya untuk pelatihan staf pengajar, pengawas, dan mahasiswa dalam penggunaan sistem baru, serta pembuatan materi panduan.
+	\item \textbf{Pemeliharaan dan Dukungan Teknis:} Biaya berkelanjutan untuk pemeliharaan sistem, dukungan teknis, serta pembaruan perangkat lunak dan keamanan.
+	\item \textbf{Keamanan dan Perlindungan Data:} Pengeluaran tambahan untuk memastikan keamanan data mahasiswa dan mencegah potensi ancaman siber.
+\end{itemize}
+
+\paragraph{Manfaat:}
+\begin{itemize}
+	\item \textbf{Efisiensi Waktu dan Biaya Operasional:} Otomatisasi proses pengumpulan, penilaian, dan publikasi hasil ujian mengurangi beban kerja manual dan waktu pemrosesan.
+	\item \textbf{Aksesibilitas dan Skalabilitas:} Mahasiswa dapat mengikuti ujian dari lokasi mana pun, sehingga mendukung pembelajaran jarak jauh dan hybrid. Sistem ini juga mampu menangani jumlah mahasiswa yang lebih besar secara efisien.
+	\item \textbf{Pengelolaan Data yang Lebih Baik:} Penyimpanan digital memudahkan pengelolaan data secara terpusat dan memastikan transparansi hasil ujian serta catatan insiden.
+	\item \textbf{Peningkatan Keamanan Ujian:} Penggunaan proctoring digital, log aktivitas, dan pengecekan plagiarisme meningkatkan integritas dan keadilan dalam pelaksanaan ujian.
+\end{itemize}
+
+Walaupun terdapat biaya awal yang cukup besar dalam implementasi sistem ujian online, manfaat jangka panjang seperti efisiensi, aksesibilitas, dan peningkatan keamanan menjadikannya solusi yang sangat bermanfaat. Selain itu, sistem online memungkinkan pengelolaan ujian secara lebih fleksibel dan terstruktur, terutama dalam skenario pembelajaran jarak jauh.
+
+
 \section{Aktivitas Kelas dan Tugas}
-Buat model data dan dokumen \textbf{As-Is} yang terpengaruh oleh kapabilitas yang dipilih. Selain itu, buat model data dan dokumen \textbf{To-Be} yang diperlukan untuk mewujudkan kapbilitas terpilih. Tuangkan dalam bentuk atau perbaharui Dokumen Definisi Arsitektur (Subbab \ref{sec:isi_dokumen_definisi_arsitektur} dan \ref{sec:data_komponen_dokumen_definisi_arsitektur}) dan Spesifikasi Persyaratan Arsitektur (Subbab \ref{sec:data_komponen_spesifikasi_kebutuhan} dan  \ref{sec:data_komponen_spesifikasi_kebutuhan}).
+Buat model data dan dokumen \textbf{As-Is} yang terpengaruh oleh kapabilitas yang dipilih. Selain itu, buat model data dan dokumen \textbf{To-Be} yang diperlukan untuk mewujudkan kapbilitas terpilih. Tuangkan dalam bentuk atau perbaharui Dokumen Definisi Arsitektur (Subbab \ref{sec:isi_dokumen_definisi_arsitektur} dan \ref{sec:dokumen_definisi_arsitektur_data}) dan Spesifikasi Persyaratan Arsitektur (Subbab \ref{sec:spesifikasi_kebutuhan_arsitektur} dan  \ref{sec:spesifikasi_kebutuhan_arsitektur_data}).

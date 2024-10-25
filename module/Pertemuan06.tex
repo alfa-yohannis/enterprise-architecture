@@ -1,4 +1,4 @@
-\chapter{Pengembangan Arsitektur Bisnis}
+\chapter{Arsitektur Bisnis}
 
 \section{Tujuan}
 Tujuan utama dari Pengembangan Arsitektur Bisnis adalah sebagai berikut:
@@ -362,7 +362,7 @@ Dalam konteks Hybrid Teaching and Learning di universitas, perbedaan antara arsi
 		Penyediaan Materi     & Ya                  & Tidak                    & Ya                         \\ \hline
 		Evaluasi dan Umpan Balik & Ya              & Tidak                    & Ya                         \\ \hline
 	\end{tabular}
-\label{tbl:matriks-offline}
+	\label{tbl:matriks-offline}
 \end{table}
 
 \begin{table}[h]
@@ -376,7 +376,7 @@ Dalam konteks Hybrid Teaching and Learning di universitas, perbedaan antara arsi
 		Penyediaan Materi     & Ya                  & Ya                      & Ya                         \\ \hline
 		Evaluasi dan Umpan Balik & Ya              & Ya                      & Ya                         \\ \hline
 	\end{tabular}
-\label{tbl:matriks-hybrid}
+	\label{tbl:matriks-hybrid}
 \end{table}
 
 \section{Spesifikasi Persyaratan Arsitektur}
@@ -399,42 +399,44 @@ Spesifikasi Persyaratan Arsitektur harus memuat:
 \subsection{Contoh:}
 \begin{enumerate}
 	
-\item
-\textbf{Ukuran keberhasilan} meliputi tingkat adopsi teknologi pembelajaran hybrid, persentase kehadiran mahasiswa dalam kelas online, dan tingkat kepuasan dosen serta mahasiswa terhadap infrastruktur IT yang disediakan.
-
-\item
-\textbf{Persyaratan arsitektur} dapat berupa sistem arsitektur harus mampu mendukung pembelajaran hybrid dengan integrasi LMS (Learning Management System), kapasitas server yang memadai, serta dukungan akses jaringan untuk mahasiswa dan dosen baik secara online maupun offline.
-
-\item
-\textbf{Kontrak layanan bisnis }harus mencakup kesepakatan dengan vendor teknologi untuk memastikan infrastruktur LMS dan platform video konferensi selalu dapat diakses, dengan waktu respons maksimal 2 jam dalam menangani kendala teknis.
-
-\item
-\textbf{Kontrak layanan aplikas}i mencakup komitmen penyedia layanan untuk menjaga uptime LMS, aplikasi konferensi video, dan aplikasi administrasi akademik di atas 99\% dengan downtime maksimum 1 jam.
-
-\item
-\textbf{Panduan implementasi} berisi langkah-langkah untuk mengonfigurasi sistem LMS, integrasi dengan perangkat lunak pihak ketiga seperti Zoom atau Google Meet, serta panduan penggunaan untuk dosen dan mahasiswa.
-
-\item
-\textbf{Spesifikasi implementasi} mencakup kebutuhan perangkat keras seperti server, storage, dan bandwidth internet yang diperlukan untuk mendukung hingga 5000 pengguna secara bersamaan dalam platform pembelajaran hybrid.
-
-\item
-\textbf{Standar implementasi }mengacu pada protokol keamanan data seperti enkripsi SSL untuk melindungi data pengguna, serta standar penyimpanan yang sesuai dengan regulasi nasional.
-
-\item
-\textbf{Persyaratan interoperabilitas} mengharuskan sistem dapat bekerja dengan platform lain seperti sistem informasi akademik, sistem perpustakaan digital, dan sistem administrasi akademik universitas agar data dapat saling bertukar secara efisien.
-
-\item
-\textbf{Persyaratan manajemen layanan IT }mencakup penyediaan tim dukungan teknis yang tersedia 24/7 untuk menangani permasalahan teknis, serta pemeliharaan sistem secara berkala tanpa mengganggu aktivitas pembelajaran.
-
-\item
-\textbf{Kendala} meliputi keterbatasan anggaran untuk peningkatan infrastruktur IT, keterbatasan waktu dalam implementasi sistem, serta tantangan dalam pelatihan dosen dan mahasiswa terkait teknologi pembelajaran baru.
-
-\item
-\textbf{Asumsi} mencakup ketersediaan infrastruktur jaringan yang memadai, kompetensi dasar IT yang dimiliki dosen dan mahasiswa, serta komitmen manajemen universitas dalam mendukung transformasi digital.
-
+	\item
+	\textbf{Ukuran keberhasilan} meliputi tingkat adopsi teknologi pembelajaran hybrid, persentase kehadiran mahasiswa dalam kelas online, dan tingkat kepuasan dosen serta mahasiswa terhadap infrastruktur IT yang disediakan.
+	
+	\item
+	\textbf{Persyaratan arsitektur} dapat berupa sistem arsitektur harus mampu mendukung pembelajaran hybrid dengan integrasi LMS (Learning Management System), kapasitas server yang memadai, serta dukungan akses jaringan untuk mahasiswa dan dosen baik secara online maupun offline.
+	
+	\item
+	\textbf{Kontrak layanan bisnis }harus mencakup kesepakatan dengan vendor teknologi untuk memastikan infrastruktur LMS dan platform video konferensi selalu dapat diakses, dengan waktu respons maksimal 2 jam dalam menangani kendala teknis.
+	
+	\item
+	\textbf{Kontrak layanan aplikas}i mencakup komitmen penyedia layanan untuk menjaga uptime LMS, aplikasi konferensi video, dan aplikasi administrasi akademik di atas 99\% dengan downtime maksimum 1 jam.
+	
+	\item
+	\textbf{Panduan implementasi} berisi langkah-langkah untuk mengonfigurasi sistem LMS, integrasi dengan perangkat lunak pihak ketiga seperti Zoom atau Google Meet, serta panduan penggunaan untuk dosen dan mahasiswa.
+	
+	\item
+	\textbf{Spesifikasi implementasi} mencakup kebutuhan perangkat keras seperti server, storage, dan bandwidth internet yang diperlukan untuk mendukung hingga 5000 pengguna secara bersamaan dalam platform pembelajaran hybrid.
+	
+	\item
+	\textbf{Standar implementasi }mengacu pada protokol keamanan data seperti enkripsi SSL untuk melindungi data pengguna, serta standar penyimpanan yang sesuai dengan regulasi nasional.
+	
+	\item
+	\textbf{Persyaratan interoperabilitas} mengharuskan sistem dapat bekerja dengan platform lain seperti sistem informasi akademik, sistem perpustakaan digital, dan sistem administrasi akademik universitas agar data dapat saling bertukar secara efisien.
+	
+	\item
+	\textbf{Persyaratan manajemen layanan IT }mencakup penyediaan tim dukungan teknis yang tersedia 24/7 untuk menangani permasalahan teknis, serta pemeliharaan sistem secara berkala tanpa mengganggu aktivitas pembelajaran.
+	
+	\item
+	\textbf{Kendala} meliputi keterbatasan anggaran untuk peningkatan infrastruktur IT, keterbatasan waktu dalam implementasi sistem, serta tantangan dalam pelatihan dosen dan mahasiswa terkait teknologi pembelajaran baru.
+	
+	\item
+	\textbf{Asumsi} mencakup ketersediaan infrastruktur jaringan yang memadai, kompetensi dasar IT yang dimiliki dosen dan mahasiswa, serta komitmen manajemen universitas dalam mendukung transformasi digital.
+	
 \end{enumerate}
 
-\section{Persyaratan Arsitektur Bisnis}
+\section{Kebutuhan/Prasyarat (\textit{Requirements}) Arsitektur Bisnis}
+\label{sec:spesifikasi_kebutuhan_arsitektur}
+
 \begin{enumerate}
 	\item Hasil Analisis Kesenjangan (\textit{Gap Analysis}).
 	\item Persyaratan (\textit{requirements}) bisnis yang telah diperbarui, diidentifikasi menggunakan teknik Skenario Bisnis
@@ -610,8 +612,246 @@ Konten berikut biasanya ditemukan dalam Peta Jalan Arsitektur:
 	\end{itemize}
 \end{itemize}
 
+\section{Arsitektur Bisnis: Studi Kasus Ujian Offline vs. Online}
+
+\subsection{Usecase Diagram}
+
+\begin{figure}[h!]
+	\centering
+	\subcaptionbox{Usecase diagram untuk ujian offline.\label{fig:usecase_offline_exam}}%
+	[0.495\linewidth]{\includegraphics[width=\linewidth]{../figures/usecase_offline_exam}}
+	\hfill
+	\subcaptionbox{Usecase diagram untuk ujian online.\label{fig:usecase_online_exam}}%
+	[0.495\linewidth]{\includegraphics[width=\linewidth]{../figures/usecase_online_exam}}
+	\caption{Perbandingan usecase diagram untuk ujian offline dan online.}
+\end{figure}
+
+\subsubsection{Sistem Ujian Offline (Baseline)}
+
+Sistem ujian offline mewakili pendekatan tradisional dan manual dalam pelaksanaan ujian. Aktor yang terlibat dalam sistem ini adalah \textbf{Dosen}, \textbf{Mahasiswa}, dan \textbf{Pengawas Ujian}. Interaksi utama antara aktor dan sistem adalah sebagai berikut:
+
+\begin{itemize}
+	\item \textbf{Dosen} bertanggung jawab untuk mempersiapkan materi ujian, mendistribusikan materi, mengevaluasi lembar jawaban, dan memberikan hasil. Distribusi materi dan pemberian hasil dimodelkan sebagai hubungan "include", yang menunjukkan bahwa tindakan ini merupakan bagian dari proses yang lebih luas.
+	\item \textbf{Mahasiswa} mengikuti ujian, mengumpulkan lembar jawaban, menunjukkan identifikasi untuk verifikasi, dan meninjau hasil ujian. Penyajian identitas dimodelkan sebagai hubungan "include" karena wajib dilakukan untuk mengikuti ujian.
+	\item \textbf{Pengawas Ujian} memantau jalannya ujian dan memverifikasi identitas mahasiswa. Proses verifikasi identitas sangat penting dan dimodelkan sebagai hubungan "include". Selain itu, verifikasi identitas memperpanjang proses pemantauan untuk memastikan integritas ujian.
+\end{itemize}
+
+Sistem offline, meskipun sudah dikenal, memerlukan intervensi manual di setiap tahap. Alur tugas seperti distribusi, evaluasi, dan verifikasi identitas sangat bergantung pada keterlibatan manusia, yang dapat memakan waktu dan rentan terhadap kesalahan.
+
+\subsubsection{Sistem Ujian Online (Target)}
+
+Sistem ujian online memperkenalkan otomatisasi dan interaksi berbasis platform untuk meningkatkan efisiensi dan skalabilitas. Aktor utama dalam sistem ini adalah \textbf{Dosen}, \textbf{Mahasiswa}, dan \textbf{Platform}. Kegiatan utama dalam sistem ini adalah:
+
+\begin{itemize}
+	\item \textbf{Dosen} membuat materi ujian, mendefinisikan aturan ujian, memantau ujian, mengevaluasi kiriman jawaban, dan memberikan nilai. Proses pemantauan mencakup alat otomatis yang disediakan oleh platform untuk meningkatkan efisiensi. Pemberian nilai dimodelkan sebagai hubungan "include" karena merupakan bagian wajib dari evaluasi.
+	\item \textbf{Mahasiswa} login ke platform, melakukan autentikasi identitas, mengikuti ujian, mengirim jawaban, dan melihat hasil. Langkah autentikasi sangat penting dalam proses ini, dimodelkan sebagai hubungan "include" untuk memastikan integritas ujian. Pengiriman jawaban juga dimodelkan sebagai tindakan wajib setelah menyelesaikan ujian.
+	\item \textbf{Platform} mengotomatiskan beberapa tugas, seperti menyimpan kiriman jawaban dan secara otomatis mengirim jawaban jika mahasiswa tidak melakukannya secara manual sebelum tenggat waktu. Ini dimodelkan sebagai hubungan "extend" untuk menunjukkan bahwa itu terjadi hanya dalam kondisi tertentu (misalnya, waktu habis).
+\end{itemize}
+
+Sistem online, dibandingkan dengan yang offline, menawarkan fleksibilitas dan skalabilitas yang lebih besar dengan memungkinkan mahasiswa mengikuti ujian dari jarak jauh dan mengotomatiskan beberapa proses utama, seperti pengiriman dan penilaian. Ini mengurangi beban kerja pada aktor manusia dan memastikan pemantauan ujian yang lebih konsisten melalui kemampuan platform.
+
+
+\subsection{Activity Diagram}
+
+\begin{figure}[th!]
+	\centering
+	\subcaptionbox{Activity diagram untuk ujian offline.\label{fig:activity_offline_exam}}%
+	[0.49\linewidth]{\includegraphics[width=\linewidth]{../figures/activity_offline_exam}}
+	\hfill
+	\subcaptionbox{Activity diagram untuk ujian online.\label{fig:activity_online_exam}}%
+	[0.49\linewidth]{\includegraphics[width=\linewidth]{../figures/activity_online_exam}}
+	\caption{Perbandingan activity diagram untuk ujian offline dan online.}
+\end{figure}
+
+Activity diagram (Figures \ref{fig:activity_offline_exam} dan \ref{fig:activity_online_exam}) menggambarkan proses ujian pada sistem ujian offline dan online. Setiap diagram menunjukkan alur kerja dari berbagai aktor yang terlibat, seperti dosen, mahasiswa, pengawas, dan platform ujian online.
+
+\subsubsection{Activity Diagram Ujian Offline}
+
+Pada sistem ujian offline, proses ujian dilaksanakan secara manual, mulai dari persiapan hingga evaluasi hasil ujian. Berikut adalah penjelasan dari activity diagram:
+
+\begin{itemize}
+	\item \textbf{Dosen} memulai proses dengan mempersiapkan materi ujian, mencetak, dan mendistribusikannya kepada para mahasiswa.
+	\item \textbf{Mahasiswa} datang ke ruang ujian dan harus terlebih dahulu menunjukkan identitas diri untuk diverifikasi oleh pengawas. Setelah identitas mahasiswa diverifikasi, mereka dapat mengikuti ujian.
+	\item \textbf{Pengawas Ujian} bertanggung jawab untuk memantau ruang ujian selama proses berlangsung, memastikan tidak ada pelanggaran aturan.
+	\item Setelah mahasiswa selesai mengerjakan ujian, mereka mengumpulkan lembar jawaban kepada dosen melalui pengawas.
+	\item \textbf{Dosen} mengumpulkan, menyimpan, dan kemudian mengevaluasi lembar jawaban tersebut untuk memberikan penilaian.
+	\item Setelah proses penilaian selesai, mahasiswa dapat meninjau hasil ujian mereka.
+\end{itemize}
+
+Activity diagram ini menunjukkan bahwa setiap tahap dalam proses ujian offline memerlukan interaksi fisik antara mahasiswa, dosen, dan pengawas, serta membutuhkan verifikasi identitas manual dan pengawasan langsung.
+
+\subsubsection{Activity Diagram Ujian Online}
+
+Pada sistem ujian online, banyak aspek dari proses ujian yang diotomatisasi dan difasilitasi oleh platform digital. Berikut adalah penjelasan dari activity diagram:
+
+\begin{itemize}
+	\item \textbf{Dosen} memulai dengan membuat dan mengunggah materi ujian ke platform ujian online, serta mendefinisikan aturan ujian, seperti durasi dan format.
+	\item \textbf{Mahasiswa} kemudian masuk ke platform ujian online dan melakukan autentikasi identitas sebelum dapat mengikuti ujian.
+	\item \textbf{Dosen} memantau aktivitas mahasiswa selama ujian berlangsung dan memulai ujian online sesuai dengan jadwal yang telah ditetapkan.
+	\item \textbf{Mahasiswa} mengerjakan ujian di platform, dan jika batas waktu telah tercapai, platform secara otomatis mengirim jawaban yang telah disimpan.
+	\item \textbf{Platform} bertanggung jawab untuk menyimpan semua kiriman jawaban yang diunggah oleh mahasiswa, baik secara manual maupun otomatis.
+	\item Setelah ujian selesai, \textbf{Dosen} mengevaluasi jawaban dan memberikan penilaian.
+	\item \textbf{Mahasiswa} dapat melihat hasil ujian mereka melalui platform setelah penilaian selesai.
+\end{itemize}
+
+Activity diagram ini menunjukkan bahwa proses ujian online mengandalkan teknologi untuk mengotomatiskan beberapa tugas penting, seperti autentikasi identitas, pengumpulan jawaban, dan penyimpanan hasil ujian, sehingga mengurangi interaksi fisik dan meningkatkan efisiensi.
+
+\subsection{Archimate Diagram}
+
+\begin{figure}[th!]
+	\centering
+	\subcaptionbox{Archimate diagram untuk ujian offline.\label{fig:archimate_business_offline_exam}}%
+	[0.49\linewidth]{\includegraphics[width=\linewidth]{../figures/archimate_business_offline_exam.pdf}}
+	\hfill
+	\subcaptionbox{Archimate diagram untuk ujian online.\label{fig:archimate_business_online_exam}}%
+	[0.49\linewidth]{\includegraphics[width=\linewidth]{../figures/archimate_business_online_exam.pdf}}
+	\caption{Perbandingan Archimate diagram untuk ujian offline dan online.}
+\end{figure}
+
+Pada bagian ini dijelaskan dua ArchiMate diagram yang menggambarkan proses ujian pada sistem ujian offline dan online. Masing-masing diagram menunjukkan alur proses bisnis, aktor yang terlibat, serta hubungan antara proses-proses tersebut.
+
+\subsubsection{ArchiMate Diagram Ujian Offline}
+
+Diagram ArchiMate ujian offline menggambarkan alur proses manual dalam pelaksanaan ujian. Aktor-aktor yang terlibat dalam sistem ini mencakup \textbf{Dosen}, \textbf{Mahasiswa}, dan \textbf{Pengawas Ujian}. Berikut adalah penjelasan detail dari alur proses dalam diagram ini:
+
+\begin{itemize}
+	\item \textbf{Dosen} bertanggung jawab untuk mempersiapkan materi ujian, kemudian mencetak dan mendistribusikan materi tersebut kepada mahasiswa.
+	\item \textbf{Mahasiswa} harus menunjukkan identifikasi diri sebelum memulai ujian, di mana proses ini diverifikasi oleh pengawas.
+	\item \textbf{Pengawas Ujian} bertugas memverifikasi identitas mahasiswa dan memantau ruangan ujian selama ujian berlangsung untuk memastikan kepatuhan terhadap aturan.
+	\item Setelah ujian dimulai, \textbf{Mahasiswa} mengerjakan ujian, sementara \textbf{Pengawas} mengawasi jalannya ujian.
+	\item Setelah ujian selesai, mahasiswa mengumpulkan lembar jawaban yang kemudian dikumpulkan oleh dosen.
+	\item \textbf{Dosen} akan mengevaluasi lembar jawaban dan memberikan hasil kepada mahasiswa untuk ditinjau.
+\end{itemize}
+
+Diagram ini menunjukkan alur proses yang ketat dan linear, dengan setiap tahap dalam proses ujian bergantung pada interaksi langsung antara aktor-aktor manusia, serta memerlukan verifikasi manual.
+
+\subsubsection{ArchiMate Diagram Ujian Online}
+
+Diagram ArchiMate ujian online menggambarkan sistem ujian yang difasilitasi oleh platform digital dengan banyak proses yang diotomatisasi. Aktor yang terlibat dalam diagram ini mencakup \textbf{Dosen}, \textbf{Mahasiswa}, dan \textbf{Platform} sebagai komponen aplikasi. Berikut adalah penjelasan prosesnya:
+
+\begin{itemize}
+	\item \textbf{Dosen} membuat dan mengunggah materi ujian ke platform, kemudian mendefinisikan aturan ujian seperti durasi dan format ujian.
+	\item \textbf{Mahasiswa} masuk ke platform ujian dan mengautentikasi identitas mereka sebelum dapat mengikuti ujian.
+	\item Selama ujian berlangsung, \textbf{Dosen} memantau aktivitas mahasiswa melalui platform, dan memulai ujian secara online.
+	\item \textbf{Mahasiswa} mengikuti ujian melalui platform, di mana jawaban dapat diserahkan secara manual atau secara otomatis oleh \textbf{Platform} saat batas waktu tercapai.
+	\item Platform juga bertanggung jawab untuk menyimpan kiriman jawaban secara otomatis, sementara \textbf{Dosen} mengevaluasi jawaban yang telah disimpan dan memberikan penilaian.
+	\item Setelah penilaian selesai, \textbf{Mahasiswa} dapat melihat hasil ujian mereka melalui platform.
+\end{itemize}
+
+Diagram ini menekankan peran teknologi dalam mengotomatiskan beberapa proses penting, seperti autentikasi identitas, penyimpanan jawaban, dan pemantauan ujian, yang mengurangi keterlibatan langsung manusia dan meningkatkan efisiensi proses ujian.
+
+Sistem ujian offline memerlukan interaksi langsung antara dosen, mahasiswa, dan pengawas, serta membutuhkan banyak proses manual yang memakan waktu dan rentan terhadap kesalahan. Sebaliknya, sistem ujian online menawarkan otomatisasi yang lebih tinggi dengan platform yang menangani banyak tugas seperti autentikasi, pemantauan, dan penyimpanan jawaban. Hal ini tidak hanya meningkatkan efisiensi tetapi juga memberikan fleksibilitas yang lebih besar bagi dosen dan mahasiswa.
+
+
+\subsection{Analisis Keuntungan dan Kerugian}
+
+\textbf{Offline (Baseline)}
+
+\textbf{Keuntungan:}
+\begin{enumerate}
+	\item Proses yang sudah dikenal: Prosedur ujian tradisional yang melibatkan materi fisik dan pengawasan manusia sudah dipahami dengan baik oleh dosen, mahasiswa, dan pengawas.
+	\item Pengawasan langsung: Dosen dan pengawas dapat memantau perilaku mahasiswa secara langsung, memungkinkan intervensi segera jika terjadi masalah, seperti kecurangan.
+	\item Tidak bergantung pada teknologi: Pendekatan ini tidak mengandalkan platform perangkat lunak, sehingga mengurangi kekhawatiran tentang kegagalan teknis atau keamanan sistem.
+\end{enumerate}
+
+\textbf{Kerugian:}
+\begin{enumerate}
+	\item Memakan waktu: Mempersiapkan, mendistribusikan, dan mengevaluasi materi fisik adalah proses manual yang memerlukan waktu yang cukup lama bagi dosen dan staf administrasi.
+	\item Rentan terhadap kesalahan manusia: Proses manual seperti penilaian atau verifikasi identitas mahasiswa dapat menyebabkan ketidakakuratan.
+	\item Skalabilitas terbatas: Penanganan ujian untuk jumlah mahasiswa yang besar menjadi tantangan logistik.
+	\item Aksesibilitas terbatas: Mahasiswa harus hadir secara fisik untuk mengikuti ujian, yang dapat membatasi fleksibilitas, terutama dalam lingkungan pembelajaran jarak jauh atau hybrid.
+\end{enumerate}
+
+\textbf{Online (Target)}
+
+\textbf{Keuntungan:}
+\begin{enumerate}
+	\item Efisiensi: Proses persiapan dan evaluasi ujian dapat diotomatiskan, dan pengumpulan serta penilaian jawaban dapat dilakukan dengan lebih efisien.
+	\item Skalabilitas: Platform digital dapat dengan mudah menangani ujian skala besar, sehingga mengurangi tantangan logistik dari distribusi materi ujian fisik.
+	\item Aksesibilitas: Mahasiswa dapat mengikuti ujian dari jarak jauh, yang mendukung model pembelajaran hybrid atau sepenuhnya online.
+	\item Manajemen data: Platform secara aman menyimpan kiriman jawaban dan data autentikasi identitas, memberikan proses yang terstruktur dan transparan.
+	\item Tindakan otomatis: Fitur seperti pengiriman jawaban otomatis mengurangi risiko mahasiswa kehilangan pekerjaan karena masalah teknis atau batasan waktu.
+\end{enumerate}
+
+\textbf{Kerugian:}
+\begin{enumerate}
+	\item Ketergantungan pada teknologi: Sistem ini sangat bergantung pada ketersediaan dan keandalan platform online, yang dapat mengganggu proses ujian jika terjadi masalah teknis.
+	\item Kekhawatiran keamanan: Autentikasi dan pencegahan kecurangan memerlukan langkah-langkah kuat untuk memastikan integritas ujian, yang mungkin memerlukan biaya tambahan.
+	\item Kurva belajar: Baik mahasiswa maupun dosen perlu membiasakan diri dengan platform, dan beberapa mungkin menghadapi tantangan dalam beradaptasi dengan teknologi.
+\end{enumerate}
+
+\subsection{Analisis Upaya yang Diperlukan untuk Migrasi dari Sistem Ujian Offline (Baseline) ke Online (Target)}
+
+\begin{enumerate}
+	
+	\item \textbf{Pemilihan dan Penyiapan Platform}
+	\begin{enumerate}
+		\item Melakukan penelitian dan evaluasi platform ujian online yang memenuhi kebutuhan institusi, dengan fokus pada keamanan, skalabilitas, dan kemudahan penggunaan.
+		\item Memperoleh teknologi yang diperlukan, termasuk lisensi platform dan perangkat yang kompatibel dengan sistem.
+		\item Mengintegrasikan platform baru dengan sistem informasi mahasiswa (SIS) yang sudah ada untuk mengelola data mahasiswa dan informasi mata kuliah secara efektif.
+	\end{enumerate}
+	
+	\item \textbf{Persiapan dan Konversi Konten}
+	\begin{enumerate}
+		\item Mengonversi materi ujian yang ada (soal, rubrik penilaian, dll.) ke dalam format digital yang kompatibel dengan platform online.
+		\item Mengonfigurasi ujian online di dalam platform, termasuk pengaturan bank soal, aturan ujian, dan kriteria penilaian.
+	\end{enumerate}
+	
+	\item \textbf{Keamanan dan Autentikasi}
+	\begin{enumerate}
+		\item Mengimplementasikan mekanisme autentikasi yang aman, seperti autentikasi multi-faktor (MFA) atau pengenalan wajah, untuk verifikasi identitas mahasiswa.
+		\item Mengintegrasikan alat pengawasan ujian, seperti perangkat lunak proctoring, untuk memantau mahasiswa dan mencegah kecurangan selama ujian.
+	\end{enumerate}
+	
+	\item \textbf{Pelatihan dan Pembiasaan}
+	\begin{enumerate}
+		\item Memberikan pelatihan kepada dosen tentang cara membuat, memantau, dan menilai ujian menggunakan platform baru.
+		\item Menawarkan sesi pelatihan untuk mahasiswa tentang cara login, autentikasi, mengikuti ujian, dan mengirim jawaban di platform.
+	\end{enumerate}
+	
+	\item \textbf{Dukungan Teknis dan Pengujian}
+	\begin{enumerate}
+		\item Mendirikan tim dukungan teknis khusus untuk membantu mahasiswa dan dosen selama proses ujian.
+		\item Melakukan ujian percobaan dengan kelompok kecil mahasiswa dan dosen untuk menguji platform dan mengatasi masalah sebelum implementasi penuh.
+	\end{enumerate}
+	
+	\item \textbf{Komunikasi dan Adaptasi Kebijakan}
+	\begin{enumerate}
+		\item Menyesuaikan kebijakan ujian yang ada agar sesuai dengan lingkungan online, termasuk aturan tentang verifikasi identitas dan integritas akademik.
+		\item Mengkomunikasikan rencana migrasi, kebijakan baru, dan prosedur kepada semua pihak terkait—dosen, mahasiswa, dan staf administrasi—jauh sebelum periode ujian dimulai.
+	\end{enumerate}
+	
+	\item \textbf{Pemantauan dan Iterasi}
+	\begin{enumerate}
+		\item Secara aktif memantau kinerja platform selama ujian dan memberikan dukungan secara real-time jika diperlukan.
+		\item Mengumpulkan umpan balik dari mahasiswa dan dosen setelah ujian untuk meningkatkan proses pada periode ujian berikutnya.
+	\end{enumerate}
+	
+\end{enumerate}
+
+\subsection{Analisis Biaya-Manfaat}
+
+\subsubsection{Biaya}
+\begin{enumerate}
+	\item Biaya pengaturan awal: Pembelian platform ujian online, termasuk biaya lisensi dan integrasi.
+	\item Pelatihan: Waktu dan sumber daya yang digunakan untuk melatih staf dan mahasiswa dalam menggunakan platform baru.
+	\item Biaya pemeliharaan: Pengeluaran berkelanjutan untuk memelihara dan mendukung platform, termasuk dukungan teknis.
+	\item Manajemen risiko: Investasi tambahan dalam infrastruktur TI atau solusi keamanan untuk mengatasi masalah seperti waktu henti sistem atau pencegahan kecurangan.
+\end{enumerate}
+
+\subsubsection{Manfaat}
+\begin{enumerate}
+	\item Penghematan waktu: Otomatisasi mengurangi beban kerja manual dalam mempersiapkan ujian, menilai jawaban, dan mengelola kiriman.
+	\item Skalabilitas: Platform dapat mengakomodasi lebih banyak mahasiswa tanpa meningkatkan beban pada dosen dan staf administrasi.
+	\item Aksesibilitas: Mahasiswa dapat mengikuti ujian dari lokasi jarak jauh, meningkatkan fleksibilitas dan mendukung model pembelajaran hybrid.
+	\item Manajemen data yang lebih baik: Penyimpanan digital untuk kiriman ujian dan data penilaian memastikan organisasi dan transparansi yang lebih baik.
+	\item Umpan balik lebih cepat: Penilaian otomatis memungkinkan mahasiswa menerima umpan balik lebih cepat, yang meningkatkan proses pembelajaran.
+\end{enumerate}
+
+Meskipun biaya awal untuk pengaturan sistem ujian online signifikan, manfaat jangka panjang—termasuk penghematan waktu, skalabilitas, dan fleksibilitas—menjadikan transisi ini berharga. Sistem online juga mendukung pembelajaran hybrid, membuatnya menjadi solusi berkelanjutan untuk pendidikan modern.
+
 
 \section{Aktivitas Kelas dan Tugas}
 
 Buatlah arsitektur bisnis \textbf{As-Is} yang terdampak oleh kapabilitas arsitektur yang dipilih. Juga, buat arsitektur bisnis \textbf{To-Be} yang diperlukan untuk mewujudkan kapabilitas tersebut. 
-Expresikan arsitektur bisnis \textbf{As-Is} dan \textbf{To-Be} dalam bentuk Dokumen Definisi Arsitektur (Subbab \ref{sec:isi_dokumen_definisi_arsitektur}) dan Spesifikasi Persyaratan Arsitektur (Subbab \ref{sec:spesifikasi_persyaratan_arsitektur}).
+Expresikan arsitektur bisnis \textbf{As-Is} dan \textbf{To-Be} dalam bentuk Dokumen Definisi Arsitektur (Subbab \ref{sec:isi_dokumen_definisi_arsitektur}) dan Spesifikasi Persyaratan Arsitektur (Subbab \ref{sec:spesifikasi_kebutuhan_arsitektur}).
