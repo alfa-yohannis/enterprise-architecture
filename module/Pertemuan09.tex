@@ -128,62 +128,59 @@ Fase Arsitektur Teknologi mencakup berbagai artefak:
 
 
 \section{Dokumen Definisi Arsitektur yang Diperbarui}
-Topik yang harus dibahas dalam Dokumen Definisi Arsitektur terkait Arsitektur Aplikasi adalah sebagai berikut:
+Topik yang harus dibahas dalam Dokumen Definisi Arsitektur terkait Arsitektur Teknologi meliputi:
 \begin{itemize}
-	\item Arsitektur Aplikasi Baseline, jika sesuai
-	\item Arsitektur Aplikasi Target:
+	\item Arsitektur Teknologi Baseline, jika ada 
+	\item Arsitektur Teknologi Target, mencakup:
 	\begin{itemize}
-		\item Model sistem proses
-		\item Model sistem tempat
-		\item Model sistem waktu
-		\item Model sistem orang
+		\item Komponen teknologi dan hubungannya dengan sistem informasi
+		\item Platform teknologi dan dekomposisinya, menunjukkan kombinasi teknologi yang diperlukan untuk mewujudkan "stack" teknologi tertentu
+		\item Lingkungan dan lokasi dengan pengelompokan teknologi yang diperlukan dalam lingkungan komputasi (misalnya, pengembangan, produksi)
+		\item Beban pemrosesan yang diharapkan dan distribusi beban di seluruh komponen teknologi
+		\item Komunikasi fisik (jaringan)
+		\item Spesifikasi perangkat keras dan jaringan
 	\end{itemize}
-	\item Tampilan Arsitektur Aplikasi yang sesuai dengan sudut pandang yang dipilih, menjawab kebutuhan utama pemangku kepentingan
+	\item Tampilan yang sesuai dengan sudut pandang yang dipilih untuk menjawab kekhawatiran utama pemangku kepentingan
 \end{itemize}
 
 \subsection*{Contoh:}
 
 \begin{itemize}
-	\item \textbf{Arsitektur Aplikasi Baseline}: Arsitektur aplikasi baseline menggambarkan sistem dan aplikasi yang telah ada saat ini yang mendukung pembelajaran hybrid di universitas. Contohnya adalah sistem Learning Management System (LMS) yang sudah berjalan seperti Moodle atau Google Classroom, dan aplikasi video konferensi seperti Zoom atau Microsoft Teams yang telah digunakan secara rutin untuk kelas daring.
+	\item \textbf{Arsitektur Teknologi Baseline, jika ada}: Arsitektur teknologi baseline adalah gambaran teknologi saat ini yang digunakan untuk mendukung operasi utama dalam universitas. Misalnya, pada sistem e-learning, arsitektur baseline dapat mencakup server lokal yang mendukung aplikasi Learning Management System (LMS) seperti Moodle, yang diakses secara terbatas oleh mahasiswa di jaringan kampus. Contoh lainnya pada sistem informasi akademik adalah server database SQL yang menyimpan data mahasiswa dan staf, serta aplikasi web berbasis internal yang memungkinkan akses melalui jaringan kampus. Arsitektur baseline ini memberikan gambaran tentang infrastruktur dasar sebelum adanya pembaruan atau integrasi teknologi baru.
 	
-	\item \textbf{Arsitektur Aplikasi Target}: Arsitektur target adalah rancangan sistem aplikasi yang akan dikembangkan atau ditingkatkan untuk memenuhi kebutuhan hybrid learning yang optimal di masa depan.
+	\item \textbf{Arsitektur Teknologi Target, mencakup}:
 	\begin{itemize}
-		\item \textbf{Model Sistem Proses}: Model ini menggambarkan alur proses interaksi antara mahasiswa dan dosen dalam lingkungan hybrid, mulai dari pengunggahan materi, forum diskusi, hingga pengumpulan tugas secara daring. Contoh proses adalah dosen mengunggah materi kuliah di LMS, mahasiswa mengakses materi, dan mengumpulkan tugas melalui portal yang sama.
-		\item \textbf{Model Sistem Tempat}: Model ini mengidentifikasi lokasi fisik dan virtual di mana kegiatan pembelajaran berlangsung, seperti ruang kelas fisik yang dilengkapi kamera untuk streaming dan ruang kelas virtual di platform video konferensi. Contoh: Kelas yang dilengkapi dengan kamera PTZ (Pan-Tilt-Zoom) untuk merekam dan menyiarkan sesi perkuliahan langsung.
-		\item \textbf{Model Sistem Waktu}: Model ini mengelola waktu pelaksanaan pembelajaran agar terkoordinasi antara sesi tatap muka dan daring. Contoh: Sistem jadwal yang sinkron di LMS dan platform video konferensi, memungkinkan mahasiswa untuk mengakses materi atau sesi kuliah daring pada waktu yang telah dijadwalkan.
-		\item \textbf{Model Sistem Orang}: Model ini mencakup peran dan tanggung jawab pengguna dalam sistem hybrid learning, seperti dosen, mahasiswa, dan administrator LMS. Contoh: Dosen yang memiliki akses untuk mengunggah dan mengedit konten, mahasiswa yang memiliki akses untuk melihat dan mengunduh materi, serta administrator yang mengelola akses pengguna.
+		\item \textbf{Komponen teknologi dan hubungannya dengan sistem informasi}: Komponen teknologi dalam arsitektur target meliputi elemen yang berperan penting dalam proses informasi universitas. Contohnya adalah penggunaan server dan penyimpanan berbasis cloud yang mendukung LMS, yang juga terintegrasi dengan aplikasi video konferensi untuk pembelajaran hybrid. Contoh lain adalah penerapan sistem autentikasi tunggal yang memungkinkan mahasiswa dan staf menggunakan satu identitas untuk mengakses berbagai aplikasi universitas, seperti portal akademik, perpustakaan digital, dan layanan email.
+		
+		\item \textbf{Platform teknologi dan dekomposisinya, menunjukkan kombinasi teknologi yang diperlukan untuk mewujudkan "stack" teknologi tertentu}: Platform teknologi target merinci kombinasi teknologi yang bekerja bersama untuk mendukung aplikasi tertentu. Misalnya, stack teknologi yang terdiri dari React sebagai frontend, Node.js sebagai backend, dan MongoDB sebagai basis data untuk portal akademik yang digunakan mahasiswa. Contoh lainnya adalah penggunaan platform AWS dengan komponen S3 untuk penyimpanan data, EC2 untuk komputasi, dan RDS untuk basis data relasional, menciptakan arsitektur multi-tier untuk mendukung skenario hybrid learning.
+		
+		\item \textbf{Lingkungan dan lokasi dengan pengelompokan teknologi yang diperlukan dalam lingkungan komputasi (misalnya, pengembangan, produksi)}: Lingkungan komputasi dipisahkan untuk pengembangan, pengujian, dan produksi. Dalam konteks ini, lingkungan pengembangan memungkinkan tim IT untuk menguji fitur baru pada LMS tanpa mengganggu operasional. Contoh lainnya adalah penggunaan lingkungan staging yang mencerminkan lingkungan produksi, sehingga simulasi akses oleh pengguna dapat diuji terlebih dahulu sebelum peluncuran ke semua mahasiswa dan staf.
+		
+		\item \textbf{Beban pemrosesan yang diharapkan dan distribusi beban di seluruh komponen teknologi}: Beban pemrosesan memperkirakan jumlah permintaan yang harus dikelola oleh setiap komponen teknologi. Misalnya, saat ujian daring, server LMS harus mampu menangani ribuan mahasiswa yang mengakses platform bersamaan, sehingga penggunaan load balancer diperlukan untuk distribusi beban. Contoh lain adalah server email kampus yang menerima permintaan pengiriman email dalam jumlah besar setiap hari, memerlukan skalabilitas otomatis agar server dapat menangani lonjakan lalu lintas pada periode tertentu.
+		
+		\item \textbf{Komunikasi fisik (jaringan)}: Komunikasi fisik dalam arsitektur teknologi memastikan konektivitas antara berbagai perangkat dan sistem. Contohnya, jaringan kabel di ruang kelas utama memungkinkan akses internet yang stabil untuk perangkat multimedia yang digunakan dalam pembelajaran hybrid. Contoh lainnya adalah jaringan nirkabel kampus yang diprioritaskan untuk perangkat mobile mahasiswa dan staf agar dapat mengakses LMS dan materi kuliah dengan cepat dari seluruh area kampus.
+		
+		\item \textbf{Spesifikasi perangkat keras dan jaringan}: Spesifikasi perangkat keras dan jaringan disesuaikan untuk mendukung kebutuhan operasional hybrid learning. Misalnya, server dengan prosesor tinggi dan kapasitas RAM yang besar diperlukan untuk mendukung ribuan akses ke LMS pada waktu bersamaan. Contoh lainnya adalah penggunaan router dan switch berkapasitas tinggi yang mendukung komunikasi data cepat dan stabil di seluruh area kampus, memastikan infrastruktur jaringan dapat mendukung berbagai perangkat yang terhubung.
 	\end{itemize}
 	
-	\item \textbf{Tampilan Arsitektur Aplikasi sesuai Sudut Pandang Stakeholder}: Tampilan ini menyediakan visualisasi arsitektur aplikasi sesuai dengan perspektif pemangku kepentingan yang relevan, seperti dosen, mahasiswa, dan administrator. Contohnya, dari sudut pandang dosen, arsitektur aplikasi harus mendukung fitur untuk mengunggah materi, mengelola kehadiran, dan menilai tugas mahasiswa secara efisien. Sedangkan dari sudut pandang mahasiswa, arsitektur tersebut harus memfasilitasi akses mudah ke materi, tugas, dan diskusi secara daring.
+	\item \textbf{Tampilan yang sesuai dengan sudut pandang yang dipilih untuk menjawab kekhawatiran utama pemangku kepentingan}: Tampilan arsitektur disusun berdasarkan sudut pandang pemangku kepentingan utama, memastikan bahwa arsitektur teknologi memenuhi kebutuhan masing-masing. Misalnya, dari sudut pandang dosen, tampilan arsitektur perlu mendukung akses mudah dan cepat ke materi serta tugas mahasiswa di LMS. Sementara itu, dari sudut pandang administrator IT, fokus utamanya adalah keamanan data dan keberlanjutan infrastruktur, memastikan bahwa semua data sensitif dilindungi dan infrastruktur mendukung pertumbuhan jumlah pengguna.
 \end{itemize}
 
-\section{Spesifikasi Kebutuhan Arsitektur yang Diperbarui}
-Kebutuhan Arsitektur Aplikasi yang mengisi Spesifikasi Kebutuhan Arsitektur pada Fase C meliputi:
+
+\section{Spesifikasi Persyaratan Arsitektur yang Diperbarui}
+Persyaratan Arsitektur Teknologi yang ditambahkan ke dalam Spesifikasi Persyaratan Arsitektur pada Fase D meliputi:
 \begin{itemize}
 	\item Hasil Analisis Kesenjangan
-	\item Kebutuhan interoperabilitas aplikasi
-	\item Kebutuhan teknis yang relevan untuk siklus pengembangan arsitektur ini
-	\item Kendala pada Arsitektur Teknologi yang akan dirancang
-	\item Kebutuhan bisnis yang diperbarui, jika sesuai
-	\item Kebutuhan data yang diperbarui, jika sesuai
+	\item Persyaratan teknologi yang diperbarui
 \end{itemize}
 
 \subsection*{Contoh:}
 
 \begin{itemize}
-	\item \textbf{Hasil Analisis Kesenjangan}: Analisis kesenjangan mengidentifikasi perbedaan antara kemampuan aplikasi saat ini dengan kebutuhan ideal untuk mendukung pembelajaran hybrid. Contoh hasil analisis kesenjangan adalah perlunya peningkatan kapasitas platform LMS untuk mendukung kelas dengan jumlah mahasiswa yang lebih besar secara daring, atau kebutuhan untuk integrasi antara LMS dan sistem video konferensi agar pengalaman pembelajaran lebih mulus.
+	\item \textbf{Hasil Analisis Kesenjangan}: Hasil analisis kesenjangan menunjukkan perbedaan antara arsitektur teknologi saat ini dan kebutuhan masa depan yang diinginkan. Misalnya, dalam konteks hybrid learning, analisis kesenjangan mungkin mengungkapkan bahwa kapasitas server saat ini tidak memadai untuk mendukung akses serentak dari ribuan mahasiswa selama ujian daring, sehingga diperlukan peningkatan kapasitas atau solusi distribusi beban. Contoh lain adalah identifikasi kebutuhan untuk integrasi antara Learning Management System (LMS) dan sistem video konferensi, di mana sistem saat ini mungkin tidak mendukung integrasi penuh yang diperlukan untuk pembelajaran daring dan tatap muka yang seamless.
 	
-	\item \textbf{Kebutuhan Interoperabilitas Aplikasi}: Interoperabilitas aplikasi memastikan bahwa berbagai sistem yang digunakan dalam pembelajaran hybrid dapat berfungsi secara bersama-sama. Contohnya adalah Kebutuhan agar LMS seperti Moodle dapat terintegrasi dengan platform video konferensi seperti Zoom, sehingga mahasiswa dapat langsung mengakses sesi kuliah online dari halaman kelas di LMS tanpa perlu membuka aplikasi terpisah.
-	
-	\item \textbf{Kebutuhan Teknis yang Relevan untuk Siklus Pengembangan Arsitektur Ini}: Kebutuhan teknis mencakup spesifikasi perangkat keras, perangkat lunak, dan jaringan yang diperlukan untuk menjalankan arsitektur pembelajaran hybrid. Contohnya, Kebutuhan bahwa server LMS harus mendukung akses serentak dari banyak pengguna atau bahwa bandwidth internet harus cukup besar untuk streaming video dalam resolusi tinggi selama sesi kuliah.
-	
-	\item \textbf{Kendala pada Arsitektur Teknologi yang Akan Dirancang}: Kendala ini mencakup batasan teknis atau operasional yang mempengaruhi desain arsitektur teknologi. Contoh kendala adalah keterbatasan anggaran yang mungkin mempengaruhi pemilihan perangkat keras, atau kebijakan keamanan yang membatasi jenis data yang dapat disimpan di platform cloud untuk menjaga privasi data mahasiswa.
-	
-	\item \textbf{Kebutuhan Bisnis yang Diperbarui, Jika Sesuai}: Kebutuhan bisnis yang diperbarui mencerminkan kebutuhan dan tujuan baru universitas terkait pembelajaran hybrid. Misalnya, adanya Kebutuhan untuk menyediakan akses bagi mahasiswa internasional ke platform LMS dan video konferensi, sehingga diperlukan dukungan multibahasa pada antarmuka pengguna.
-	
-	\item \textbf{Kebutuhan Data yang Diperbarui, Jika Sesuai}: Kebutuhan data yang diperbarui mengatur bagaimana data dikumpulkan, disimpan, dan dikelola dalam lingkungan hybrid. Contohnya adalah kebutuhan untuk mengumpulkan data kehadiran dan aktivitas mahasiswa selama sesi online, yang memerlukan pengaturan privasi dan keamanan tambahan agar sesuai dengan regulasi perlindungan data seperti GDPR (\textit{General Data Protection Regulation}).
+	\item \textbf{Persyaratan Teknologi yang Diperbarui}: Persyaratan teknologi yang diperbarui menggambarkan spesifikasi dan kebutuhan teknologi yang diperlukan untuk mencapai target arsitektur yang mendukung seluruh aspek hybrid learning. Misalnya, dalam mendukung skenario hybrid, mungkin dibutuhkan teknologi jaringan yang lebih cepat dan stabil di seluruh area kampus untuk memastikan pengalaman pembelajaran yang tidak terganggu, baik di dalam kelas fisik maupun di lingkungan daring. Contoh lainnya adalah peningkatan kebutuhan perangkat keras pada server dan penyimpanan cloud, seperti penambahan unit penyimpanan dan peningkatan kapasitas RAM pada server, untuk mengakomodasi volume data yang meningkat akibat penambahan jumlah materi digital dan rekaman kelas.
 \end{itemize}
-
 
 \section{Tren Terkini dalam IT}
 Teknologi yang muncul dan mempengaruhi fase Arsitektur Teknologi meliputi:
