@@ -1,4 +1,4 @@
-\chapter{Peluang dan Solusi}
+\chapter{Fase E: Peluang dan Solusi}
 
 \section{Tujuan}
 Tujuan dari fase ini adalah:
@@ -241,8 +241,152 @@ Sebuah \textbf{Faktor Implementasi} mengacu pada kondisi, batasan, atau aspek ya
 	\item \textbf{Ketergantungan (Dependencies)}: Hubungan antara kesenjangan dan solusi yang menunjukkan urutan atau keterkaitan dalam implementasi. Misalnya, beberapa solusi mungkin harus diimplementasikan sebelum solusi lain dapat berfungsi dengan optimal.
 \end{enumerate}
 
+\section{Peta Jalan Arsitektur Hybrid Learning}
+\label{sec:peta_jalan}
+
+\begin{enumerate}
+	\item \textbf{Kapasitas Server untuk Akses Serentak (Teknologi)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Keterbatasan kapasitas server dalam menangani akses serentak.
+		\item \textbf{Solusi:} Upgrade server atau migrasi ke solusi cloud untuk kapasitas yang lebih besar.
+		\item \textbf{Implementasi:} Dilakukan sebagai prioritas utama untuk memastikan infrastruktur yang mendukung beban pengguna secara stabil sebelum aplikasi dan layanan data diterapkan.
+	\end{itemize}
+	
+	\item \textbf{Jaringan Wi-Fi Kampus (Teknologi)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Kebutuhan akan jaringan Wi-Fi yang stabil dan cepat di seluruh area kampus.
+		\item \textbf{Solusi:} Peningkatan kapasitas Wi-Fi di kampus dengan perangkat router baru.
+		\item \textbf{Implementasi:} Dilakukan setelah peningkatan server, mendukung akses nirkabel yang luas dan stabil untuk perangkat pengguna.
+		\item \textbf{Alasan Urutan:} Wi-Fi stabil menjadi dasar penting bagi akses pengguna yang memerlukan mobilitas di area kampus.
+	\end{itemize}
+	
+	\item \textbf{Sistem Autentikasi Tunggal (Single Sign-On) (Teknologi)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Tidak ada sistem SSO untuk akses aplikasi kampus.
+		\item \textbf{Solusi:} Implementasi SSO untuk akses LMS, portal akademik, dan aplikasi lainnya.
+		\item \textbf{Implementasi:} Setelah jaringan Wi-Fi dan server siap, SSO memudahkan akses terintegrasi dan aman.
+		\item \textbf{Alasan Urutan:} Infrastruktur stabil memungkinkan SSO memberikan pengalaman akses yang mulus dan aman.
+	\end{itemize}
+	
+	\item \textbf{Integrasi Layanan Mahasiswa (Bisnis)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Layanan mahasiswa belum terintegrasi untuk akses informasi akademik yang terpusat.
+		\item \textbf{Solusi:} Mengembangkan portal mahasiswa terpadu yang memungkinkan akses ke informasi akademik, keuangan, dan administrasi secara terpusat.
+		\item \textbf{Implementasi:} Setelah implementasi SSO untuk memudahkan akses terintegrasi.
+		\item \textbf{Alasan Urutan:} Portal mahasiswa terpadu memerlukan autentikasi yang aman, yang disediakan oleh SSO, untuk memberikan akses yang cepat dan terintegrasi.
+	\end{itemize}
+	
+	\item \textbf{Fitur Interaktif dalam LMS (Aplikasi)}:
+	\begin{itemize}
+		\item \textbf{Gap:} LMS tidak memiliki fitur interaktif untuk pembelajaran daring.
+		\item \textbf{Solusi:} Integrasi LMS dengan alat video konferensi dan forum diskusi real-time.
+		\item \textbf{Implementasi:} Setelah SSO dan portal mahasiswa terpadu tersedia untuk memastikan akses terintegrasi.
+		\item \textbf{Alasan Urutan:} Fitur interaktif LMS lebih efektif jika pengguna sudah memiliki akses mudah melalui portal mahasiswa dan SSO.
+	\end{itemize}
+	
+	\item \textbf{Komunikasi dan Kolaborasi Dosen-Mahasiswa (Bisnis)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Terbatasnya komunikasi dan kolaborasi antara dosen dan mahasiswa.
+		\item \textbf{Solusi:} Mengimplementasikan platform komunikasi terintegrasi seperti Microsoft Teams atau Slack.
+		\item \textbf{Implementasi:} Setelah LMS dan portal mahasiswa tersedia untuk mendukung interaksi lebih dalam.
+		\item \textbf{Alasan Urutan:} Kolaborasi lebih efektif setelah pengguna memiliki akses ke LMS dan portal mahasiswa untuk aktivitas pembelajaran utama.
+	\end{itemize}
+	
+	\item \textbf{Pelaporan dan Analisis Data Mahasiswa (Data)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Kurangnya sistem pelaporan komprehensif untuk analisis data mahasiswa.
+		\item \textbf{Solusi:} Implementasi sistem Business Intelligence (BI) dengan laporan yang dapat dikustomisasi.
+		\item \textbf{Implementasi:} Setelah fitur interaktif LMS tersedia untuk mendukung data yang dibutuhkan.
+		\item \textbf{Alasan Urutan:} Sistem BI memerlukan data dari LMS dan aktivitas portal untuk memberikan analisis menyeluruh.
+	\end{itemize}
+	
+	\item \textbf{Pengumpulan dan Pengarsipan Tugas (Aplikasi)}:
+	\begin{itemize}
+		\item \textbf{Gap:} LMS tidak mendukung pengumpulan dan pengarsipan tugas otomatis.
+		\item \textbf{Solusi:} Menambahkan modul manajemen tugas dan arsip dalam LMS.
+		\item \textbf{Implementasi:} Bersamaan dengan atau setelah fitur interaktif dalam LMS.
+		\item \textbf{Alasan Urutan:} Modul ini mendukung pengalaman pembelajaran lebih lengkap dan membantu mengumpulkan data untuk BI.
+	\end{itemize}
+	
+	\item \textbf{Pelatihan Dosen untuk Hybrid Learning (Bisnis)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Kebutuhan untuk pelatihan dosen dalam penggunaan alat hybrid learning.
+		\item \textbf{Solusi:} Melaksanakan program pelatihan berkala yang mencakup penggunaan LMS, video konferensi, dan alat interaktif lainnya.
+		\item \textbf{Implementasi:} Setelah platform komunikasi dan fitur LMS telah tersedia.
+		\item \textbf{Alasan Urutan:} Pelatihan akan lebih efektif jika dosen telah memiliki akses ke platform dan fitur yang akan mereka gunakan.
+	\end{itemize}
+	
+	\item \textbf{Akses Data Real-Time untuk Evaluasi Kinerja (Data)}:
+	\begin{itemize}
+		\item \textbf{Gap:} Terbatasnya akses data real-time untuk evaluasi kinerja mahasiswa.
+		\item \textbf{Solusi:} Integrasi sistem evaluasi kinerja dengan dashboard analitik.
+		\item \textbf{Implementasi:} Dilakukan setelah sistem BI terintegrasi dengan LMS.
+		\item \textbf{Alasan Urutan:} Data evaluasi real-time hanya dapat diakses jika BI telah mengumpulkan dan mengintegrasikan data dari LMS dan modul evaluasi kinerja.
+	\end{itemize}
+\end{enumerate}
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{|p{.05\textwidth}|p{.3\textwidth}|p{.3\textwidth}|p{.2\textwidth}|}
+		\hline
+		\textbf{No.} & \textbf{Komponen} & \textbf{Kegiatan} & \textbf{Waktu Implementasi} \\
+		\hline
+		1 & Kapasitas Server untuk Akses Serentak (Teknologi) & 
+		Upgrade server atau migrasi ke solusi cloud untuk kapasitas yang lebih besar & 
+		Q1 - Prioritas awal untuk mendukung stabilitas akses \\
+		\hline
+		2 & Jaringan Wi-Fi Kampus (Teknologi) & 
+		Peningkatan kapasitas Wi-Fi di seluruh kampus dengan perangkat router baru & 
+		Q1 - Dilakukan setelah server ditingkatkan \\
+		\hline
+		3 & Sistem Autentikasi Tunggal (Single Sign-On) (Teknologi) & 
+		Implementasi SSO untuk akses LMS, portal akademik, dan aplikasi lainnya & 
+		Q2 - Setelah server dan Wi-Fi siap \\
+		\hline
+		4 & Integrasi Layanan Mahasiswa (Bisnis) & 
+		Mengembangkan portal mahasiswa terpadu dengan akses ke informasi akademik, keuangan, dan administrasi & 
+		Q2 - Setelah SSO siap untuk akses terpusat \\
+		\hline
+		5 & Fitur Interaktif dalam LMS (Aplikasi) & 
+		Integrasi LMS dengan alat video konferensi dan forum diskusi real-time & 
+		Q3 - Setelah SSO dan portal mahasiswa tersedia \\
+		\hline
+		6 & Komunikasi dan Kolaborasi Dosen-Mahasiswa (Bisnis) & 
+		Implementasi platform komunikasi terintegrasi (misalnya, Microsoft Teams atau Slack) & 
+		Q3 - Setelah LMS dan portal siap untuk mendukung interaksi \\
+		\hline
+		7 & Pelaporan dan Analisis Data Mahasiswa (Data) & 
+		Implementasi sistem Business Intelligence (BI) dengan laporan yang dapat dikustomisasi & 
+		Q4 - Setelah fitur interaktif LMS tersedia \\
+		\hline
+		8 & Pengumpulan dan Pengarsipan Tugas (Aplikasi) & 
+		Menambahkan modul manajemen tugas dan arsip dalam LMS & 
+		Q4 - Bersamaan atau setelah fitur interaktif LMS \\
+		\hline
+		9 & Pelatihan Dosen untuk Hybrid Learning (Bisnis) & 
+		Program pelatihan untuk penggunaan LMS, video konferensi, dan alat interaktif & 
+		Q4 - Setelah platform komunikasi dan fitur LMS siap \\
+		\hline
+		10 & Akses Data Real-Time untuk Evaluasi Kinerja (Data) & 
+		Integrasi sistem evaluasi kinerja dengan dashboard analitik & 
+		Q1 Tahun 2 - Setelah sistem BI tersedia \\
+		\hline
+	\end{tabular}
+	\caption{Rencana Migrasi untuk Implementasi Arsitektur Hybrid Learning}
+	\label{tab:rencana_migrasi_arsitektur_hybrid_learning}
+\end{table}
+
+
+\section{Rencana Migrasi Arsitektur Hybrid Learning}
+\label{sec:rencana_migrasi}
+Contoh rencana migrasi arsitektur untuk hybrid learning dapat dilihat pada Tabel \ref{tab:rencana_migrasi_arsitektur_hybrid_learning}.
+
 \section{Ringkasan}
 \begin{enumerate}
 	\item Fase Peluang dan Solusi memungkinkan kita untuk mengidentifikasi dan mengembangkan solusi arsitektur yang efektif dan efisien.
 	\item Ini membantu dalam merencanakan implementasi arsitektur secara terperinci.
 \end{enumerate}
+
+\section{Aktivitas Kelas dan Tugas}
+Buatlah Peta Jalan (Subbab \ref{sec:peta_jalan}) dan Rencana Migrasi (Subbab \ref{sec:rencana_migrasi}) untuk mewujudkan arsitektur \textbf{As-Is} atau kapabilitas yang Anda pilih.
